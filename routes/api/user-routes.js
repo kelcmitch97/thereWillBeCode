@@ -1,6 +1,6 @@
 // placeholder for routes/api/user-routes
 // to develop on branch develop feature/login
-// boilerplate for routes/api/user-route.js
+// boilerplate for routes/api/user-routesjs.js
 const router = require('express').Router();
 const { User } = require('../../models');
 
