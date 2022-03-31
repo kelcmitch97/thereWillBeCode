@@ -127,15 +127,119 @@ header a {
   /* Circle Options */
 
   .dot {
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     background-color: #bbb;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    flex-wrap: wrap;
+  
   } 
   
+  .dot2{
+    display: flex;
+    position: absolute;
+    bottom: 134px;
+    right: 400px;
+  }
+
+  .game p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .eventspage {
+
+    height:  800px;
+    width: 100%;
+  }
+
+  .eventspage h2{
+    margin-top: 40px;
+  }
+
+  /*  Events page------ */
+
+  .event {
+
+    height: 200px;
+    width: 370px;
+    display: inline-block;
+    background-color:#a9a9a9 ;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 20px;
+  }
+
+  .event p {
+    font-size: 20px;
+    color: black;
+  }
+
+  /*  Specific events page  */
+
+  .sport, .description {
+    height: 40px;
+    width: 30%;
+    background-color: #a9a9a9;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .circle {
   
+      height: 100px;
+      width: 100px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+    
+    } 
+
+    .opendot{
+      margin-top: 14px;
+    }
+
+    .closedot {
+      display: flex;
+    position: absolute;
+    top: 1080px;
+    left: 130px;
+  
+    }
+
+    /*    Buttons for join now and save later */
+
+    .btn{
+      height: 40px;
+      width: 120px;
+      margin-top: 20px;
+      display: flex;
+      padding: 10px;
+      margin-left: 20px;
+    }
+
+    /*  icon and location for the map */
+
+    .icon-box{
+      height: 400px;
+      width: 60%;
+      float: right;
+    }
+
+
+
+
+
+
+  
+
+
+
+
