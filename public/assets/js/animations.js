@@ -43,3 +43,19 @@ var observer = new IntersectionObserver(function(entries) {
 }, { threshold: [0] });
 
 observer.observe(document.querySelector(".circle"));
+
+// Swiper
+
+let swiper = new Swiper(".event_container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  
+  });

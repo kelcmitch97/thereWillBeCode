@@ -105,24 +105,59 @@ header a {
 
   /* HERO STYLES START */
 .hero {
-    /* background-image: url('/public/assets/images/game.jpg'); */
     background-color: var(--light-blue);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background-attachment: fixed;
-    background-position: 80%;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    text-align: center;
+    /* background-position: 80%; */
+    width: 100vw;
+    height: 100vh;
+
+    /* Background image - not working for some reason? */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/public/assets/images/game.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
   }
 
-  .hero-cta {
+  .hero h2 {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+  }
+
+  .hero p {
+    font-size: 2rem;
+
+  }
+
+  .hero .btn {
+    display: block;
+    width: 200px;
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid var(--dark-grey);
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;  
+    background-color: var(--dark-grey);
+    color: white;
+  }
+
+  /* .hero-cta {
     width: 50%;
     text-align: left;
     margin: 3.5%;
     color: black;
     font-size: 18px;
     line-height: 1.2;
-  }
+  } */
 
   /* Circle Options */
 
@@ -176,12 +211,117 @@ header a {
     flex-wrap: wrap;
     margin: 10px;
     margin-left: 20px;
+    border-radius: 20px;
   }
 
   .event p {
     font-size: 20px;
     color: black;
   }
+
+  /* Events (new approach) */
+
+/* .section {
+  padding: 2rem 0 4rem;
+}
+.event_section {
+  padding: 2rem 0 4rem;
+}
+
+.event_header {
+  font-size: 1.5rem;
+}
+
+.event_subtitle {
+  display: block;
+  font-size: 0.813rem;
+  margin-bottom: 3rem;
+}
+
+.event_header, .event_subtitle {
+  text-align: center;
+} 
+
+  .container-event {
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event_container {
+  overflow: initial;
+}
+
+.event_content {
+  padding: 0 1.5rem;
+}
+
+.event_img {
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+.event_title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.event_description {
+  margin-bottom: 0.75rem;
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+.button--flex {
+  display: inline-block;
+  align-items: center;
+}
+
+.event_button:hover .button__icon {
+  transform: translateX(.25rem);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+}
+
+.swiper-event-icon {
+  font-size: 2rem;
+  color: darkgrey;
+}
+
+.swiper-button-prev {
+  left: -.5rem;
+}
+
+.swiper-button-next {
+  right: -.5rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: darkgrey;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet {
+  outline: none;
+} */
 
   /*  Specific events page  */
 
