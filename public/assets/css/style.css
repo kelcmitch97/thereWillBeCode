@@ -219,30 +219,55 @@ header a {
     color: black;
   }
 
+  /* Buttons */
+
+.button {
+  display: inline-block;
+  background-color: var(--light-blue);
+  color:black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: var(--pink-red);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
+}
+
+.button--flex {
+  display: inline-block;
+  align-items: center;
+}
+
   /* Events (new approach) */
 
-/* .section {
+.section {
   padding: 2rem 0 4rem;
 }
 .event_section {
   padding: 2rem 0 4rem;
 }
 
-.event_header {
-  font-size: 1.5rem;
-}
-
-.event_subtitle {
-  display: block;
-  font-size: 0.813rem;
-  margin-bottom: 3rem;
-}
-
-.event_header, .event_subtitle {
+.section_title {
+  font-size: 4rem;
+  font-weight: 600;
   text-align: center;
-} 
+}
 
-  .container-event {
+.section_subtitle {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container-event {
     max-width: 768px;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -259,32 +284,26 @@ header a {
 
 .event_content {
   padding: 0 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .event_img {
-  width: 265px;
+  width: 300px;
   border-radius: .5rem;
   justify-self: center;
+  align-self: center;
 }
 
 .event_title {
-  font-size: 1.125rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
+
 }
 
-.event_description {
+.event_location, .event_day {
   margin-bottom: 0.75rem;
-}
+  font-size: 1.5rem;
 
-.button__icon {
-  font-size: 1.25rem;
-  margin-left: var(--mb-0-5);
-  transition: 0.3s;
-}
-
-.button--flex {
-  display: inline-block;
-  align-items: center;
 }
 
 .event_button:hover .button__icon {
@@ -302,11 +321,11 @@ header a {
 }
 
 .swiper-button-prev {
-  left: -.5rem;
+  left: 7rem;
 }
 
 .swiper-button-next {
-  right: -.5rem;
+  right: 7rem;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets {
@@ -321,7 +340,7 @@ header a {
 .swiper-button-next,
 .swiper-pagination-bullet {
   outline: none;
-} */
+} 
 
   /*  Specific events page  */
 
@@ -369,6 +388,8 @@ header a {
       width: 60%;
       float: right;
     }
+
+
 
 
 

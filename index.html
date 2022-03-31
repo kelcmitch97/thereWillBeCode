@@ -35,7 +35,7 @@
                     <a href="#">Home </a>
                 </li>
                 <li>
-                    <a href="#">Events </a>
+                    <a href="#eventspage">Events </a>
                 </li>
                 <li>
                     <a href="#">Profile</a>
@@ -57,7 +57,7 @@
 
             <p>Join a game now or create one!</p>
 
-            <button class="btn" type="submit">
+            <button class="button" type="submit">
                 Login
             </button>
         </div>
@@ -66,105 +66,156 @@
     <main>
 
 
-    <!--Circle Options  -->
-    <section>
-        <div class="container">
-            <span class="dot">
-                <a href="#join-game">
-                    <div id="join-game" class="joingame game">
-                        <p> Looking to Join a game ?</p>
+        <!--Circle Options  -->
+        <section>
+            <div class="container">
+                <span class="dot">
+                    <a href="#join-game">
+                        <div id="join-game" class="joingame game">
+                            <p> Looking to Join a game ?</p>
+                        </div>
+                    </a>
+                </span>
+
+                <span class="dot  dot2">
+                    <a href="#create-game">
+                        <div id="create-game" class="creategame game">
+                            <p> create a game ?</p>
+                        </div>
+                    </a>
+                </span>
+
+            </div>
+        </section>
+
+        <!--  Events page -->
+
+        <div class="eventspage">
+
+            <h2>
+                Events ( Looking to join a game?)
+            </h2>
+
+            <div class="event event1">
+                <h3>
+                    Event 1
+                </h3>
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+
+            </div>
+
+            <div class="event event2">
+                <h3>
+                    Event 2
+                </h3>
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+
+            </div>
+
+            <div class="event event3">
+
+                <h3>
+                    Event 3
+                </h3>
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+            </div>
+
+            <div class="event event4">
+                <h3>
+                    Event 4
+                </h3>
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+
+            </div>
+
+            <div class="event event5">
+                <h3>
+                    Event 5
+                </h3>
+
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+
+            </div>
+
+            <div class="event event6">
+                <h3>
+                    Event 6
+                </h3>
+                <p>
+                    location
+                    <br> Day & Time
+                </p>
+            </div>
+        </div>
+
+        <!-- Testing out new approach to event display -->
+        <section class="event_section section" id="events">
+            <h2 class="section_title">Events</h2>
+            <span class="section_subtitle">Happening Soon...</span>
+            <div class="event_container eventcontainer swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Event 1 -->
+                    <div class="event_content grid swiper-slide">
+                        <img src="./public/assets/images/placeholder.jpeg" alt="Event1" class="event_img">
+
+                        <div class="event_data">
+                            <h3 class="event_title">Event Name</h3>
+                            <p class="event_location">Location</p>
+                            <p class="event_day">Day/Time</p>
+                            <button href="" class="button button--flex button--small event_button">
+                                More info
+                                <i class="uil uil-info-circle button__icon"></i>
+                            </button>
+                        </div>
                     </div>
-                </a>
-            </span>
+                    <!-- Event 1 -->
+                    <div class="event_content grid swiper-slide">
+                        <img src="./public/assets/images/placeholder.jpeg" alt="Event2" class="event_img">
 
-            <span class="dot  dot2">
-                <a href="#create-game">
-                    <div id="create-game" class="creategame game">
-                        <p> create a game ?</p>
+                        <div class="event_data">
+                            <h3 class="event_title">Event Name</h3>
+                            <p class="event_location">Location</p>
+                            <p class="event_day">Day/Time</p>
+                            <button href="" class="button button--flex button--small event_button">
+                                More info
+                                <i class="uil uil-info-circle button__icon"></i>
+                            </button>
+                        </div>
                     </div>
-                </a>
-            </span>
+                </div>
 
-        </div>
-    </section>
+                <!-- Swiper -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-event-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-event-icon"></i>
+                </div>
+                <div class="swiper-pagination">
 
-    <!--  Events page -->
+                </div>
 
-    <div class="eventspage">
+            </div>
+        </section>
 
-        <h2>
-            Events ( Looking to join a game?)
-        </h2>
 
-        <div class="event event1">
-            <h3>
-                Event 1
-            </h3>
-            <p>
-                location
-                <br> Day & Time
-            </p>
 
-        </div>
-
-        <div class="event event2">
-            <h3>
-                Event 2
-            </h3>
-            <p>
-                location
-                <br> Day & Time
-            </p>
-
-        </div>
-
-        <div class="event event3">
-
-            <h3>
-                Event 3
-            </h3>
-            <p>
-                location
-                <br> Day & Time
-            </p>
-        </div>
-
-        <div class="event event4">
-            <h3>
-                Event 4
-            </h3>
-            <p>
-                location
-                <br> Day & Time
-            </p>
-
-        </div>
-
-        <div class="event event5">
-            <h3>
-                Event 5
-            </h3>
-
-            <p>
-                location
-                <br> Day & Time
-            </p>
-
-        </div>
-
-        <div class="event event6">
-            <h3>
-                Event 6
-            </h3>
-            <p>
-                location
-                <br> Day & Time
-            </p>
-        </div>
-    </div>
-
-    <!-- Testing out new approach to event display -->
-    <!-- <section class="event_section section" id="events">
+        <!-- <section class="event_section section" id="events">
         <h2 class="event_header">Events</h2>
         <span class="event_subtitle">Happening soon</span>
 
@@ -202,7 +253,7 @@
                     </div>
                 </div> -->
 
-<!--             
+        <!--             
                 <div class="swiper-button-next">
                     <i class="uil uil-angle-right-b swiper-event-icon"></i>
                 </div>
@@ -220,56 +271,56 @@
 
 
 
-     <!-- Specific event page - this will probably be a link to a new page or a modal-->
+        <!-- Specific event page - this will probably be a link to a new page or a modal-->
 
 
-    <div class="specificevent">
-        <div class="sport">
-            <h3>
-                Event(Sport)
-            </h3>
-
-        </div>
-
-        <div class="description">
-            <h3>
-                Description/ Members needed
-            </h3>
-        </div>
-
-        <section>
-            <div class="gamestatus">
-                <span class="circle  opendot">
-
-                    <div id="opengame" class="open">
-                        <h3> OPEN </h3>
-                    </div>
-
-                </span>
-
-                <span class="circle  closedot">
-
-                    <div id="closegame" class="closed">
-                        <h3> CLOSED </h3>
-                    </div>
-
-                </span>
-
-
-                <button type="submit" class="joinnow btn">
-                    Join Now
-                </button>
-
-                <button type="submit" class="saveforlater btn">
-                    saveforlater
-                </button>
-
+        <div class="specificevent">
+            <div class="sport">
+                <h3>
+                    Event(Sport)
+                </h3>
 
             </div>
-        </section>
-    </div>
 
-</main>
+            <div class="description">
+                <h3>
+                    Description/ Members needed
+                </h3>
+            </div>
+
+            <section>
+                <div class="gamestatus">
+                    <span class="circle  opendot">
+
+                        <div id="opengame" class="open">
+                            <h3> OPEN </h3>
+                        </div>
+
+                    </span>
+
+                    <span class="circle  closedot">
+
+                        <div id="closegame" class="closed">
+                            <h3> CLOSED </h3>
+                        </div>
+
+                    </span>
+
+
+                    <button type="submit" class="joinnow btn">
+                        Join Now
+                    </button>
+
+                    <button type="submit" class="saveforlater btn">
+                        saveforlater
+                    </button>
+
+
+                </div>
+            </section>
+        </div>
+
+    </main>
     <div class="icon-box">
         <div class="icon">
             <h3>
