@@ -94,6 +94,8 @@ const eventCard = $('.event')
 const swiperNext = $('.swiper-button-next');
 const swiperPrev = $('.swiper-button-prev');
 
+const loginButton = $('.hero button');
+
 // For loop displaying event cards
 
 for (let i = 0; i < eventCard.length; i++) {
@@ -144,6 +146,24 @@ $(document).ready(function() {
         function out(){
 
             TweenMax.to(icon, 0.5, { x: 0, transformOrigin:"50% 0%", ease:Power1.easeInOut });
+
+        }
+
+});
+
+$(document).ready(function() {
+
+    loginButton.hover(over, out);
+
+        function over(){
+
+            // TweenMax.to(icon, 0.5, { x: -30, transformOrigin:"50% 0%", ease:Power1.easeInOut, yoyo: true, repeat: -1 });
+
+        }
+
+        function out(){
+
+            // TweenMax.to(icon, 0.5, { x: 0, transformOrigin:"50% 0%", ease:Power1.easeInOut });
 
         }
 
