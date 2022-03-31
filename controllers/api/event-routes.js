@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   Event.findAll({
     // attributes: { exclude: ['password'] }
   })
-    .then(dbUserData => res.json(dbUserData))
+    .then(eventData => res.json(eventData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -40,12 +40,12 @@ router.get('/:id', (req, res) => {
     //   }
     // ]
   })
-    .then(dbUserData => {
-      if (!dbUserData) {
+    .then(eventData => {
+      if (!eventData) {
         res.status(404).json({ message: 'No user found with this id' });
         return;
       }
-      res.json(dbUserData);
+      res.json(eventData);
     })
     .catch(err => {
       console.log(err);

@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
   })
-    .then(dbUserData => res.json(dbUserData))
+    .then(userData => res.json(userData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -40,12 +40,12 @@ router.get('/:id', (req, res) => {
     //   }
     // ]
   })
-    .then(dbUserData => {
-      if (!dbUserData) {
+    .then(userData => {
+      if (!userData) {
         res.status(404).json({ message: 'No user found with this id' });
         return;
       }
-      res.json(dbUserData);
+      res.json(userData);
     })
     .catch(err => {
       console.log(err);
@@ -65,17 +65,17 @@ router.get('/:id', (req, res) => {
 
 
 //   })
-//   .then(dbUserData => {
+//   .then(userData => {
 
 //     req.session.save(() => {
 
 //         // Logs In here
 
-//       req.session.user_id = dbUserData.id;
-//       req.session.username = dbUserData.username;
+//       req.session.user_id = userData.id;
+//       req.session.username = userData.username;
 //       req.session.loggedIn = true;
   
-//       res.json(dbUserData);
+//       res.json(userData);
 //     });
 //   })
 //     .catch(err => {
@@ -89,15 +89,15 @@ router.get('/:id', (req, res) => {
 //     where: {
 //       email: req.body.email
 //     }
-//   }).then(dbUserData => {
-//     if (!dbUserData) {
+//   }).then(userData => {
+//     if (!userData) {
 //       res.status(400).json({ message: 'No user with that email address!' });
 //       return;
 //     }
 
 //     // Password Check
 
-//     const validPassword = dbUserData.checkPassword(req.body.password);
+//     const validPassword = userData.checkPassword(req.body.password);
 
 //     if (!validPassword) {
 //       res.status(400).json({ message: 'Incorrect password!' });
@@ -108,11 +108,11 @@ router.get('/:id', (req, res) => {
 
 //       // Session stuff
 
-//       req.session.user_id = dbUserData.id;
-//       req.session.username = dbUserData.username;
+//       req.session.user_id = userData.id;
+//       req.session.username = userData.username;
 //       req.session.loggedIn = true;
 
-//       res.json({ user: dbUserData, message: 'You are now logged in!' });
+//       res.json({ user: userData, message: 'You are now logged in!' });
 //     });
 //   });
 // });
@@ -128,12 +128,12 @@ router.get('/:id', (req, res) => {
 //       id: req.params.id
 //     }
 //   })
-//     .then(dbUserData => {
-//       if (!dbUserData[0]) {
+//     .then(userData => {
+//       if (!userData[0]) {
 //         res.status(404).json({ message: 'No user found with this id' });
 //         return;
 //       }
-//       res.json(dbUserData);
+//       res.json(userData);
 //     })
 //     .catch(err => {
 //       console.log(err);
@@ -147,12 +147,12 @@ router.get('/:id', (req, res) => {
 //       id: req.params.id
 //     }
 //   })
-//     .then(dbUserData => {
-//       if (!dbUserData) {
+//     .then(userData => {
+//       if (!userData) {
 //         res.status(404).json({ message: 'No user found with this id' });
 //         return;
 //       }
-//       res.json(dbUserData);
+//       res.json(userData);
 //     })
 //     .catch(err => {
 //       console.log(err);
