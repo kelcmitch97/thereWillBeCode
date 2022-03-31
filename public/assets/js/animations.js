@@ -1,6 +1,11 @@
+// --- FUNCTIONS USED FROM functions.js ---
+
+// GET API CALLS: getUsers();, getEvents();, getLocations();
+
 // Animations go here
 
 var observer = new IntersectionObserver(function(entries) {
+    
 	if(entries[0].isIntersecting === true){
 
         // Checking observer call below if it's visible
@@ -16,6 +21,10 @@ var observer = new IntersectionObserver(function(entries) {
         console.log(entries[0].target.className)
 
         if (entries[0].target.id === "location"){
+
+            getUsers();
+            getEvents();
+            getLocations();
 
             console.log('should work?')
 

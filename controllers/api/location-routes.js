@@ -3,16 +3,22 @@ const { Location } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
+
   Location.findAll({})
-    .then(dbUserData => res.json(dbUserData))
+
+    .then(locationData => res.json(locationData))
+
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+
 });
 
 router.get('/:id', (req, res) => {
+
   Location.findOne({
+
     where: {
       id: req.params.id
     },
@@ -37,17 +43,26 @@ router.get('/:id', (req, res) => {
     //   }
     // ]
   })
-    .then(dbUserData => {
-      if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
+
+    .then(locationData => {
+
+      if (!locationData) {
+        res.status(404).json({ message: 'No location found with this id' });
         return;
       }
-      res.json(dbUserData);
+
+      res.json(locationData);
+
     })
+
     .catch(err => {
+
       console.log(err);
+
       res.status(500).json(err);
+
     });
+    
 });
 
 module.exports = router;
