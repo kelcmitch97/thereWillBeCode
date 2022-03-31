@@ -57,16 +57,92 @@
 
             <p>Join a game now or create one!</p>
 
-            <button class="button" type="submit">
+            <button id='login_button' class="button" type="submit">
                 Login
                 <span></span>
             </button>
         </div>
     </section>
 
+    <!-- Login/Create Account Modal -->
+    <div class="cd_user_modal">
+        <div class="cd_user_modal_container">
+
+            <ul class="cd_switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">Create Account</a></li>
+            </ul>
+
+            <!-- log in form -->
+            <div id="cd_signin">
+                <form class="cd_form">
+
+                    <p class="fieldset">
+                        <label class="image_replace cd_email" for="signin_email">Email</label>
+                        <input class="full-width has-padding has-border" id="signin_email" type="email"
+                            placeholder="Email">
+                        <span class="cd_error_message">Error message here</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image_replace cd_password" for="signin_password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin_password" type="text"
+                            placeholder="Password">
+                        <a href="#0" class="hide_password">Hide</a>
+                        <span class="cd_error_message">Error message here</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login">
+                    </p>
+
+                </form>
+            </div>
+
+            <!-- Create account form -->
+            <div id="cd_signup">
+                <form class="cd_form">
+
+                    <p class="fieldset">
+                        <label class="image_replace cd_username" for="signup_username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup_username" type="text"
+                            placeholder="Username">
+                        <span class="cd_error_message">Error message here</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image_replace cd_email" for="signup_email">Email</label>
+                        <input class="full-width has-padding has-border" id="signup_email" type="email"
+                            placeholder="Email">
+                        <span class="cd_error_message">Error message here</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image_replace cd_password" for="signup_password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup_password" type="text"
+                            placeholder="Password">
+                        <a href="#0" class="hide_password">Hide</a>
+                        <span class="cd_error_message">Error message here</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                      </p>
+            
+                      <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                      </p>
+
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
     <main>
-
-
         <!--Circle Options  -->
         <section>
             <div class="container">
@@ -178,10 +254,10 @@
                             <h3 class="event_title">Event Name</h3>
                             <p class="event_location">Location</p>
                             <p class="event_day">Day/Time</p>
-                            <button href="" class="button button--flex button--small event_button">
+                            <a href="./event.html" class="button button--flex button--small event_button">
                                 More info
                                 <i class="uil uil-info-circle button__icon"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <!-- Event 1 -->
@@ -192,10 +268,10 @@
                             <h3 class="event_title">Event Name</h3>
                             <p class="event_location">Location</p>
                             <p class="event_day">Day/Time</p>
-                            <button href="" class="button button--flex button--small event_button">
+                            <a href="./event.html" class="button button--flex button--small event_button">
                                 More info
                                 <i class="uil uil-info-circle button__icon"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +351,7 @@
         <!-- Specific event page - this will probably be a link to a new page or a modal-->
 
 
-        <div class="specificevent">
+        <!-- <div class="specificevent">
             <div class="sport">
                 <h3>
                     Event(Sport)
@@ -319,7 +395,7 @@
 
                 </div>
             </section>
-        </div>
+        </div> -->
 
     </main>
     <div class="icon-box">
@@ -388,5 +464,8 @@
 <script src="./public/assets/js/swiper-bundle.min.js"></script>
 <script src="./public/assets/js/functions.js"></script>
 <script src="./public/assets/js/animations.js"></script>
+<script src="./public/assets/js/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 </html>
