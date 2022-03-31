@@ -22,9 +22,9 @@ var observer = new IntersectionObserver(function(entries) {
 
         if (entries[0].target.className === "circle  opendot"){
 
-            getUsers();
-            getEvents();
-            getLocations();
+            // getUsers();
+            // getEvents();
+            // getLocations();
 
             // call       //target    //duration(seconds)      //animations to take place over duration //power //repeat
 
