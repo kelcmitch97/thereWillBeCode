@@ -17,7 +17,7 @@ const userData = [
       email: 'keenplayer@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
-      description: 'looking for players at community level',
+      description: 'looking to participate at community level',
       events_created: '',
       events_participating: ''
     },
@@ -26,8 +26,8 @@ const userData = [
       user_name: 'PickupPlayer',
       email: 'pickupplayer@fakemail.com',
       password: 'password123',
-      sports: 'hockey, baseball, basketball, soccer',
-      description: 'looking for players at community level',
+      sports: 'hockey, baseball',
+      description: 'looking to play at community level',
       events_created: '',
       events_participating: ''
     },
