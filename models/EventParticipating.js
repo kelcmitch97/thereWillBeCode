@@ -6,18 +6,21 @@ class EventParticipating extends Model {}
 
 EventParticipating.init(
     {
-
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      event_name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      sport: {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        event_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        date_time: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        sport: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
