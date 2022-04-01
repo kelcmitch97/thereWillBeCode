@@ -1,11 +1,19 @@
 // Index for models including foreign keys
 
-const User = require('./User');
+const EventCreated = require('./EventCreated');
+const EventParticipating = require('./EventParticipating')
 const Location = require('./Location');
-const Event = require('./Event');
+const MembersUser = require('./MemberUser');
+const Sports = require('./Sports');
+const User = require('./User');
+const VenueType = require('./VenueType');
 
 module.exports = {
-    User,
+    EventCreated,
+    EventParticipating,
     Location,
-    Event,
+    MembersUser,
+    Sports,
+    User,
+    VenueType
 }
