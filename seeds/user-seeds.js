@@ -2,7 +2,74 @@ const { User } = require('../models');
 
 const userData = [
     {
-      user_name: 'Test Name',
+      id: 100,
+      user_name: 'SportsNut',
+      email: 'sportsnut@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'looking for players at community level',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 101,
+      user_name: 'KeenPlayer',
+      email: 'keenplayer@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'looking for players at community level',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 102,
+      user_name: 'PickupPlayer',
+      email: 'pickupplayer@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'looking for players at community level',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 103,
+      user_name: 'LoveToPlay',
+      email: 'lovetoplay@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'looking for players at community level',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 104,
+      user_name: 'SportsEventsFun',
+      email: 'sportseventsfun@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'creating events for community level players',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 105,
+      user_name: 'GetTogetherSports',
+      email: 'gettogethersports@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'getting community-level players together',
+      events_created: '',
+      events_participating: ''
+    },
+    {
+      id: 106,
+      user_name: 'SportsAreUs',
+      email: 'sportsareus@fakemail.com',
+      password: 'password123',
+      sports: 'hockey, baseball, basketball, soccer',
+      description: 'inclusive community-level sports events',
+      events_created: '',
+      events_participating: ''
     },
 ]
 
