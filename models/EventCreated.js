@@ -16,6 +16,10 @@ EventCreated.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        date_time: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
         sport: {
             type: DataTypes.INTEGER,
             allowNull: false,
