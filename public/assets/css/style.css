@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+
+    --header-height: 3rem ;
+
+    /* Colors */
+    --primary-color: #ffff;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+    --light-blue: #CAEBF2;
+    --dark-grey: #a9a9a9;
+    --pink-red: #FF3B3F;
+    --light-grey: #EFEFEF;
+
+    /* Fonts */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+  }
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    color: var(--tertiary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--normal-font-size);
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  /*header*/
+
+  header {
+    padding: 20px 35px;
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* background-image: url("/public/assets/images/game.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+  }
+
+
+  
+header h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 36px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  
+header a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  header nav {
+    margin: 7px 0;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--pink-red);
+    border-radius: 15px;
+    text-shadow: none;
+  }
+
+
+  /* HERO STYLES START */
+.hero {
+    background-color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    text-align: center;
+    /* background-position: 80%; */
+    width: 100vw;
+    height: 100vh;
+
+    /* Background image - not working for some reason? */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../images/game.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .hero h2 {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+  }
+
+  .hero p {
+    font-size: 2rem;
+
+  }
+
+  .hero .btn {
+    display: block;
+    width: 200px;
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid var(--dark-grey);
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;  
+    background-color: var(--dark-grey);
+    color: white;
+  }
+
+  /* .hero-cta {
+    width: 50%;
+    text-align: left;
+    margin: 3.5%;
+    color: black;
+    font-size: 18px;
+    line-height: 1.2;
+  } */
+
+  /* Circle Options */
+
+  .container {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dot {
+    height: 200px;
+    width: 200px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .dot:nth-child(1){
+    margin-right: 100px;
+  }
+
+  .game p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .eventspage {
+    height:  800px;
+    width: 100%;
+  }
+
+  .eventspage h2{
+    margin-top: 40px;
+  }
+
+  /*  Events page------ */
+
+  .event {
+
+    height: 200px;
+    width: 370px;
+    display: inline-block;
+    background-color:#a9a9a9 ;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+
+  .event p {
+    font-size: 20px;
+    color: black;
+  }
+
+  /* Buttons */
+
+.button {
+  display: inline-flex;
+  background-color: var(--light-blue);
+  color:black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: var(--pink-red);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero button {
+  outline: none;
+  border: none;
+  position: relative;
+  width: 140px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 16px;
+}
+
+  /* Events (new approach) */
+
+.section {
+  padding: 2rem 0 4rem;
+}
+.event_section {
+  padding: 2rem 0 4rem;
+}
+
+.section_title {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section_subtitle {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container-event {
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event_container {
+  overflow: initial;
+}
+
+.event_content {
+  padding: 0 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.event_img {
+  width: 300px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.event_title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.event_location, .event_day {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+
+}
+
+.event_button:hover .button__icon {
+  transform: translateX(.25rem);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+}
+
+.swiper-event-icon {
+  font-size: 2rem;
+  color: darkgrey;
+}
+
+.swiper-button-prev {
+  left: 7rem;
+}
+
+.swiper-button-next {
+  right: 7rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: darkgrey;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet {
+  outline: none;
+} 
+
+  /*  Specific events page  */
+
+  .sport, .description {
+    height: 40px;
+    width: 30%;
+    background-color: #a9a9a9;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .circle {
+  
+      height: 100px;
+      width: 100px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+    
+    } 
+
+    .opendot, .closedot {
+      margin-top: 20px;
+    }
+
+    /*    Buttons for join now and save later */
+
+    .btn{
+      height: 40px;
+      width: 120px;
+      margin-top: 20px;
+      display: flex;
+      padding: 10px;
+      margin-left: 20px;
+    }
+
+    /*  icon and location for the map */
+
+    .icon-box{
+      height: 400px;
+      width: 60%;
+      float: right;
+    }
