@@ -2,9 +2,49 @@ const { Location } = require('../models');
 
 const locationData = [
     {
-      location_name: 'Test Location',
+      id: 167,
+      city_name: 'Toronto',
+      location_name: 'Ramsden Park',
+      location_address: '1020 Yonge Street, M4W 2K1',
+      venue_type: 'rink-outdoor'
     },
-]
+    {
+      id: 241,
+      city_name: 'Toronto',
+      location_name: 'Trinity Bellwoods Park',
+      location_address: '790 Queen Street W, M6J 1G3',
+      venue_type: 'rink-outdoor, baseball-diamond, playing-field, outdoor-drypad'
+    },
+    {
+      id: 196,
+      city_name: 'Toronto',
+      location_name: 'Christie Pits',
+      location_address: '779 Crawford Ave W, M6G 3K4',
+      venue_type: 'baseball-diamond, rink-outdoor, outdoor-drypad, sports-field'
+    },
+    {
+      id: 241,
+      city_name:'Toronto',
+      location_name: 'Trinity Bellwoods Park',
+      location_address: '790 Queen St W, M6J 1G3',
+      venue_type: 'rink-outdoor, sports-field, baseball-diamond, outdoor-drypad'
+    },
+    {
+      id: 306,
+      city_name: 'Toronto',
+      location_name: 'Withrow Park',
+      location_address: '725 Logan Ave, M4K 3B9',
+      venue_type: 'rink-outdoor, baseball-diamond, outdoor-drypad, sports-field'
+    },
+    {
+      id: 508,
+      city_name: 'Toronto',
+      location_name: 'Weston Lions Park',
+      location_address: '2125 Lawrence Ave W, M9N 1H7',
+      venue_type: 'baseball-diamond, sports-field, rink-indoor(arena-adjacent)'
+    },
+    
+    ]
 
 const seedLocations = () => Location.bulkCreate(locationData);
 
