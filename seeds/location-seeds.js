@@ -20,7 +20,7 @@ const locationData = [
       city_name: 'Toronto',
       location_name: 'Christie Pits',
       location_address: '779 Crawford Ave W, M6G 3K4',
-      venue_type: 'baseball-diamond, rink-outdoor, outdoor-drypad, sports-field'
+      venue_type: 'baseball-diamond, rink-outdoor, outdoor-drypad, sports-field, basketball-court'
     },
     {
       id: 241,
@@ -41,9 +41,22 @@ const locationData = [
       city_name: 'Toronto',
       location_name: 'Weston Lions Park',
       location_address: '2125 Lawrence Ave W, M9N 1H7',
-      venue_type: 'baseball-diamond, sports-field, rink-indoor(arena-adjacent)'
+      venue_type: 'baseball-diamond, sports-field, rink-indoor(arena-adjacent), basketball-court'
     },
-    
+    {
+      id: 514,
+      city_name: 'Toronto',
+      location_name: 'Earlscourt Park',
+      location_address: '1200 Landsdowne Ave , M6H 3Z8',
+      venue_type: 'baseball-diamond, sports-field, rink-outdoor, basketball-court'
+    },
+    {
+      id: 585,
+      city_name: 'Toronto',
+      location_name: 'Flemingdon Park',
+      location_address: '150 Grenoble Drive, M3C 1E3',
+      venue_type: 'sports-field, baseball-diamond, basketball-court, rink-indoor(arena-adjacent)'
+
     ]
 
 const seedLocations = () => Location.bulkCreate(locationData);
