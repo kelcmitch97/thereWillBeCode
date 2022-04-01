@@ -56,8 +56,9 @@ const locationData = [
       location_name: 'Flemingdon Park',
       location_address: '150 Grenoble Drive, M3C 1E3',
       venue_type: 'sports-field, baseball-diamond, basketball-court, rink-indoor(arena-adjacent)'
+    },
 
-    ]
+  ]
 
 const seedLocations = () => Location.bulkCreate(locationData);
 
