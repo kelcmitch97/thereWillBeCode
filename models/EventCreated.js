@@ -2,57 +2,54 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class User extends Model {}
+class EventCreated extends Model {}
 
-User.init(
+EventCreated.init(
     {
-        id:{
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        user_name:{
+        event_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        email:{
-            type: DataTypes.STRING,
+        sport: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
+            references: {
+                model: 'sports',
+                key: 'id'
             }
         },
-        password: {
-            type: DataTypes.STRING,
+        members_needed: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        location: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                len: [4]
+            references: {
+                model: 'location',
+                key: 'id'
             }
         },
-        sports: {
-            type: DataTypes.STRING,
-            allowNull: true,
+        availability: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
         },
         description: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        events_created: {
+        members: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
-                model: 'eventCreated',
+                model: 'membersUser',
                 key: 'id'
-            }
-        },
-        events_participating: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'eventParticipating',
-            key: 'id'
             }
         }
     },
@@ -61,7 +58,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'eventCreated',
     }
 );
-  module.exports = User;
+module.exports = EventCreated;

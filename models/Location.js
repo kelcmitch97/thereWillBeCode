@@ -6,29 +6,40 @@ class Location extends Model {}
 
 Location.init(
     {
-      
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
 
-      location_name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        city_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        location_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        location_address: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        venue_type: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'venue_type',
+                key: 'id'
+            }
+        }
     },
-    
     {
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'location',
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'location',
     }
-  
-  );
-  
-  module.exports = Location;
+);
+module.exports = Location;
