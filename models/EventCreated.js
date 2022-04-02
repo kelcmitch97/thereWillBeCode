@@ -12,6 +12,14 @@ EventCreated.init(
             primaryKey: true,
             autoIncrement: true
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
         event_name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -20,7 +28,7 @@ EventCreated.init(
             type: DataTypes.DATE,
             allowNull: false
         },
-        sport: {
+        sport_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -32,7 +40,7 @@ EventCreated.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        location: {
+        location_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -52,7 +60,7 @@ EventCreated.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'membersUser',
+                model: 'members_user',
                 key: 'id'
             }
         }
