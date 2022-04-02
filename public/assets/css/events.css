@@ -57,7 +57,7 @@ body {
     padding: 20px 35px;
     background-color: var(--light-blue);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
@@ -77,37 +77,11 @@ header h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  
 header a {
     text-decoration: none;
     color: black;
   }
-  
-  header nav {
-    margin: 7px 0;
-  }
-  
-  header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-  }
 
-  header nav ul li a {
-    padding: 10px 15px;
-    font-weight: lighter;
-    font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  header nav ul li a:hover {
-    background: var(--primary-color);
-    color: var(--pink-red);
-    border-radius: 15px;
-    text-shadow: none;
-  }
 
   /* navbar */
 
@@ -145,7 +119,7 @@ header a {
   margin-left: 50px;
 }
 
-#main {
+#mainNav {
   transition: margin-left .5s;
   padding: 16px;
 }
@@ -159,7 +133,7 @@ header a {
 
 .event_container {
   background-color: #ffffff;
-  width: 95vmin;
+  width: 120vmin;
   min-width: 30em;
   height: 30em;
   font-size: 16px;
@@ -177,6 +151,8 @@ header a {
   flex-direction: column;
   justify-content: space-around;
   background-color: var(--light-grey);
+  border: 1px solid #ccc;
+  border-left: none;
 }
 
 h3{
@@ -218,6 +194,14 @@ h3{
   background-color: var(--pink-red);
   color: white;
   font-weight: 600;
+}
+
+.tab h3:hover {
+  background-color: #ddd;
+}
+
+.event1 {
+  border: 1px solid #ccc;
 }
 
 /* .tab {
