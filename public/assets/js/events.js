@@ -1,22 +1,22 @@
-function openSport(evt, sportName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(sportName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+let tab = document.querySelectorAll(".tab h3");
+let tabContent = document.querySelectorAll(".tab_content div");
 
-  document.getElementById("defaultOpen").click();
+tab.forEach((tab,index) => {
+    tab.addEventListener("click", () => {
+        tabContent.forEach(content => {
+            content.classList.remove("active");
+        });
+        tabContent[index].classList.add("active");
+    });
+});
+
+tab.forEach((tab,index) => {
+    tab.addEventListener("click", () => {
+        tab.forEach(tab => {
+            tab.classList.remove("active");
+        });
+        tab[index].classList.add("active");
+    });
+});
+
+
