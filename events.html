@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,300;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="./public/assets/css/events.css">
 
     <title>Games Happening</title>
 
@@ -43,7 +44,55 @@
 
     <!--  Events page -->
 
-    <div class="eventspage">
+    <div id="event_page">
+        <div class="event_container">
+
+            <div class="event_page_title">
+                <h2>Events Happening</h2>
+            </div>
+            
+            <!-- Sports Tabs -->
+            <div class="tab">
+                <button class="tablinks" onclick="openSport(event, 'BasketBall')"id="defaultOpen">BasketBall</button>
+                <button class="tablinks" onclick="openSport(event, 'Baseball')">Baseball</button>
+                <button class="tablinks" onclick="openSport(event, 'Soccer')">Soccer</button>
+                <button class="tablinks" onclick="openSport(event, 'Tennis')">Tennis</button>
+                <button class="tablinks" onclick="openSport(event, 'Hockey')">Hockey</button>
+            </div>
+
+            <div id="BasketBall" class="tabcontent">
+                <h3>Basketball</h3>
+                <p>event details</p>
+            </div>
+
+            <div id="Baseball" class="tabcontent">
+                <h3>Baseball</h3>
+                <p>event details</p>
+            </div>
+
+            <div id="Soccer" class="tabcontent">
+                <h3>Soccer</h3>
+                <p>event details</p>
+            </div>
+
+            <div id="Tennis" class="tabcontent">
+                <h3>Tennis</h3>
+                <p>event details</p>
+            </div>
+
+            <div id="Hockey" class="tabcontent">
+                <h3>Hockey</h3>
+                <p>event details</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="eventspage">
 
         <h2>
             Events ( Looking to join a game?)
@@ -114,7 +163,7 @@
                 <br> Day & Time
             </p>
         </div>
-    </div>
+    </div> -->
 
 </body>
 
@@ -122,6 +171,7 @@
 <script src="./public/assets/js/functions.js"></script>
 <script src="./public/assets/js/animations.js"></script>
 <script src="./public/assets/js/login.js"></script>
+<script src="./public/assets/js/events.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
