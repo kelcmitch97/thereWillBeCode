@@ -46,14 +46,6 @@ User.init(
                 model: 'eventCreated',
                 key: 'id'
             }
-        },
-        events_participating: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'eventParticipating',
-            key: 'id'
-            }
         }
     },
     {
