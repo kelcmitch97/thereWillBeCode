@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS rename_me;
-CREATE DATABASE rename_me;
-USE rename_me;
+DROP DATABASE IF EXISTS pick_up_sports;
+CREATE DATABASE pick_up_sports;
+USE pick_up_sports;

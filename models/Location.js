@@ -27,7 +27,6 @@ Location.init(
         },
         venue_type_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'venue_type',
                 key: 'id'

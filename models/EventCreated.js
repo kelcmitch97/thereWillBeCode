@@ -14,7 +14,6 @@ EventCreated.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
@@ -30,7 +29,6 @@ EventCreated.init(
         },
         sport_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'sports',
                 key: 'id'
@@ -42,7 +40,6 @@ EventCreated.init(
         },
         location_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'location',
                 key: 'id'
@@ -56,14 +53,13 @@ EventCreated.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        members: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'members_user',
-                key: 'id'
-            }
-        }
+        // members: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'members_user',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,
