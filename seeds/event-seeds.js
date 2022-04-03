@@ -1,4 +1,4 @@
-const { Event } = require('../models');
+const { EventCreated } = require('../models');
 
 const eventData = [
     {
