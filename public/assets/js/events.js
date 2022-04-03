@@ -11,13 +11,13 @@ tab.forEach((tab,index) => {
 });
 
 // // Not working? 
-// tab.forEach((tab,index) => {
-//     tab.addEventListener("click", () => {
-//         tab.forEach(tab => {
-//             tab.classList.remove("active");
-//         });
-//         tab[index].classList.add("active");
-//     });
-// });
+tab.forEach((tab,index) => {
+    tab.addEventListener("click", () => {
+        tab.forEach(tab => {
+            tab.classList.remove("active");
+        });
+        tab[index].classList.add("active");
+    });
+});
 
 
