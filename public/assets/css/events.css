@@ -155,7 +155,7 @@ header a {
   border-left: none;
 }
 
-h3{
+.tab h3{
   height: 33.33%;
   display: grid;
   place-items: center;
@@ -200,45 +200,131 @@ h3{
   background-color: #ddd;
 }
 
-.event1 {
-  border: 1px solid #ccc;
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
 }
 
-/* .tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 20%;
-    height: 600px;
+/*  Specific events page  */
+
+.specificevent_container {
+  background-color: #ffffff;
+  width: 80vmin;
+  min-width: 30em;
+  height: 30em;
+  font-size: 16px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: var(--bshadow-2);
 }
 
-.tab button {
-    display: block;
-    background-color: inherit;
+.sport {
+  grid-column: span 2;
+  margin: 20px 10px;
+  justify-self: center;
+}
+
+.sport h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gamestatus {
+  margin-top: 30px;
+}
+
+.event_icon {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.description {
+  margin-left: 50px;
+}
+
+.description_title {
+  margin-bottom: 10px;
+}
+.circle {
+
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+
+  .opendot, .closedot {
+    margin: 20px;
+    box-shadow: var(--bshadow-6);
+  }
+
+  /*    Buttons for join now */
+
+  .join_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .join_now {
+    background-color: #bbb;
+    border-radius: 30px;
+    box-shadow: var(--bshadow-6);
     color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
     cursor: pointer;
-    transition: 0.3s;
-}
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
 
-.tab button:hover {
-    background-color: #ddd;
+  .join_now:hover {
+    background-color: #fff;
   }
   
-  .tab button.active {
-    background-color: #ccc;
+  .join_now:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
   }
-  
-  .tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 600px;
-  } */
+
+
+
+
+
 

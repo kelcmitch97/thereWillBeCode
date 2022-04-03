@@ -399,49 +399,4 @@ header a {
   outline: none;
 } 
 
-  /*  Specific events page  */
-
-  .sport, .description {
-    height: 40px;
-    width: 30%;
-    background-color: #a9a9a9;
-    margin-top: 5px;
-    margin-left: 20px;
-  }
-
-  .circle {
   
-      height: 100px;
-      width: 100px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    
-    
-    } 
-
-    .opendot, .closedot {
-      margin-top: 20px;
-    }
-
-    /*    Buttons for join now and save later */
-
-    .btn{
-      height: 40px;
-      width: 120px;
-      margin-top: 20px;
-      display: flex;
-      padding: 10px;
-      margin-left: 20px;
-    }
-
-    /*  icon and location for the map */
-
-    .icon-box{
-      height: 400px;
-      width: 60%;
-      float: right;
-    }

@@ -13,7 +13,7 @@
         rel="stylesheet">
     <title>Event Details</title>
 
-    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="./public/assets/css/events.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
 
     <header>
         <h1>
-            <a href="/"> PickUp </a>
+            <a href="/"> Event Details </a>
         </h1>
         <div id="sideNavBar" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -43,21 +43,17 @@
 
 
     <!-- Specific Event Details -->
-    <div class="specificevent">
+    <div class="specificevent_container">
         <div class="sport">
             <h3>
-                Event(Sport)
-            </h3>
-
-        </div>
-
-        <div class="description">
-            <h3>
-                Description/ Members needed
+                Event Name
             </h3>
         </div>
 
-        <section>
+        <div class="chip">
+            <img src="./public/assets/images/avatar.jpeg" width="96" height="96">
+            Creator's name
+
             <div class="gamestatus">
                 <span class="circle  opendot">
 
@@ -74,19 +70,49 @@
                     </div>
 
                 </span>
-
-
-                <button type="submit" class="joinnow btn">
-                    Join Now
-                </button>
-
-                <button type="submit" class="saveforlater btn">
-                    saveforlater
-                </button>
-
-
             </div>
-        </section>
+
+        </div>
+
+        <div class="description">
+            <h3 class="description_title">
+                Description
+            </h3>
+
+            <p>
+                <i class="uil uil-clock event_icon"></i>
+
+                Date/Time
+            </p>
+
+            <p>
+                <i class="uil uil-location-point event_icon"></i>
+
+                Location
+            </p>
+
+
+            <p>
+                <i class="uil uil-users-alt event_icon"></i>
+
+                8 Players Needed
+            </p>
+
+            <p>
+                <i class="uil uil-info-circle event_icon"></i>
+
+                Any other details
+            </p>
+
+        </div>
+
+
+        <div class="join_button">
+            <button type="submit" role="button" class="join_now">
+                Join Now
+            </button>
+        </div>
+
     </div>
 </body>
 
@@ -98,3 +124,4 @@
     crossorigin="anonymous"></script>
 
 </html>
+
