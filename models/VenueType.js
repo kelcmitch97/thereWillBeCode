@@ -22,7 +22,7 @@ VenueType.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'venuetype',
+        modelName: 'venue_type',
     }
   );
   module.exports = VenueType;

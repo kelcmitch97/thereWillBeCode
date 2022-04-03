@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // get all users
-router.get('/', (req, res) => {
+router.route('/')
+.get((req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -11,45 +12,74 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+})
+.post((req, res) => {
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    }).then( res.json({message: 'User Created!'}))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
-router.get('/:id', (req, res) => {
-  User.findOne({
-    attributes: { exclude: ['password'] },
-    where: {
-      id: req.params.id
-    },
-    // include: [
-    //   {
-    //     model: Post,
-    //     attributes: ['id', 'title', 'post_url', 'created_at']
-    //   },
-    //   {
-    //     model: Comment,
-    //     attributes: ['id', 'comment_text', 'created_at'],
-    //     include: {
-    //       model: Post,
-    //       attributes: ['title']
-    //     }
-    //   },
-    //   {
-    //     model: Post,
-    //     attributes: ['title'],
-    //     through: Vote,
-    //     as: 'voted_posts'
-    //   }
-    // ]
-  })
-    .then(userData => {
-      if (!userData) {
-        res.status(404).json({ message: 'No user found with this id' });
-        return;
-      }
-      res.json(userData);
+router.route('/:id')
+.get((req, res) => {
+    User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+        id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this id to return.' });
+            return;
+        }
+        res.json(dbUserData);
     })
     .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.put((req, res) => {
+    User.update(req.body, {
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData[0]) {
+            res.status(404).json({ message: 'No user found with this id to update.' });
+            return;
+        }
+        res.json({message: "User has been updated"});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.delete((req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'No user found with this id to delete.' });
+            return;
+        }
+        res.json({message: "The user has been deleted."});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     });
 });
 
@@ -74,7 +104,7 @@ router.get('/:id', (req, res) => {
 //       req.session.user_id = userData.id;
 //       req.session.username = userData.username;
 //       req.session.loggedIn = true;
-  
+
 //       res.json(userData);
 //     });
 //   })
@@ -118,7 +148,7 @@ router.get('/:id', (req, res) => {
 // });
 
 // router.put('/:id', (req, res) => {
- 
+
 
 //   // pass in req.body instead to only update what's passed through
 

@@ -1,27 +1,48 @@
 const router = require('express').Router();
 const { Location } = require('../../models');
 
-// get all users
-router.get('/', (req, res) => {
-
-  Location.findAll({})
-
+router.route('/')
+.get((req, res) => {
+    Location.findAll({
+  })
     .then(locationData => res.json(locationData))
-
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-
+})
+.post((req, res) => {
+    Location.create({
+        city_name: req.body.city_name,
+        location_name: req.body.location_name,
+        location_address: req.body.location_address,
+        venue_type_id: req.body.venue_type_id
+    }).then( res.json({message: 'Location Created!'}))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
+// router.get('/', (req, res) => {
 
-router.get('/:id', (req, res) => {
+//   Location.findAll({})
 
-  Location.findOne({
+//     .then(locationData => res.json(locationData))
 
-    where: {
-      id: req.params.id
-    },
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+
+// });
+
+// router.get('/:id', (req, res) => {
+
+//   Location.findOne({
+
+//     where: {
+//       id: req.params.id
+//     },
     // include: [
     //   {
     //     model: Post,
@@ -42,27 +63,27 @@ router.get('/:id', (req, res) => {
     //     as: 'voted_posts'
     //   }
     // ]
-  })
+//   })
 
-    .then(locationData => {
+//     .then(locationData => {
 
-      if (!locationData) {
-        res.status(404).json({ message: 'No location found with this id' });
-        return;
-      }
+//       if (!locationData) {
+//         res.status(404).json({ message: 'No location found with this id' });
+//         return;
+//       }
 
-      res.json(locationData);
+//       res.json(locationData);
 
-    })
+//     })
 
-    .catch(err => {
+//     .catch(err => {
 
-      console.log(err);
+//       console.log(err);
 
-      res.status(500).json(err);
+//       res.status(500).json(err);
 
-    });
-    
-});
+//     });
+
+// });
 
 module.exports = router;

@@ -12,7 +12,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        user_name:{
+        username:{
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -24,36 +24,20 @@ User.init(
                 isEmail: true
             }
         },
-        password: {
+        password:{
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [4]
             }
         },
-        sports: {
+        sports:{
             type: DataTypes.STRING,
             allowNull: true,
         },
-        description: {
+        description:{
             type: DataTypes.STRING,
-            allowNull: false
-        },
-        events_created: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'eventCreated',
-                key: 'id'
-            }
-        },
-        events_participating: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'eventParticipating',
-            key: 'id'
-            }
+            allowNull: true
         }
     },
     {
