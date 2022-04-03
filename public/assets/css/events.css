@@ -57,7 +57,7 @@ body {
     padding: 20px 35px;
     background-color: var(--light-blue);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
     position: -webkit-sticky;
@@ -144,6 +144,7 @@ header a {
   display: grid;
   grid-template-columns: 2fr 9fr;
   box-shadow: var(--bshadow-2);
+  border-radius: 10px;
 }
 
 .tab {
@@ -221,6 +222,7 @@ header a {
   top: 50%;
   left: 50%;
   box-shadow: var(--bshadow-2);
+  border-radius: 10px;
 }
 
 .sport {
