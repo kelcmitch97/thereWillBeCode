@@ -25,7 +25,7 @@ EventCreated.init(
         },
         date_time: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true // Changed for seeding
         },
         sport_id: {
             type: DataTypes.INTEGER,

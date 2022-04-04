@@ -9,13 +9,6 @@ const locationData = [
       venue_type: 'rink-outdoor'
     },
     {
-      id: 241,
-      city_name: 'Toronto',
-      location_name: 'Trinity Bellwoods Park',
-      location_address: '790 Queen Street W, M6J 1G3',
-      venue_type: 'rink-outdoor, baseball-diamond, playing-field, outdoor-drypad'
-    },
-    {
       id: 196,
       city_name: 'Toronto',
       location_name: 'Christie Pits',

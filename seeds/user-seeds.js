@@ -3,7 +3,7 @@ const { User } = require('../models');
 const userData = [
     {
       id: 100,
-      user_name: 'SportsNut',
+      username: 'SportsNut',
       email: 'sportsnut@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
@@ -13,7 +13,7 @@ const userData = [
     },
     {
       id: 101,
-      user_name: 'KeenPlayer',
+      username: 'KeenPlayer',
       email: 'keenplayer@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
@@ -23,7 +23,7 @@ const userData = [
     },
     {
       id: 102,
-      user_name: 'PickupPlayer',
+      username: 'PickupPlayer',
       email: 'pickupplayer@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball',
@@ -33,7 +33,7 @@ const userData = [
     },
     {
       id: 103,
-      user_name: 'LoveToPlay',
+      username: 'LoveToPlay',
       email: 'lovetoplay@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
@@ -43,7 +43,7 @@ const userData = [
     },
     {
       id: 104,
-      user_name: 'SportsEventsFun',
+      username: 'SportsEventsFun',
       email: 'sportseventsfun@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
@@ -53,7 +53,7 @@ const userData = [
     },
     {
       id: 105,
-      user_name: 'GetTogetherSports',
+      username: 'GetTogetherSports',
       email: 'gettogethersports@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
@@ -63,7 +63,7 @@ const userData = [
     },
     {
       id: 106,
-      user_name: 'SportsAreUs',
+      username: 'SportsAreUs',
       email: 'sportsareus@fakemail.com',
       password: 'password123',
       sports: 'hockey, baseball, basketball, soccer',
