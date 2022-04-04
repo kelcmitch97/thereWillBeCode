@@ -26,7 +26,7 @@ MembersUser.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'membersUser',
+        modelName: 'members_user',
     }
 );
 module.exports = MembersUser;
