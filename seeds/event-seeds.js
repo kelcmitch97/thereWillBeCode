@@ -27,11 +27,11 @@ const eventData = [
       id: 102,
       event_name: 'Test Event 102',
       date_time: null,
-      sport: 100, // hockey
+      sport: 500, // tennis
       members_needed: 1,
       location: 77, // using actual Parks & Rec location ids HighPark
       availability: true, // tbd
-      description: 'looking for defence',
+      description: 'looking for doubles partner',
       members: 1
     },
     {
