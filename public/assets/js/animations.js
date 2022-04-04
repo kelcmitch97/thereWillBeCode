@@ -169,6 +169,43 @@
 
 // });
 
+// Video Main page animation
+
+$(document).ready(function(){
+
+    TweenMax.to($('#hero_main_spacer'), 0, { opacity: 0, transformOrigin:"50% 50%", ease:Power1.easeInOut });
+
+    const video = document.getElementById('hero_video');
+
+    video.addEventListener("ended", function(){
+
+        video.currentTime = 0;
+        video.play();
+
+    });
+
+    video.addEventListener("play", function(){
+
+        TweenMax.to($('#hero_main_spacer'), 1, { opacity: 1, transformOrigin:"50% 50%", ease:Power1.easeInOut });
+
+    });
+
+    // No clue why it doesn't go full opacity: 0
+
+    video.addEventListener("timeupdate", function(){
+
+        if (video.currentTime >= 22){
+
+            TweenMax.to($('#hero_main_spacer'), 1, { opacity: 0, transformOrigin:"50% 50%", ease:Power1.easeInOut });
+    
+        }
+
+    });
+
+});
+
+// Hovers on Event page (don't know what CSS is affecting the first dark grey, I think an active?)
+
 $(document).ready(function() {
 
     $('.event_content_spacer').hover(over, out);
