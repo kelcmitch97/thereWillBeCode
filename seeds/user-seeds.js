@@ -6,7 +6,7 @@ const userData = [
       user_name: 'SportsNut',
       email: 'sportsnut@fakemail.com',
       password: 'password123',
-      sports: 'hockey, baseball, basketball, soccer',
+      sports: 'hockey, baseball, basketball, soccer, tennis',
       description: 'looking for players at community level',
       events_created: '',
       events_participating: ''
@@ -16,7 +16,7 @@ const userData = [
       user_name: 'KeenPlayer',
       email: 'keenplayer@fakemail.com',
       password: 'password123',
-      sports: 'hockey, baseball, basketball, soccer',
+      sports: 'hockey, baseball, basketball, soccer, tennis',
       description: 'looking to participate at community level',
       events_created: '',
       events_participating: ''
@@ -56,17 +56,17 @@ const userData = [
       user_name: 'GetTogetherSports',
       email: 'gettogethersports@fakemail.com',
       password: 'password123',
-      sports: 'hockey, baseball, basketball, soccer',
+      sports: 'hockey, baseball, basketball, soccer, tennis',
       description: 'getting community-level players together',
       events_created: '',
       events_participating: ''
     },
     {
-      id: 106,
-      user_name: 'SportsAreUs',
-      email: 'sportsareus@fakemail.com',
+      id: 107,
+      user_name: 'RacketsAndBats',
+      email: 'racketsandbats@fakemail.com',
       password: 'password123',
-      sports: 'hockey, baseball, basketball, soccer',
+      sports: 'baseball, tennis',
       description: 'inclusive community-level sports events',
       events_created: '',
       events_participating: ''
