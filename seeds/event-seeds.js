@@ -73,6 +73,16 @@ const eventData = [
       description: 'skill building and pick-up play for adults all levels',
       members: DataTypes.INTEGER
     },
+    {
+      id: 107,
+      event_name: 'Test Event 107',
+      date_time: 'DataTypes.DATE [tbd]',
+      sport: 500, 
+      location: 514, // using actual Parks & Rec location ids Earlscourt
+      availability: Boolean, // tbd
+      description: 'looking for mixed doubles tennis players',
+      members: DataTypes.INTEGER
+    },
 
   ]
 
