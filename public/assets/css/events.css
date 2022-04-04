@@ -371,10 +371,36 @@ header a {
   align-items: center;
 }
 
+.sport_tab {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+}
+
 .event_content_spacer {
   width: 1000px;
-  height: 20%;
+  height: 96px;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #ccc;
+}
+
+.event_content_spacer h4 {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.event_content_spacer p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 25px;
+}
+
+.sport_tab {
+  display: none;
+}
+
+.active {
+  display: flex;
 }

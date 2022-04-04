@@ -1,5 +1,5 @@
 let tab = document.querySelectorAll(".left_tab");
-let tabContent = document.querySelectorAll(".event_content_spacer");
+let tabContent = document.querySelectorAll(".sport_tab");
 
 tab.forEach((tab,index) => {
     tab.addEventListener("click", () => {
