@@ -27,7 +27,7 @@ const venueData = [
   },
   {
    id: 401,
-   venue: playing-field
+   venue: sports-field
   },
   {
     id: 500,
