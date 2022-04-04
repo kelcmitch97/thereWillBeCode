@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="public/assets/css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Create Event</title>
 
     <link rel="stylesheet" href="./public/assets/css/events.css">
@@ -40,60 +41,74 @@
         </div>
     </header>
 
-<!-- Create Event Form -->
+    <!-- Create Event Form -->
 
-<div class="container">
-    <form id="event-form" class="event-form" method="POST">
-        <div class="form-group">
-            <div class="form-sport">
-                <select>
-                    <option value="0">Select Sport:</option>
-                    <option value="1">Basketball</option>
-                    <option value="2">Baseball</option>
-                    <option value="3">Tennis</option>
-                    <option value="4">Soccer</option>
-                    <option value="5">Hockey</option>
-                </select>
+    <div class="form-container">
+        <h3 class="create-game-title">
+            Create Game
+        </h3>
+        <form id="event-form" class="event-form" method="POST">
+            <div class="form-group form-event-details">
+                <div class="form-sport">
+                    <label for="sport">Sport</label>
+                    <select>
+                        <option value="1">Basketball</option>
+                        <option value="2">Baseball</option>
+                        <option value="3">Tennis</option>
+                        <option value="4">Soccer</option>
+                        <option value="5">Hockey</option>
+                    </select>
+                </div>
+                <div class="form-date">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" class="date" place="Pick a date" />
+                </div>
+                <div class="form-duration">
+                    <label for="duration">Duration</label>
+                    <select>
+                        <option value="1">1 hour</option>
+                        <option value="2">1 1/2 hours</option>
+                        <option value="3">2 hours</option>
+                        <option value="4">3 hours</option>
+                    </select>
+                </div>
+                <div class="form-players">
+                    <label for="players">Players Needed</label>
+                    <span class="modify-qty plus" onClick="Tang()"><i class="zmdi zmdi-chevron-up"></i></span>
+                    <input type="number" name="players" id="players" value="0" min="0" class="nput-text qty text">
+                    <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"></i></span>
+                </div>
+
             </div>
-            <div class="form-date">
-                <label for="date">Date</label>
-                <input type="text" id="date" class="date" place="Pick a date" />
+
+            <div class="form-group form-location">
+                <div class="form-venue">
+                    <label for="venue">Venue Location</label>
+                    <input type="text" id="venue" class="venue" place="Pick a venue location" />
+                </div>
+                <div class="form-city">
+                    <label for="city">City</label>
+                    <select>
+                        <option value="1">Toronto</option>
+                    </select>
+                </div>
+                <div class="form-address">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" class="address" place="Event address" />
+                </div>
+                <div class="form-description">
+                    <label for="info">Description</label>
+                    <input type="text" id="info" class="info" place="Provide any additional details" />
+                </div>
             </div>
-            <div class="form-duration">
-                <select>
-                    <option value="0">Select duration:</option>
-                    <option value="1">1 hour</option>
-                    <option value="2">1 1/2 hours</option>
-                    <option value="3">2 hours</option>
-                    <option value="4">3 hours</option>
-                </select>
-            </div>
-            <div class="form-players">
-                <label for="players">Players Needed</label>
-                <span class="modify-qty plus" onClick="Tang()"><i class="zmdi zmdi-chevron-up"></i></span>
-                <input type="number" name="players" id="players" value="0" min="0" class="nput-text qty text">
-                <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"></i></span>
-            </div>
-            <div class="form-description">
-                <label for="info">Date</label>
-                <input type="text" id="info" class="info" place="Provide any additional details" />
-            </div>
+        </form>
+
+        <!-- Submit -->
+        <div class="form-submit">
+            <input type="submit" id="submit" class="submit" value="Create Game!" />
         </div>
 
-        <div class="form-group form-location">
-            <div class="form-venue">
-                <label for="venue">Venue Location</label>
-                <input type="text" id="venue" class="venue" place="Pick a venue location" />
-            </div>
-            <div class="form-city">
-                <select>
-                    <option value="0">Select City:</option>
-                    <option value="1">Toronto</option>
-                </select>
-            </div>
-        </div>
-    </form>
-</div>
+    </div>
 
 
 </body>
@@ -104,4 +119,3 @@
     crossorigin="anonymous"></script>
 
 </html>
-

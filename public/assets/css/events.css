@@ -231,7 +231,7 @@ header a {
   justify-self: center;
 }
 
-.sport h3 {
+.main-event-title {
   font-size: 1.8em;
   font-weight: 600;
   cursor: pointer;
@@ -324,6 +324,65 @@ header a {
     box-shadow: #422800 2px 2px 0 0;
     transform: translate(2px, 2px);
   }
+
+/* Create Event Page */
+
+.form-container {
+  width: 960px;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  width: 100vmin;
+  min-width: 500px;
+  height: 500px;
+  font-size: 16px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--bshadow-2);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  justify-content: space-around;
+  margin-top: 45px; 
+}
+
+.create-game-title {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  background-color: var(--light-grey); /*maybe change color */
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.form-sport, .form-date, .form-duration, .form-players, .form-description, .form-venue, .form-city, .form-address {
+  width: 250px;
+}
+
+.form-submit {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 
