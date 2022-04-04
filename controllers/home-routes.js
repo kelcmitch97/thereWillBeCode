@@ -75,4 +75,54 @@ router.get('/events', (req, res) => {
 
 });
 
+router.get('/event', (req, res) => {
+  EventCreated.findOne({
+    where: {
+      id: 1, //testing... would be : req.params.id for /event:id
+    },
+      attributes: [
+          'id',
+          'event_name',
+          'members_needed',
+          'description',
+          'user_id',
+          'location_id',
+          'sport_id',
+      ],
+  //     include: [
+  //     {
+  //         model: Comment,
+  //         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+  //         include: {
+  //             model: User,
+  //             attributes: ['username', 'id']
+  //         }
+  //     },
+  //     {
+  //         model: User,
+  //         attributes: ['username']
+  //     }
+  //   ]
+  })
+  
+  .then(eventData => {
+      // const events = eventData.map(event => event.get({ plain: true }));
+
+        res.render('event-page', {
+          eventData,
+          // loggedIn: req.session.loggedIn,
+          // session: req.session
+
+      });
+  })
+  .catch(err => {
+
+      console.log(err);
+
+      res.status(500).json(err);
+
+  });
+
+});
+
 module.exports = router;
