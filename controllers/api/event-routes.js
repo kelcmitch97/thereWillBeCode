@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Event } = require('../../models');
+const { EventCreated } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
-  Event.findAll({
+  EventCreated.findAll({
     // attributes: { exclude: ['password'] }
   })
     .then(eventData => res.json(eventData))
