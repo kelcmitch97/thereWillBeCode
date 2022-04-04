@@ -67,7 +67,7 @@ const eventData = [
       id: 106,
       event_name: 'Test Event 106',
       date_time: 'DataTypes.DATE [tbd]',
-      sport: 400, 
+      sport: 400, // soccer
       location: 508, // using actual Parks & Rec location ids WestonLionsPark
       availability: Boolean, // tbd
       description: 'skill building and pick-up play for adults all levels',
@@ -77,7 +77,7 @@ const eventData = [
       id: 107,
       event_name: 'Test Event 107',
       date_time: 'DataTypes.DATE [tbd]',
-      sport: 500, 
+      sport: 500, // tennis
       location: 514, // using actual Parks & Rec location ids Earlscourt
       availability: Boolean, // tbd
       description: 'looking for mixed doubles tennis players',
