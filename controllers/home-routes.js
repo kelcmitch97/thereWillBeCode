@@ -57,26 +57,68 @@ router.get('/events', (req, res) => {
     
     .then(eventData => {
 
-        const tests = eventData.map(test => test.get({ plain: true }));
+        const events = eventData.map(event => event.get({ plain: true }));
 
         var basketballArray = []
+        var baseballArray = []
+        var hockeyArray = []
+        var tennisArray = []
+        var soccerArray = []
         
-        for (let i = 0; i < tests.length; i++) {
-          
-          if (tests[i].id === 104){
+        for (let i = 0; i < events.length; i++) {
 
-            basketballArray.push(tests[i]);
-            console.log(basketballArray);
+          // EXAMPLE Basketball Array
+          
+          if (events[i].id === 104){
+
+            basketballArray.push(events[i]);
+
+          }
+
+          // EXAMPLE Hockey Array
+
+          if (events[i].id === 100){
+
+            hockeyArray.push(events[i]);
+            // console.log(hockeyArray);
+
+          }
+
+          // EXAMPLE Baseball Array
+
+          if (events[i].id === 103){
+
+            baseballArray.push(events[i]);
+            // console.log(baseballArray);
+
+          }
+
+          // EXAMPLE Tennis Array
+
+          if (events[i].id === 102){
+
+            tennisArray.push(events[i]);
+            // console.log(tennisArray);
+
+          }
+
+          // EXAMPLE Soccer Array
+
+          if (events[i].id === 106){
+
+            soccerArray.push(events[i]);
+            // console.log(soccerArray);
 
           }
           
         }
-
-        const events = eventData.map(event => event.get({ plain: true }));
   
           res.render('events-page', {
-            events,
             basketballArray,
+            baseballArray,
+            hockeyArray,
+            tennisArray,
+            soccerArray,
             // loggedIn: req.session.loggedIn,
             // session: req.session
   
