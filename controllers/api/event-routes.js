@@ -1,56 +1,84 @@
 const router = require('express').Router();
 const { EventCreated } = require('../../models');
 
-// get all users
-router.get('/', (req, res) => {
+router.route('/')
+.get((req, res) => {
   EventCreated.findAll({
-    // attributes: { exclude: ['password'] }
   })
     .then(eventData => res.json(eventData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.get('/:id', (req, res) => {
-  Event.findOne({
-    // attributes: { exclude: ['password'] },
-    where: {
-      id: req.params.id
-    },
-    // include: [
-    //   {
-    //     model: Post,
-    //     attributes: ['id', 'title', 'post_url', 'created_at']
-    //   },
-    //   {
-    //     model: Comment,
-    //     attributes: ['id', 'comment_text', 'created_at'],
-    //     include: {
-    //       model: Post,
-    //       attributes: ['title']
-    //     }
-    //   },
-    //   {
-    //     model: Post,
-    //     attributes: ['title'],
-    //     through: Vote,
-    //     as: 'voted_posts'
-    //   }
-    // ]
-  })
-    .then(eventData => {
-      if (!eventData) {
-        res.status(404).json({ message: 'No user found with this id' });
-        return;
-      }
-      res.json(eventData);
-    })
+})
+.post((req, res) => {
+    EventCreated.create({
+        // username: req.body.username,
+        // email: req.body.email,
+        // password: req.body.password
+    }).then( res.json({message: 'Event Created!'}))
     .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+        console.log(err);
+        res.status(500).json(err);
     });
 });
+
+router.route('/:id')
+.get((req, res) => {
+    EventCreated.findOne({
+        where: {
+        id: req.params.id
+        }
+    })
+    .then(eventData => {
+        if (!eventData) {
+            res.status(404).json({ message: 'No Event found with this id to return.' });
+            return;
+        }
+        res.json(eventData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.put((req, res) => {
+    EventCreated.update(req.body, {
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(eventData => {
+        if (!eventData[0]) {
+            res.status(404).json({ message: 'No Event found with this id to update.' });
+            return;
+        }
+        res.json({message: "Event has been updated"});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.delete((req, res) => {
+    EventCreated.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(eventData => {
+        if (!eventData) {
+            res.status(404).json({ message: 'No Event found with this id to delete.' });
+            return;
+        }
+        res.json({message: "The Event has been deleted."});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 
 module.exports = router;

@@ -23,67 +23,62 @@ router.route('/')
         res.status(500).json(err);
     });
 });
-// router.get('/', (req, res) => {
 
-//   Location.findAll({})
-
-//     .then(locationData => res.json(locationData))
-
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-
-// });
-
-// router.get('/:id', (req, res) => {
-
-//   Location.findOne({
-
-//     where: {
-//       id: req.params.id
-//     },
-    // include: [
-    //   {
-    //     model: Post,
-    //     attributes: ['id', 'title', 'post_url', 'created_at']
-    //   },
-    //   {
-    //     model: Comment,
-    //     attributes: ['id', 'comment_text', 'created_at'],
-    //     include: {
-    //       model: Post,
-    //       attributes: ['title']
-    //     }
-    //   },
-    //   {
-    //     model: Post,
-    //     attributes: ['title'],
-    //     through: Vote,
-    //     as: 'voted_posts'
-    //   }
-    // ]
-//   })
-
-//     .then(locationData => {
-
-//       if (!locationData) {
-//         res.status(404).json({ message: 'No location found with this id' });
-//         return;
-//       }
-
-//       res.json(locationData);
-
-//     })
-
-//     .catch(err => {
-
-//       console.log(err);
-
-//       res.status(500).json(err);
-
-//     });
-
-// });
+router.route('/:id')
+.get((req, res) => {
+    Location.findOne({
+        where: {
+        id: req.params.id
+        }
+    })
+    .then(locationData => {
+        if (!locationData) {
+            res.status(404).json({ message: 'No Location found with this id to return.' });
+            return;
+        }
+        res.json(locationData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.put((req, res) => {
+    Location.update(req.body, {
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(locationData => {
+        if (!locationData[0]) {
+            res.status(404).json({ message: 'No Location found with this id to update.' });
+            return;
+        }
+        res.json({message: "Location has been updated"});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+.delete((req, res) => {
+    Location.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(locationData => {
+        if (!locationData) {
+            res.status(404).json({ message: 'No Location found with this id to delete.' });
+            return;
+        }
+        res.json({message: "The Location has been deleted."});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

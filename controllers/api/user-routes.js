@@ -33,12 +33,12 @@ router.route('/:id')
         id: req.params.id
         }
     })
-    .then(dbUserData => {
-        if (!dbUserData) {
+    .then(userData => {
+        if (!userData) {
             res.status(404).json({ message: 'No user found with this id to return.' });
             return;
         }
-        res.json(dbUserData);
+        res.json(userData);
     })
     .catch(err => {
         console.log(err);
@@ -52,8 +52,8 @@ router.route('/:id')
             id: req.params.id
         }
     })
-    .then(dbUserData => {
-        if (!dbUserData[0]) {
+    .then(userData => {
+        if (!userData[0]) {
             res.status(404).json({ message: 'No user found with this id to update.' });
             return;
         }
@@ -70,8 +70,8 @@ router.route('/:id')
             id: req.params.id
         }
     })
-    .then(dbUserData => {
-        if (!dbUserData) {
+    .then(userData => {
+        if (!userData) {
             res.status(404).json({ message: 'No user found with this id to delete.' });
             return;
         }

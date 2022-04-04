@@ -17,10 +17,14 @@ function openNav() {
 const usersAPI = "./api/users";
 const eventsAPI = "./api/events";
 const locationsAPI = "./api/locations";
+const venuesAPI = "./api/venues";
+const sportsAPI = "./api/sports";
 
 var userData;
 var eventData;
 var locationData;
+var venueData;
+var sportData;
 
 const getUsers = async () => {
 
@@ -34,8 +38,6 @@ const getUsers = async () => {
         for (let i = 0; i < userData.length; i++) {
             
             // console.log(userData[i]);
-
-            $('#location').append(`${userData[i].user_name}`);
             
         }
 
@@ -55,8 +57,6 @@ const getEvents = async () => {
         for (let i = 0; i < eventData.length; i++) {
             
             // console.log(eventData[i]);
-
-            $('#location').append(`\n${eventData[i].event_name}`);
             
         }
 
@@ -73,11 +73,47 @@ const getLocations = async () => {
 
         locationData = data;
 
-        for (let i = 0; i < eventData.length; i++) {
+        for (let i = 0; i < locationData.length; i++) {
             
-            // console.log(eventData[i]);
+            // console.log(locationData[i]);
+            
+        }
 
-            $('#location').append(`\n${locationData[i].location_name}`);
+    });
+
+}
+
+const getVenues = async () => {
+
+    await fetch(venuesAPI)
+    .then(res => res.json())
+
+    .then(function(data){
+
+        venueData = data;
+
+        for (let i = 0; i < venueData.length; i++) {
+            
+            // console.log(venueData[i]);
+            
+        }
+
+    });
+
+}
+
+const getSports = async () => {
+
+    await fetch(sportsAPI)
+    .then(res => res.json())
+
+    .then(function(data){
+
+        sportData = data;
+
+        for (let i = 0; i < sportData.length; i++) {
+            
+            // console.log(sportData[i]);
             
         }
 
