@@ -52,29 +52,16 @@
 
             <div id="basketball_tab" class="sport_tab">
 
-                <div class="event_content_spacer">
+                {{#each basketballArray as |basketball|}}
 
-                    <h4>Event Name1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non deserunt accusamus ab? Quos id officiis cupiditate? Perferendis 
-                        recusandae consectetur placeat a voluptatibus deserunt, dolor voluptas quasi repudiandae incidunt ipsam.</p>
+                    <div class="event_content_spacer">
 
-                </div>
+                    <h4>{{basketball.event_name}}</h4>
+                    <p>{{basketball.description}}</p>
 
-                <div class="event_content_spacer">
+                    </div>
 
-                    <h4>Event Name1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non deserunt accusamus ab? Quos id officiis cupiditate? Perferendis 
-                        recusandae consectetur placeat a voluptatibus deserunt, dolor voluptas quasi repudiandae incidunt ipsam.</p>
-
-                </div>
-
-                <div class="event_content_spacer">
-
-                    <h4>Event Name1</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non deserunt accusamus ab? Quos id officiis cupiditate? Perferendis 
-                        recusandae consectetur placeat a voluptatibus deserunt, dolor voluptas quasi repudiandae incidunt ipsam.</p>
-
-                </div>
+                {{/each}}
 
             </div>
 

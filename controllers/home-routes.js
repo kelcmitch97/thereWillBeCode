@@ -56,10 +56,27 @@ router.get('/events', (req, res) => {
     })
     
     .then(eventData => {
+
+        const tests = eventData.map(test => test.get({ plain: true }));
+
+        var basketballArray = []
+        
+        for (let i = 0; i < tests.length; i++) {
+          
+          if (tests[i].id === 104){
+
+            basketballArray.push(tests[i]);
+            console.log(basketballArray);
+
+          }
+          
+        }
+
         const events = eventData.map(event => event.get({ plain: true }));
   
           res.render('events-page', {
             events,
+            basketballArray,
             // loggedIn: req.session.loggedIn,
             // session: req.session
   
