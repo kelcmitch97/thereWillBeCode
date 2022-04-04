@@ -535,6 +535,7 @@ header a {
 .creator_text p {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 25px;
 }
 
 .right_card_spacer {
