@@ -4,6 +4,28 @@ const db = require('../config/vanilla');
 const { User, EventCreated } = require('../models');
 
 router.get('/', (req, res) => {
+  User.findAll({ })
+  .then(eventData => {
+    const users = eventData.map(user => user.get({ plain: true }));
+
+        res.render('home-page', {
+          users,
+          // loggedIn: req.session.loggedIn,
+          // session: req.session
+
+        });
+  })
+.catch(err => {
+
+    console.log(err);
+
+    res.status(500).json(err);
+
+});
+
+});
+
+router.get('/events', (req, res) => {
     EventCreated.findAll({
       where: {
         // user_id: req.session.user_id
@@ -33,8 +55,8 @@ router.get('/', (req, res) => {
     //   ]
     })
     
-    .then(dbPostData => {
-        const events = dbPostData.map(event => event.get({ plain: true }));
+    .then(eventData => {
+        const events = eventData.map(event => event.get({ plain: true }));
   
           res.render('events-page', {
             events,
