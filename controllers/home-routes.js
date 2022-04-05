@@ -69,7 +69,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Basketball Array
           
-          if (events[i].sport_id === 300){
+          if (events[i].sport_id === 3){
 
             basketballArray.push(events[i]);
 
@@ -77,7 +77,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Hockey Array
 
-          if (events[i].sport_id === 100){
+          if (events[i].sport_id === 1){
 
             hockeyArray.push(events[i]);
             // console.log(hockeyArray);
@@ -86,7 +86,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Baseball Array
 
-          if (events[i].sport_id === 200){
+          if (events[i].sport_id === 2){
 
             baseballArray.push(events[i]);
             // console.log(baseballArray);
@@ -95,7 +95,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Tennis Array
 
-          if (events[i].sport_id === 500){
+          if (events[i].sport_id === 5){
 
             tennisArray.push(events[i]);
             // console.log(tennisArray);
@@ -104,7 +104,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Soccer Array
 
-          if (events[i].sport_id === 400){
+          if (events[i].sport_id === 4){
 
             soccerArray.push(events[i]);
             // console.log(soccerArray);
@@ -181,6 +181,28 @@ router.get('/event', (req, res) => {
       res.status(500).json(err);
 
   });
+
+});
+
+router.get('/create-event', (req, res) => {
+  EventCreated.findAll({ })
+  .then(eventData => {
+    const users = eventData.map(user => user.get({ plain: true }));
+
+        res.render('create-event', {
+
+          // loggedIn: req.session.loggedIn,
+          // session: req.session
+
+        });
+  })
+.catch(err => {
+
+    console.log(err);
+
+    res.status(500).json(err);
+
+});
 
 });
 
