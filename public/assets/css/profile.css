@@ -179,13 +179,17 @@ header a {
 }
 
 button.events-created-btn, .events-participating-btn {
-    background-color: var(--tertiary-color);
-	border: 1px solid var(--tertiary-color);
-	border-radius: 3px;
-	color: #231E39;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	padding: 10px 25px;
+  border: 0;
+  outline: 0;
+  width: 200px;
+  height: 60px;
+  background: #39a6b2;
+  border-radius: 25px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 
 button.events-participating-btn {
@@ -258,5 +262,40 @@ button.events-participating-btn {
     margin-right: auto;
     justify-content: center;
     margin-bottom: 10px;
+    padding: 15px;
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
+}
+
+.event-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.event-image {
+  margin-right: 20px;
+  border-radius: 25px;
+}
+
+.more-details-button button{
+  display: flex;
+  border: 0;
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 60px;
+  background: #39a6b2;
+  border-radius: 25px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 

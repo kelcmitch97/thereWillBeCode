@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="public/assets/css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./public/assets/css/profile.css">
 
     <title>Profile</title>
@@ -20,7 +20,7 @@
 
 </head>
 
-<body >
+<body>
 
     <header>
         <h1>
@@ -46,54 +46,79 @@
 
     <div class="profile-page">
 
-    <!-- Profile Container -->
-    <div class="profile-container">
+        <!-- Profile Container -->
+        <div class="profile-container">
 
-        <img src="./public/assets/images/avatar.jpeg" alt="Profile Picture" id="profile-picture" class="round" width="300" height="300">
-        <h3>Welcome, (username)</h3>
-        <p>Description: Lorem ipsum dolor sit amet.</p>
+            <img src="./public/assets/images/avatar.jpeg" alt="Profile Picture" id="profile-picture" class="round"
+                width="300" height="300">
+            <h3>Welcome, (username)</h3>
+            <p>Description: Lorem ipsum dolor sit amet.</p>
 
-        <div class="events-buttons">
-            <button class="events-created-btn">
-                Events Created
-            </button>
-            <button class="events-participating-btn">
-                Events Participating
-            </button>
+            <div class="events-buttons">
+                <button class="events-created-btn">
+                    Events Created
+                </button>
+                <button class="events-participating-btn">
+                    Events Participating
+                </button>
+            </div>
+
+            <div class="sport-skills">
+                <h6>Sports:</h6>
+                <ul>
+                    <li>Basketball</li>
+                    <!--selected by user-->
+                    <li>Baseball</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="sport-skills">
-            <h6>Sports:</h6>
-            <ul>
-                <li>Basketball</li> <!--selected by user-->
-                <li>Baseball</li>
-            </ul>
+
+        <!-- Events Created Container -->
+
+        <div class="events-created-container">
+
+            <div class="user-events-created">
+                <div class="event-details">
+                    <div class="event-image">
+                        <img src="/public/assets/images/" width="100" height="100">
+                    </div>
+                    <div class="more-details">
+                        <h3>Event Name1</h3>
+                        <p><i class="uil uil-calender button__icon">Insert Date</i></p>
+ 
+                    </div>
+                    <div class="more-details-button">
+                        <button>
+                            More Details <i class="uil uil-arrow-right button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <div class="events-participating-container">
+            <div class="user-events-created">
+                <div class="event-details">
+                    <div class="event-image">
+                        <img src="/public/assets/images/eventicon.png" width="100" height="100">
+                    </div>
+                    <div class="more-details">
+                        <h3>Event Name1</h3>
+                        <p><i class="uil uil-calender button__icon">Insert Date</i></p>
+ 
+                    </div>
+                    <div class="more-details-button">
+                        <button>
+                            More Details <i class="uil uil-arrow-right button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-    <!-- Events Created Container -->
-
-    <div class="events-created-container">
-
-        <div class="user-events-created">
-            Hi 
-        </div>
-        <div class="user-events-created">
-            Hi 
-        </div>
-        <div class="user-events-created">
-            Hi 
-        </div>
-    </div>
-
-    <div class="events-participating-container">
-        <h3>
-            Test
-        </h3>
-    </div>
-
-</div>
 
 
 
