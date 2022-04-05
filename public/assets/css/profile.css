@@ -141,6 +141,12 @@ header a {
   .sidenav a {font-size: 18px;}
 }
 
+
+.profile-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 /* Profile container */
 
 .profile-title {
@@ -151,7 +157,7 @@ header a {
 
 .profile-container {
     background-color: #ffffff;
-    width: 350px;
+    width: 500px;
     max-width: 100%;
     /* height: 300px; */
     text-align: center;
@@ -207,4 +213,19 @@ button.events-participating-btn {
 	font-size: 12px;
 	margin: 0 7px 7px 0;
 	padding: 7px;
+}
+
+/* Events created */
+
+.events-created-container {
+    background-color: #000;
+    color: white;
+    opacity: 0.5;
+    width: 600px;
+    max-width: 100%;
+    padding-top: 30px;
+    position: relative;
+    margin-right: 50px;
+    box-shadow: var(--bshadow-2);
+    border-radius: 10px;
 }
