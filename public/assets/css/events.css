@@ -656,5 +656,27 @@ input, select {
 }
 
 .form-submit {
+  display: flex;
   width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-submit button {
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  background-color: #39a6b2;
+  border-radius: 25px;
+  color: #fff;
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -18,7 +18,7 @@ router.route('/')
         date_time: null,
         sport_id: req.body.sport_id,
         members_needed: req.body.members_needed,
-        location: req.body.location,
+        location_id: req.body.location_id,
         description: req.body.description,
         availability: true
     }).then( res.json({message: 'Event Created!'}))
