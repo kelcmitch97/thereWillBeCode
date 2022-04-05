@@ -20,11 +20,11 @@ const seedAll = async () => {
     await seedLocations();
     console.log('\n----- LOCATIONS SEEDED -----\n');
 
-    await seedEvents();
-    console.log('\n----- EVENTS SEEDED -----\n');
-
     await seedSports();
     console.log('\n----- SPORTS SEEDED -----\n');
+
+    await seedEvents();
+    console.log('\n----- EVENTS SEEDED -----\n');
 
     process.exit(0);
 

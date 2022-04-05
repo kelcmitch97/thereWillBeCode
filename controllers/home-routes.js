@@ -69,7 +69,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Basketball Array
           
-          if (events[i].id === 104){
+          if (events[i].sport_id === 300){
 
             basketballArray.push(events[i]);
 
@@ -77,7 +77,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Hockey Array
 
-          if (events[i].id === 100){
+          if (events[i].sport_id === 100){
 
             hockeyArray.push(events[i]);
             // console.log(hockeyArray);
@@ -86,7 +86,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Baseball Array
 
-          if (events[i].id === 103){
+          if (events[i].sport_id === 200){
 
             baseballArray.push(events[i]);
             // console.log(baseballArray);
@@ -95,7 +95,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Tennis Array
 
-          if (events[i].id === 102){
+          if (events[i].sport_id === 500){
 
             tennisArray.push(events[i]);
             // console.log(tennisArray);
@@ -104,7 +104,7 @@ router.get('/events', (req, res) => {
 
           // EXAMPLE Soccer Array
 
-          if (events[i].id === 106){
+          if (events[i].sport_id === 400){
 
             soccerArray.push(events[i]);
             // console.log(soccerArray);
