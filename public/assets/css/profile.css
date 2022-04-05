@@ -190,6 +190,7 @@ button.events-created-btn, .events-participating-btn {
   font-size: 16px;
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+  cursor: pointer;
 }
 
 button.events-participating-btn {
@@ -232,11 +233,12 @@ button.events-participating-btn {
     margin-right: 50px;
     box-shadow: var(--bshadow-2);
     border-radius: 10px;
-    /* display: none; */
+
 }
 
-/* Events created */
-
+.active {
+  display: none;
+}
 .events-participating-container {
     background-color: #000;
     opacity: 0.5;
@@ -247,7 +249,6 @@ button.events-participating-btn {
     margin-right: 50px;
     box-shadow: var(--bshadow-2);
     border-radius: 10px;
-    display: none;
 }
 
 .user-events-created {
