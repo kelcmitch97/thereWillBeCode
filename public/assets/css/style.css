@@ -108,6 +108,11 @@ header a {
     text-shadow: none;
   }
 
+  a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
   /* navbar */
 
 .sidenav {

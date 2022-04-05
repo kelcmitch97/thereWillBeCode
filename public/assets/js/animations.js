@@ -224,12 +224,12 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    $('.event_content_spacer').on('click', function(){
+//     $('.event_content_spacer').on('click', function(){
 
-        document.location.replace('/event');
+//         document.location.replace('/event');
 
-    });
+//     });
 
-});
+// });

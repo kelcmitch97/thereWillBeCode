@@ -14,7 +14,7 @@
 
         <div class="event_card_header">
 
-            <h3>Event Example</h3>
+            <h3>{{event.event_name}}</h3>
 
         </div>
 
@@ -27,7 +27,7 @@
                     <div class="creator_header">
 
                         <span class="icon_spacer">
-                            <img src="./assets/images/avatar.jpeg" />
+                            <img src="/assets/images/avatar.jpeg" />
                         </span>
 
                         <div class="creator_text">
@@ -77,7 +77,7 @@
 
                         <span><i class="uil uil-location-point event_icon"></i></span>
 
-                        <p>Location</p>
+                        <p>{{event.location_id}}</p>
 
                     </div>
 
@@ -85,7 +85,7 @@
 
                         <span><i class="uil uil-users-alt event_icon"></i></span>
 
-                        <p>Players Needed</p>
+                        <p>Players Needed: {{event.members_needed}}</p>
 
                     </div>
 
@@ -93,7 +93,7 @@
 
                         <span><i class="uil uil-info-circle event_icon"></i></span>
 
-                        <p>Details</p>
+                        <p>{{event.description}}</p>
 
                     </div>
 

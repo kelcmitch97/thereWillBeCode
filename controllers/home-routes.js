@@ -134,10 +134,10 @@ router.get('/events', (req, res) => {
 
 });
 
-router.get('/event', (req, res) => {
+router.get('/event/:id', (req, res) => {
   EventCreated.findOne({
     where: {
-      id: 1, //testing... would be : req.params.id for /event:id
+      id: req.params.id
     },
       attributes: [
           'id',
@@ -165,10 +165,11 @@ router.get('/event', (req, res) => {
   })
   
   .then(eventData => {
-      // const events = eventData.map(event => event.get({ plain: true }));
+
+    const event = eventData.get({ plain: true });
 
         res.render('event-page', {
-          eventData,
+          event,
           // loggedIn: req.session.loggedIn,
           // session: req.session
 
