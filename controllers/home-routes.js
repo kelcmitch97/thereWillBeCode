@@ -187,7 +187,7 @@ router.get('/event', (req, res) => {
 router.get('/create-event', (req, res) => {
   EventCreated.findAll({ })
   .then(eventData => {
-    const users = eventData.map(user => user.get({ plain: true }));
+    const events = eventData.map(user => user.get({ plain: true }));
 
         res.render('create-event', {
 

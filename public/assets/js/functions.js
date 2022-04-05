@@ -120,3 +120,32 @@ const getSports = async () => {
     });
 
 }
+
+async function newEvent(event) {
+    event.preventDefault();
+
+    const sport_id = document.querySelector('.form-sport select').value;
+    const members_needed = document.querySelector('#players').value;
+    const location = document.querySelector('.form-venue select').value;
+    const description = document.querySelector('#info').value;
+    
+    const response = await fetch(`/api/events/`, {
+        method: 'POST',
+        body: JSON.stringify({
+            sport_id,
+            members_needed,
+            location,
+            description,
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert(response.statusText);
+    }
+  };
+
+  document.querySelector('#submit').addEventListener('click', newEvent);
