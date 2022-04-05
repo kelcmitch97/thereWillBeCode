@@ -228,4 +228,35 @@ button.events-participating-btn {
     margin-right: 50px;
     box-shadow: var(--bshadow-2);
     border-radius: 10px;
+    /* display: none; */
 }
+
+/* Events created */
+
+.events-participating-container {
+    background-color: #000;
+    opacity: 0.5;
+    width: 600px;
+    max-width: 100%;
+    padding-top: 30px;
+    position: relative;
+    margin-right: 50px;
+    box-shadow: var(--bshadow-2);
+    border-radius: 10px;
+    display: none;
+}
+
+.user-events-created {
+    background-color: #ffffff;
+    box-shadow: var(--bshadow-2);
+    border-radius: 10px;
+    height: 150px;
+    color: black;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
