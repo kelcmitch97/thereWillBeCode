@@ -18,7 +18,7 @@
     z-index: 1,
 }
 
-#hero_main_spacer {
+#hero_main_spacer, #hero_signup_spacer {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -64,6 +64,7 @@
     color: #fff;
     font-family: 'Poppins';
     font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 
 .hero_content_line {
@@ -74,4 +75,52 @@
     /* mix-blend-mode: luminosity; */
     mix-blend-mode: screen;
     /* mix-blend-mode: hard-light; */
+}
+
+#hero_main_spacer {
+    display: none;
+}
+
+#hero_signup_spacer {
+    opacity: 1;
+}
+
+#hero_signup_spacer form {
+    display: flex;
+    width: 300px;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.hero_login_input {
+    display: flex;
+    position: relative;
+    height: 34px;
+    margin-bottom: 10px;
+}
+
+#hero_signup_spacer input {
+    display: flex;
+    height: 34px!important;
+    border-radius: 17px;
+    padding-left: 50px!important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+input[type="password"]{
+    letter-spacing: 2px;
+}
+
+.hero_login_input span {
+    position: absolute;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    left: 2px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
 }
