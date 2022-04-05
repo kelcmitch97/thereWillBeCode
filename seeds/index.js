@@ -2,6 +2,7 @@ const seedUsers = require('./user-seeds');
 const seedLocations = require('./location-seeds');
 const seedEvents = require('./event-seeds');
 const seedSports = require('./sports-seeds');
+const seedVenues = require('./venue-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -13,6 +14,9 @@ const seedAll = async () => {
     await seedUsers();
     console.log('\n----- USERS SEEDED -----\n');
 
+    await seedVenues();
+    console.log('\n----- VENUES SEEDED -----\n');
+
     await seedLocations();
     console.log('\n----- LOCATIONS SEEDED -----\n');
 
@@ -21,9 +25,9 @@ const seedAll = async () => {
 
     await seedSports();
     console.log('\n----- SPORTS SEEDED -----\n');
-  
+
     process.exit(0);
-    
+
   };
-  
+
   seedAll();

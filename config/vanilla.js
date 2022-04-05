@@ -13,9 +13,9 @@ const db = mysql.createConnection(
       // USE YOUR MySQL password
       password: dbPassword,
       // Database Name
-      database: 'techBlog'
+      database: 'pick_up_sports'
     },
-    console.log('Connected to techBlog database')
+    console.log('Connected to pick_up_sports database')
   );
 
 module.exports = db;
