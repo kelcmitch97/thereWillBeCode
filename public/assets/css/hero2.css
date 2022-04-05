@@ -18,7 +18,7 @@
     z-index: 1,
 }
 
-#hero_main_spacer, #hero_signup_spacer {
+#hero_main_spacer, #hero_login_spacer {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -78,14 +78,14 @@
 }
 
 #hero_main_spacer {
+    display: flex;
+}
+
+#hero_login_spacer {
     display: none;
 }
 
-#hero_signup_spacer {
-    opacity: 1;
-}
-
-#hero_signup_spacer form {
+#hero_login_spacer form {
     display: flex;
     width: 300px;
     height: fit-content;
@@ -99,7 +99,7 @@
     margin-bottom: 10px;
 }
 
-#hero_signup_spacer input {
+#hero_login_spacer input {
     display: flex;
     height: 34px!important;
     border-radius: 17px;

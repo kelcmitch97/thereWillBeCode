@@ -26,7 +26,15 @@
 
             <div class="hero_content_line">
 
-                <button>Login</button>
+                {{#if loggedIn}}
+
+                <button id="create_main_login">Create Event</button>
+
+                {{else}}
+
+                <button id="hero_main_login">Login</button>
+
+                {{/if}}
 
             </div>
 
@@ -34,15 +42,15 @@
 
     </div>
 
-    <div id="hero_signup_spacer">
+    <div id="hero_login_spacer">
 
-        <form>
+        <form id="hero_login_form">
 
             <div class="hero_login_input">
 
                 <span><i class="uil uil-user-circle"></i></span>
 
-                <input type="text" name="username" />
+                <input type="text" id="main_user" />
 
             </div>
 
@@ -50,7 +58,7 @@
 
                 <span><i class="uil uil-keyhole-circle"></i></span>
 
-                <input type="password" name="username" />
+                <input type="password" id="main_password" />
 
             </div>
 
@@ -64,7 +72,7 @@
 
     </div>
 
-    <div id="hero_login_spacer"></div>
+    <div id="hero_signup_spacer"></div>
 
 </div>
 

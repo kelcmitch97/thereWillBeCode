@@ -5,12 +5,11 @@ const { User, EventCreated } = require('../models');
 
 router.get('/', (req, res) => {
   User.findAll({ })
-  .then(eventData => {
-    const users = eventData.map(user => user.get({ plain: true }));
-
+  .then(userData => {
+    
         res.render('home-page', {
           users,
-          // loggedIn: req.session.loggedIn,
+          loggedIn: req.session.loggedIn,
           // session: req.session
 
         });
