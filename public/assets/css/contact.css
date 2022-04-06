@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 100px;
+    /* margin-top: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("../images/game.jpg");
+    background-size: cover;
+
+    
+    
+
+
+}
+
+/* .contactInfo  {
+
+    margin-top: 10px;
+} */
+
+.contact .content {
+    max-width: 400px;
+    text-align:center;
+
+
+    
+
+    
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    bottom: 100px;
+    right: 350px;
+    
+
+}
+
+.contact .content p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    bottom: 80px;
+    right: 350px;
+
+    
+    
+}
+
+
+.container {
+    width: 100%;
+    height: 800px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 30px; */
+}
+
+.container .contactInfo{
+    width: 50%;
+    height: 10px;
+    /* display: flex;
+    flex-direction: column; */
+
+    position: relative;
+
+    bottom: 150px;
+    right: 40px;
+
+   
+
+}
+
+.container .contactInfo .box{
+    /* position: relative; */
+    padding: 20px;
+    display: flex;
+
+
+}
+
+container .contactInfo .box .icon{
+    min-width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+     margin: 40px; 
+    align-items: center;
+     border-radius: 22px; 
+    
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    /* margin-left: 20px; */
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+
+
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.contactForm{
+    width: 30%;
+    padding: 30px;
+    background: #fff;
+
+}
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input, textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 25px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+
+}
+
+.contactForm .inputBox input:focus ~ span{
+color:  #e91e63;
+font-size: 12px;
+transform: translate(-20px);
+}
+
+.contactForm .inputBox input:valid ~ span{
+
+    color:  #e91e63;
+font-size: 12px;
+transform: translate(-20px);
+
+}
+.contactForm .inputBox textarea:focus ~ span{
+    color:  #e91e63;
+    font-size: 12px;
+    transform: translate(-20px);
+}
+
+.contactForm .inputBox textarea:valid ~ span{
+
+    color:  #e91e63;
+    font-size: 12px;
+    transform: translate(-20px);
+}
+
+.contactForm .inputBox input[type = "submit"]{
+    width: 100px;
+    background: #666;
+    border: none;
+    cursor: pointer;
+    padding: 18px;
+    font-size: 18px;
+
+}
+/* 
+@media screen (max-width: 991px;){
+
+    
+} */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #mainNav {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
