@@ -29,6 +29,7 @@
   box-shadow: var(--bshadow-2);
   border-radius: 10px;
   flex-direction: row;
+  z-index: 2;
 }
 
 .profile_nav {
