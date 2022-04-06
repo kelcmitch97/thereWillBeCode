@@ -145,7 +145,8 @@ header a {
 .profile-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 1200px;
 }
 /* Profile container */
 
@@ -236,9 +237,6 @@ button.events-participating-btn {
 
 }
 
-.active {
-  display: none;
-}
 .events-participating-container {
     background-color: #000;
     opacity: 0.5;
