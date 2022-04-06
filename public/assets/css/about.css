@@ -230,10 +230,10 @@
     width: 40%;
     background-color: #ffffff;
     top: 50%;
-    left: 60%;
+    left: 70%;
     width: 45vmin;
-    min-width: 250px;
-    height: 300px;
+    min-width: 350px;
+    height: 500px;
     font-size: 18px;
     position: absolute;
     transform: translate(-50%, -50%);
