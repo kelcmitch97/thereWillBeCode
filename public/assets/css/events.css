@@ -23,6 +23,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  background: url('../images/tennis_full.jpg') #188a97 no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
 }
 
 #events_spacer {
@@ -103,6 +106,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  background: url('../images/soccer_full.jpg') #188a97 no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
 }
 
 #event_card_spacer {
@@ -294,6 +300,21 @@ body {
 }
 
 /* Create Event Page */
+
+#form_page_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/basketball_full.jpg') #188a97 no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
 
 .form-container {
   width: 960px;
