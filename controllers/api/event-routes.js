@@ -14,8 +14,9 @@ router.route('/')
 .post((req, res) => {
     EventCreated.create({
         // event_name, availability and date_time set to bypass difficult
-        event_name: 'test event name',
-        date_time: null,
+        user_id: req.session.user_id,
+        event_name: req.body.event_name,
+        date_time: req.body.date_time,
         sport_id: req.body.sport_id,
         members_needed: req.body.members_needed,
         location_id: req.body.location_id,

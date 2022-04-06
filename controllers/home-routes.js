@@ -8,11 +8,11 @@ router.get('/', (req, res) => {
   .then(userData => {
     
         res.render('home-page', {
-          users,
           loggedIn: req.session.loggedIn,
           // session: req.session
 
         });
+        
   })
 .catch(err => {
 
@@ -207,11 +207,18 @@ router.get('/create-event', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-  // if (req.session.loggedIn) {
-  //     res.redirect('/');
-  //     return;
-  // }
-  res.render('profile-page');
+  EventCreated.findAll({ })
+  .then(eventData => {
+    
+    const events = eventData.map(user => user.get({ plain: true }));
+
+        res.render('profile-page', {
+
+          // loggedIn: req.session.loggedIn,
+          session: req.session
+
+        });
+  })
 });
 
 

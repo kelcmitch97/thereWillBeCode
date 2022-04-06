@@ -19,7 +19,21 @@ router.route('/')
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
-    }).then( res.json({message: 'User Created!'}))
+    }).then(dbUserData => {
+
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+        
+            res.json(dbUserData);
+          });
+
+        res.json({message: 'User Created!'})
+    
+    
+    })
+
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -94,7 +108,7 @@ router.post('/login', (req, res) => {
         res.status(400).json({ message: 'No user with that username...' });
         return;
       }
-  
+
       const validPassword = dbUserData.checkPassword(req.body.password);
   
       if (!validPassword) {
@@ -106,6 +120,7 @@ router.post('/login', (req, res) => {
         
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
+        req.session.description = dbUserData.description;
         req.session.loggedIn = true;
   
         res.json({ user: dbUserData, message: 'You are now logged in!' });

@@ -9,8 +9,8 @@
 
             <img src="/assets/images/avatar.jpeg" alt="Profile Picture" id="profile-picture" class="round"
                 width="300" height="300">
-            <h3>Welcome, (username)</h3>
-            <p>Description: Lorem ipsum dolor sit amet.</p>
+            <h3>Welcome, {{session.username}}</h3>
+            <p>Description: {{session.description}}</p>
 
             <div class="events-buttons">
                 <button class="events-created-btn">
