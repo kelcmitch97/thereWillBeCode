@@ -187,6 +187,7 @@ router.get('/event/:id', (req, res) => {
 router.get('/create-event', (req, res) => {
   EventCreated.findAll({ })
   .then(eventData => {
+
     const events = eventData.map(user => user.get({ plain: true }));
 
         res.render('create-event', {
@@ -207,10 +208,39 @@ router.get('/create-event', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-  EventCreated.findAll({ })
+  EventCreated.findAll({ 
+    where: {
+      user_id: req.session.id
+    },
+    attributes: [
+      'id',
+      'event_name',
+      'members_needed',
+      'description',
+      'user_id',
+      'location_id',
+      'sport_id',
+    ],
+    include: [
+          // {
+          //   model: Comment,
+          //   attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          //   include: {
+          //       model: User,
+          //       attributes: ['username', 'id']
+          //   }
+          // },
+          // {
+          //   model: User,
+          //   attributes: ['username']
+          // }
+        ]
+   })
   .then(eventData => {
     
     const events = eventData.map(user => user.get({ plain: true }));
+
+    console.log(events)
 
         res.render('profile-page', {
 
