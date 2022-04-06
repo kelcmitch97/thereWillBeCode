@@ -1,15 +1,17 @@
-$('.events-participating-container').css('display', 'none');
+$('#events_participating').css('display', 'none');
 
-$('.events-participating-btn').on('click', function(){
+$('#participating_tab').on('click', function(){
 
-    TweenMax.to($('.events-created-container'), 0, { display: 'none' });
-    TweenMax.to($('.events-participating-container'), 0, { display: 'flex' });
+    console.log('?')
+
+    TweenMax.to($('#events_created'), 0, { display: 'none' });
+    TweenMax.to($('#events_participating'), 0, { display: 'flex' });
 
 });
 
-$('.events-created-btn').on('click', function(){
+$('#created_tab').on('click', function(){
 
-    TweenMax.to($('.events-created-container'), 0, { display: 'flex' });
-    TweenMax.to($('.events-participating-container'), 0, { display: 'none' });
+    TweenMax.to($('#events_created'), 0, { display: 'flex' });
+    TweenMax.to($('#events_participating'), 0, { display: 'none' });
 
 });

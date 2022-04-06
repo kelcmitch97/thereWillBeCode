@@ -1,81 +1,163 @@
-<h2 class="profile-title">
-        Profile
-    </h2>
+<div id="profile_page_container">
 
-    <div class="profile-page">
+    <div class="page_header_container">
 
-        <!-- Profile Container -->
-        <div class="profile-container">
+        <h2>(USERNAME) PROFILE</h2>
 
-            <img src="/assets/images/avatar.jpeg" alt="Profile Picture" id="profile-picture" class="round"
-                width="300" height="300">
-            <h3>Welcome, {{session.username}}</h3>
-            <p>Description: {{session.description}}</p>
+    </div>
 
-            <div class="events-buttons">
-                <button class="events-created-btn">
-                    Events Created
-                </button>
-                <button class="events-participating-btn">
-                    Events Participating
-                </button>
-            </div>
+    <nav class="profile_nav">
 
-            <div class="sport-skills">
-                <h6>Sports:</h6>
-                <ul>
-                    <!--selected by user-->
-                    <li>Basketball</li>
-                    <li>Baseball</li>
-                </ul>
-            </div>
-        </div>
+        <div id="participating_tab" class="profile_event">
 
-
-        <!-- Events Created Container -->
-
-        <div class="events-created-container">
-
-            <div class="user-events-created">
-                <div class="event-details">
-                    <div class="event-image">
-                        <img src="/assets/images/eventicon.png" width="100" height="100">
-                    </div>
-                    <div class="more-details">
-                        <h3>Event Name1</h3>
-                        <p><i class="uil uil-calender button__icon">Insert Date</i></p>
- 
-                    </div>
-                    <div class="more-details-button">
-                        <button>
-                            More Details <i class="uil uil-arrow-right button__icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <p>Participating</p>
 
         </div>
 
-        <div class="events-participating-container">
-            <div class="user-events-created">
-                <div class="event-details">
-                    <div class="event-image">
-                        <img src="/assets/images/eventicon.png" width="100" height="100">
-                    </div>
-                    <div class="more-details">
-                        <h3>Event Name2</h3>
-                        <p><i class="uil uil-calender button__icon">Insert Date</i></p>
- 
-                    </div>
-                    <div class="more-details-button">
-                        <button>
-                            More Details <i class="uil uil-arrow-right button__icon"></i>
-                        </button>
-                    </div>
+        <div id="created_tab" class="profile_event">
+
+            <p>Created</p>
+
+        </div>
+
+    </nav>
+
+    <div class="profile_panel_container">
+
+        <div class="profile_panel_left">
+
+            <div class="profile_spacer">
+
+                <div class="profile_image">
+
+                    <img src="/assets/images/avatar.jpeg" />
+
                 </div>
+
+                <div class="profile_info">
+
+                    <h3>USERNAME</h3>
+
+                    <p>DESCRIPTION</p>
+
+                </div>
+
+                <div class="profile_sports">
+
+                    <p>Baseball</p>
+
+                    <p>Hockey</p>
+
+                </div>
+
             </div>
+
+        </div>
+
+        <div class="profile_panel_right">
+
+            <div id="events_participating" class="profile_event_spacer">
+
+                <div class="profile_event_container">
+
+                    <div class="profile_event_icon">
+
+                        <img src="/assets/images/eventicon.png" />
+
+                    </div>
+
+                    <div class="profile_event_info">
+
+                        <h3>PARTICIPATING Event</h3>
+
+                        <div class="profile_event_date">
+                        
+                            <i class="uil uil-calender button__icon"></i>
+
+                            <p>Event Date</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile_event_button">
+
+                        <button>More Info</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="events_created" class="profile_event_spacer">
+
+                <div class="profile_event_container">
+
+                    <div class="profile_event_icon">
+
+                        <img src="/assets/images/eventicon.png" />
+
+                    </div>
+
+                    <div class="profile_event_info">
+
+                        <h3>CREATED Event</h3>
+
+                        <div class="profile_event_date">
+                        
+                            <i class="uil uil-calender button__icon"></i>
+
+                            <p>Event Date</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile_event_button">
+
+                        <button>More Info</button>
+
+                    </div>
+
+                </div>
+
+                <div class="profile_event_container">
+
+                    <div class="profile_event_icon">
+
+                        <img src="/assets/images/eventicon.png" />
+
+                    </div>
+
+                    <div class="profile_event_info">
+
+                        <h3>CREATED Event</h3>
+
+                        <div class="profile_event_date">
+                        
+                            <i class="uil uil-calender button__icon"></i>
+
+                            <p>Event Date</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile_event_button">
+
+                        <button>More Info</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
-    <script src="/assets/js/profile-page.js"></script>
+</div>
+
+<script src="/assets/js/profile-page.js"></script>
