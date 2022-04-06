@@ -14,9 +14,7 @@
 
     <title>PickUp - Find Your Team</title>
 
-    <!-- <link rel="stylesheet" href="./public/assets/css/reset.css"> -->
     <link rel="stylesheet" href="./public/assets/css/style.css">
-    <link rel="stylesheet" href="./public/assets/css/hero2.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -36,6 +34,9 @@
                     <a href="/">Home </a>
                 </li>
                 <li>
+                    <a href="/">About </a>
+                </li>
+                <li>
                     <a href="/events">Events </a>
                 </li>
                 <li>
@@ -47,9 +48,6 @@
             </ul>
         </nav>
     </header>
-
-
-
 
     <!-- Hero -->
     <div id="hero_2">
@@ -94,11 +92,61 @@
 
     </div>
 
+    <!-- Look for Events -->
+
+    <div class="event_section section" id="events">
+        <h2 class="section_title">Events</h2>
+        <span class="section_subtitle">Happening Soon...</span>
+        <div class="event_container eventcontainer swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Event 1 -->
+                <div class="event_content grid swiper-slide">
+                    <img src="./public/assets/images/placeholder.jpeg" alt="Event1" class="event_img">
+
+                    <div class="event_data">
+                        <h3 class="event_title">Event Name</h3>
+                        <p class="event_location">Location</p>
+                        <p class="event_day">Day/Time</p>
+                        <a href="./event.html" class="button button--flex button--small event_button">
+                            More info
+                            <i class="uil uil-info-circle button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Event 1 -->
+                <div class="event_content grid swiper-slide">
+                    <img src="./public/assets/images/placeholder.jpeg" alt="Event2" class="event_img">
+
+                    <div class="event_data">
+                        <h3 class="event_title">Event Name</h3>
+                        <p class="event_location">Location</p>
+                        <p class="event_day">Day/Time</p>
+                        <a href="./event.html" class="button button--flex button--small event_button">
+                            More info
+                            <i class="uil uil-info-circle button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-event-icon"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-event-icon"></i>
+            </div>
+            <div class="swiper-pagination">
+
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 <script src="./public/assets/js/swiper-bundle.min.js"></script>
 <script src="./public/assets/js/functions.js"></script>
 <script src="./public/assets/js/animations.js"></script>
-<!-- <script src="./public/assets/js/login.js"></script> -->
 
 </html>
