@@ -210,40 +210,41 @@ router.get('/create-event', (req, res) => {
 router.get('/profile', (req, res) => {
   EventCreated.findAll({ 
     where: {
-      user_id: req.session.id
+      user_id: req.session.user_id
     },
-    attributes: [
-      'id',
-      'event_name',
-      'members_needed',
-      'description',
-      'user_id',
-      'location_id',
-      'sport_id',
-    ],
-    include: [
-          // {
-          //   model: Comment,
-          //   attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-          //   include: {
-          //       model: User,
-          //       attributes: ['username', 'id']
-          //   }
-          // },
-          // {
-          //   model: User,
-          //   attributes: ['username']
-          // }
-        ]
+    // attributes: [
+    //   'id',
+    //   'event_name',
+    //   'members_needed',
+    //   'description',
+    //   'user_id',
+    //   'location_id',
+    //   'sport_id',
+    // ],
+    // include: [
+    //       // {
+    //       //   model: Comment,
+    //       //   attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+    //       //   include: {
+    //       //       model: User,
+    //       //       attributes: ['username', 'id']
+    //       //   }
+    //       // },
+    //       // {
+    //       //   model: User,
+    //       //   attributes: ['username']
+    //       // }
+    //     ]
    })
   .then(eventData => {
     
     const events = eventData.map(user => user.get({ plain: true }));
 
-    console.log(events)
+    console.log(events);
+    console.log(req.session);
 
         res.render('profile-page', {
-
+          events,
           // loggedIn: req.session.loggedIn,
           session: req.session
 

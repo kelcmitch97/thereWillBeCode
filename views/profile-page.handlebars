@@ -82,35 +82,7 @@
 
             <div id="events_created" class="profile_event_spacer">
 
-                <div class="profile_event_container">
-
-                    <div class="profile_event_icon">
-
-                        <img src="/assets/images/eventicon.png" />
-
-                    </div>
-
-                    <div class="profile_event_info">
-
-                        <h3>CREATED Event</h3>
-
-                        <div class="profile_event_date">
-                        
-                            <i class="uil uil-calender button__icon"></i>
-
-                            <p>Event Date</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="profile_event_button">
-
-                        <button>More Info</button>
-
-                    </div>
-
-                </div>
+                {{#each events as |event|}}
 
                 <div class="profile_event_container">
 
@@ -122,13 +94,13 @@
 
                     <div class="profile_event_info">
 
-                        <h3>CREATED Event</h3>
+                        <h3>{{event.event_name}}</h3>
 
                         <div class="profile_event_date">
                         
                             <i class="uil uil-calender button__icon"></i>
 
-                            <p>Event Date</p>
+                            <p>{{format_date event.date_time}}</p>
 
                         </div>
 
@@ -136,11 +108,13 @@
 
                     <div class="profile_event_button">
 
-                        <button>More Info</button>
+                        <a href="/event/{{event.id}}"><button>More Info</button></a>
 
                     </div>
 
                 </div>
+
+                {{/each}}
 
             </div>
 
