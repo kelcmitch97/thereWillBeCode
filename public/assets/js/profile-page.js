@@ -1,7 +1,5 @@
 $('#participating_tab').on('click', function(){
 
-    console.log('?')
-
     TweenMax.to($('#events_created'), 0, { display: 'none' });
     TweenMax.to($('#events_participating'), 0, { display: 'flex' });
 
@@ -32,23 +30,23 @@ const getUsers = async () => {
 
         // Check for user
         
-        for (let i = 0; i < userData.length; i++) {
-            
-            if (userText === userData[i].username){
+            for (let i = 0; i < userData.length; i++) {
+                
+                if (userText === userData[i].username){
 
-                var sportArray = userData[i].sports.split(',');
+                    var sportArray = userData[i].sports.split(',');
 
-                for (let i = 0; i < sportArray.length; i++) {
-                    
-                    $('.profile_sports').append(`
-                        <p>${sportArray[i]}</p>
-                    `)
-                    
+                    for (let i = 0; i < sportArray.length; i++) {
+                        
+                        $('.profile_sports').append(`
+                            <p>${sportArray[i]}</p>
+                        `)
+                        
+                    }
+
                 }
-
+                
             }
-            
-        }
 
     });
 

@@ -42,7 +42,8 @@ User.init(
         },
         description:{
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: true,
+            defaultValue: 'Description goes here'
         }
     },
     {

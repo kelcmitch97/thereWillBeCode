@@ -24,9 +24,10 @@ router.route('/')
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
+            req.session.description = dbUserData.description;
             req.session.loggedIn = true;
         
-            res.json(dbUserData);
+            // res.json(dbUserData);
           });
 
         res.json({message: 'User Created!'})
