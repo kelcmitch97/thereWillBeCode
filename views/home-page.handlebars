@@ -38,6 +38,8 @@
 
                 <button id="hero_main_login">Login</button>
 
+                <button id="hero_main_register">Register</button>
+
                 {{/if}}
 
             </div>
@@ -54,7 +56,7 @@
 
                 <span><i class="uil uil-user-circle"></i></span>
 
-                <input type="text" id="main_user" />
+                <input type="text" id="main_user" placeholder="Username"/>
 
             </div>
 
@@ -62,7 +64,7 @@
 
                 <span><i class="uil uil-keyhole-circle"></i></span>
 
-                <input type="password" id="main_password" />
+                <input type="password" id="main_password" placeholder="Password"/>
 
             </div>
 
@@ -76,8 +78,46 @@
 
     </div>
 
-    <div id="hero_signup_spacer"></div>
+    <div id="hero_signup_spacer">
+
+        <form id="hero_register_form">
+
+            <div class="hero_register_input">
+
+                <span><i class="uil uil-user-circle"></i></span>
+
+                <input type="text" id="register_user" placeholder="Username" />
+
+            </div>
+
+            <div class="hero_register_input">
+
+                <span><i class="uil uil-at"></i></span>
+
+                <input type="text" id="register_email" placeholder="E-mail" />
+
+            </div>
+
+            <div class="hero_register_input">
+
+                <span><i class="uil uil-keyhole-circle"></i></span>
+
+                <input type="password" id="register_password" placeholder="Password" />
+
+            </div>
+
+            <div class="hero_content_line">
+
+                <button type="submit">Register</button>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </div>
 
 <script src="/assets/js/home-page.js"></script>
+
+<!-- <i class="uil uil-at"></i> -->

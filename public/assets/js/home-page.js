@@ -7,6 +7,15 @@ $('#hero_main_login').on('click', function(){
 
 });
 
+$('#hero_main_register').on('click', function(){
+
+    TweenMax.to($('#hero_main_spacer'), 0.5, { opacity: 0, transformOrigin:"50% 50%", ease:Power1.easeInOut });
+    TweenMax.to($('#hero_main_spacer'), 0, { delay: 0.5, display: 'none' });
+    TweenMax.to($('#hero_signup_spacer'), 0, { delay: 0.5, display: 'flex' });
+    TweenMax.to($('#hero_signup_spacer'), 0.5, { delay: 0.5, opacity: 1, transformOrigin:"50% 50%", ease:Power1.easeInOut });
+
+});
+
 $(document).ready(function(){
 
     TweenMax.to($('#hero_main_spacer'), 0, { opacity: 0, transformOrigin:"50% 50%", ease:Power1.easeInOut });

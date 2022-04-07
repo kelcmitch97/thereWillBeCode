@@ -18,7 +18,7 @@
     z-index: 1,
 }
 
-#hero_main_spacer, #hero_login_spacer {
+#hero_main_spacer, #hero_login_spacer, #hero_signup_spacer {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -67,6 +67,10 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 
+.hero_content_line button:nth-child(2) {
+    margin-left: 20px;
+}
+
 .hero_content_line {
     font-size: 30px;
 }
@@ -85,21 +89,25 @@
     display: none;
 }
 
-#hero_login_spacer form {
+#hero_signup_spacer {
+    display: none;
+}
+
+#hero_login_spacer form, #hero_signup_spacer form {
     display: flex;
     width: 300px;
     height: fit-content;
     flex-direction: column;
 }
 
-.hero_login_input {
+.hero_login_input, .hero_register_input {
     display: flex;
     position: relative;
     height: 34px;
     margin-bottom: 10px;
 }
 
-#hero_login_spacer input {
+#hero_login_spacer input, #hero_signup_spacer input {
     display: flex;
     height: 34px!important;
     border-radius: 17px;
@@ -110,11 +118,15 @@
     font-weight: 600;
 }
 
+input::placeholder {
+    letter-spacing: 0px;
+}
+
 input[type="password"]{
     letter-spacing: 2px;
 }
 
-.hero_login_input span {
+.hero_login_input span, .hero_register_input span {
     position: absolute;
     display: flex;
     width: 34px;

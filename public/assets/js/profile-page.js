@@ -1,5 +1,3 @@
-$('#events_participating').css('display', 'none');
-
 $('#participating_tab').on('click', function(){
 
     console.log('?')
