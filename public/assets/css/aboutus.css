@@ -1,0 +1,82 @@
+ .about-us-section {
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/basketball1.jpg");
+    background-size: cover;
+    /* background-blend-mode: luminosity; */
+    filter: opacity(90%);
+  }
+
+  .about-us-container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    background: #fff;
+    box-shadow: var(--bshadow-2);
+    border-radius: 10px;
+    flex-direction: row;
+    z-index: 2;
+  }
+
+  /* Left side panel */
+
+  .about-us-left {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .about-us-title h1 {
+    margin-bottom: 10px;
+  }
+
+  .about-us-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+  .about-us-content p{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 300px;
+    color: black;
+    text-align: justify;
+  }
+
+  .about-us-whoarewe {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Right side panel */
+
+  .about-us-right {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    padding: 30px;
+  }
+
+.about3 h2 {
+  margin-top: 10px;
+}
+.about h2 {
+  margin-bottom: 10px;
+
+}
+.about p {
+  color: black;
+}
