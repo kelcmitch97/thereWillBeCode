@@ -1,11 +1,11 @@
-// NavBar
+// Nav Bar
 
 function openNav() {
     document.getElementById("sideNavBar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   };
-  
+
   function closeNav() {
     document.getElementById("sideNavBar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
@@ -34,11 +34,11 @@ const getUsers = async () => {
     .then(function(data){
 
         userData = data;
-        
+
         for (let i = 0; i < userData.length; i++) {
-            
+
             // console.log(userData[i]);
-            
+
         }
 
     });
@@ -55,9 +55,9 @@ const getEvents = async () => {
         eventData = data;
 
         for (let i = 0; i < eventData.length; i++) {
-            
+
             // console.log(eventData[i]);
-            
+
         }
 
     });
@@ -74,9 +74,9 @@ const getLocations = async () => {
         locationData = data;
 
         for (let i = 0; i < locationData.length; i++) {
-            
+
             // console.log(locationData[i]);
-            
+
         }
 
     });
@@ -93,9 +93,9 @@ const getVenues = async () => {
         venueData = data;
 
         for (let i = 0; i < venueData.length; i++) {
-            
+
             // console.log(venueData[i]);
-            
+
         }
 
     });
@@ -112,9 +112,9 @@ const getSports = async () => {
         sportData = data;
 
         for (let i = 0; i < sportData.length; i++) {
-            
+
             // console.log(sportData[i]);
-            
+
         }
 
     });

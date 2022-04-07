@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 router.get('/events', (req, res) => {
     EventCreated.findAll({
       where: {
-        // user_id: req.session.user_id
+        user_id: req.session.user_id
       },
         attributes: [
             'id',
@@ -54,7 +54,7 @@ router.get('/events', (req, res) => {
     //     }
     //   ]
     })
-    
+
     .then(eventData => {
 
         const events = eventData.map(event => event.get({ plain: true }));
@@ -64,11 +64,11 @@ router.get('/events', (req, res) => {
         var hockeyArray = []
         var tennisArray = []
         var soccerArray = []
-        
+
         for (let i = 0; i < events.length; i++) {
 
           // EXAMPLE Basketball Array
-          
+
           if (events[i].id === 104){
 
             basketballArray.push(events[i]);
@@ -110,9 +110,9 @@ router.get('/events', (req, res) => {
             // console.log(soccerArray);
 
           }
-          
+
         }
-  
+
           res.render('events-page', {
             basketballArray,
             baseballArray,
@@ -121,7 +121,7 @@ router.get('/events', (req, res) => {
             soccerArray,
             // loggedIn: req.session.loggedIn,
             // session: req.session
-  
+
         });
     })
     .catch(err => {
@@ -132,6 +132,12 @@ router.get('/events', (req, res) => {
 
     });
 
+});
+
+router.get('./participating', (req, res) => {
+    EventCreated.findAll({
+
+    })
 });
 
 router.get('/event', (req, res) => {
@@ -163,7 +169,7 @@ router.get('/event', (req, res) => {
   //     }
   //   ]
   })
-  
+
   .then(eventData => {
       // const events = eventData.map(event => event.get({ plain: true }));
 

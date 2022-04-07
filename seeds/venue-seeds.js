@@ -2,19 +2,28 @@ const { VenueType } = require('../models');
 
 const venueData = [
     {
-        venue: "NameHere1"
+        venue: "outdoor-rink"
     },
     {
-        venue: "NameHere2"
+        venue: "indoor-arena"
     },
     {
-        venue: "NameHere3"
+        venue: "baseball-diamond"
     },
     {
-        venue: "NameHere4"
+        venue: "basketball-court"
     },
     {
-        venue: "NameHere5"
+        venue: "outdoor-drypad"
+    },
+    {
+        venue: "soccer-field"
+    },
+    {
+        venue: "sports-field"
+    },
+    {
+        venue: "tennis-court"
     },
 ];
 

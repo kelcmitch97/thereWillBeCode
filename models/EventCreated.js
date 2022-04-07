@@ -52,14 +52,7 @@ EventCreated.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        // members: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'members_user',
-        //         key: 'id'
-        //     }
-        // }
+        }
     },
     {
         sequelize,

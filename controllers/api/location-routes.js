@@ -1,9 +1,16 @@
 const router = require('express').Router();
-const { Location } = require('../../models');
+const { Location, VenueType, LocationVenue } = require('../../models');
 
 router.route('/')
 .get((req, res) => {
     Location.findAll({
+        include: [
+            {
+              model: VenueType,
+              through: LocationVenue,
+              attributes: ['venue']
+            }
+        ]
   })
     .then(locationData => res.json(locationData))
     .catch(err => {
