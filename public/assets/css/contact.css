@@ -1,0 +1,86 @@
+#contact_page_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/hockey_full.jpg') #188a97 no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+
+#contact_spacer {
+    width: 1200px;
+    height: 480px;
+    display: flex;
+    background: #fff;
+    box-shadow: var(--bshadow-2);
+    border-radius: 10px;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.contact_panel_left {
+    position: relative;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact_panel_left h2, .contact_panel_left h3 {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.contact_panel_left p {
+    display: flex;
+    width: 80%;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact_panel_right {
+    position: relative;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact_panel_right h2 {
+    margin-bottom: 20px;
+}
+
+.contact_panel_right input {
+    display: flex;
+    width: 50%;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.contact_panel_right button {
+    width: 160px;
+      height: 50px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #fff;
+      background-color: #39a6b2;
+      border-radius: 25px;
+      color: #fff;
+      font-family: 'Poppins';
+      font-weight: 600;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+  }

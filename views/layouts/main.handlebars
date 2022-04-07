@@ -17,6 +17,7 @@
     <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/hero.css" />
+    <link rel="stylesheet" href="/assets/css/contact.css" />
     <link rel="stylesheet" href="/assets/css/events.css" />
     <link rel="stylesheet" href="/assets/css/profile.css" />
     <link rel="stylesheet" href="/assets/css/aboutus.css" />
@@ -58,12 +59,18 @@
 
     {{{body}}}
 
-</body>
+    {{#if loggedIn}}
 
-{{!-- <script src="./assets/js/swiper-bundle.min.js"></script> --}}
-{{!-- <script src="/assets/js/functions.js"></script>
-<script src="/assets/js/events2.js"></script>
-<script src="/assets/js/animations.js"></script> --}}
-{{!-- <script src="/assets/js/login.js"></script> --}}
+        <div id="logout_button_spacer">
+
+            <button id="logout_button">Logout</button>
+
+        </div>
+
+        <script src="/assets/js/logout.js"></script>
+
+    {{/if}}
+
+</body>
 
 </html>

@@ -237,6 +237,8 @@ router.get('/profile', (req, res) => {
     //     ]
    })
   .then(eventData => {
+
+    console.log('?')
     
     const events = eventData.map(user => user.get({ plain: true }));
     var eventsPart = [];
@@ -245,6 +247,16 @@ router.get('/profile', (req, res) => {
     const params = req.session.user_id;
 
     db.query(sql, params, (err, results) => {
+
+      if (!results) {
+
+        res.render('profile-page', {
+          events,
+          eventsPart,
+          session: req.session
+        });
+
+      } else {
 
         for (let i = 0; i < results.length; i++) {
           
@@ -264,6 +276,8 @@ router.get('/profile', (req, res) => {
           })
 
         }
+
+      }
 
     });
         
