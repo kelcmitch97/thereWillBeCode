@@ -240,9 +240,6 @@ router.get('/profile', (req, res) => {
     
     const events = eventData.map(user => user.get({ plain: true }));
 
-    console.log(events);
-    console.log(req.session);
-
         res.render('profile-page', {
           events,
           // loggedIn: req.session.loggedIn,
@@ -252,5 +249,16 @@ router.get('/profile', (req, res) => {
   })
 });
 
+router.get('/about', (req, res) => {
+
+  res.render('about-page');
+
+});
+
+router.get('/contact', (req, res) => {
+
+  res.render('contact-page');
+
+});
 
 module.exports = router;
