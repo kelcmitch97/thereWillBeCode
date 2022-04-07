@@ -1,0 +1,37 @@
+#login_page_container {
+    width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/basketball_full.jpg') #188a97 no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+#login_spacer {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#login_spacer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+#login_spacer input {
+    display: flex;
+    width: 100%;
+    padding-left: 40px;
+}
