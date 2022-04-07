@@ -6,6 +6,7 @@ const MembersUser = require('./MemberUser');
 const Sports = require('./Sports');
 const User = require('./User');
 const VenueType = require('./VenueType');
+const LocationVenue = require('./LocationVenue');
 
 //Association between User and the event - creation.
 User.hasMany(EventCreated, {
@@ -35,12 +36,14 @@ EventCreated.belongsTo(Location, {
 });
 
 //Association between the venue and the location - Which venue is the event taking place at.
-VenueType.hasMany(Location, {
-    foreignKey: 'venue_type_id'
+VenueType.belongsToMany(Location, {
+    through: LocationVenue,
+    foreignKey: 'venue_id'
 });
 
-Location.belongsTo(VenueType, {
-    foreignKey: 'venue_type_id'
+Location.belongsToMany(VenueType, {
+    through: LocationVenue,
+    foreignKey: 'location_id'
 });
 
 //Association between users and event through MembersUser - for the users that want to participate.
@@ -60,5 +63,6 @@ module.exports = {
     MembersUser,
     Sports,
     User,
-    VenueType
+    VenueType,
+    LocationVenue
 }
