@@ -42,7 +42,7 @@
 
   header {
     padding: 20px 35px;
-    background-color: var(--light-blue);
+    background-color: var(--dark-grey);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -54,11 +54,12 @@
     background-attachment: fixed;
     background-position: 80%;
     z-index: 9999;
+    filter: opacity(90%);
   }
 
 header h1 {
     font-weight: bold;
-    margin: 0;
+    margin-left: 35px;
     font-size: 36px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -67,7 +68,7 @@ header h1 {
   
 header a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-color);
   }
   
   header nav {
@@ -85,20 +86,25 @@ header a {
   header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 1.80vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   header nav ul li a:hover {
-    background: var(--primary-color);
-    color: var(--pink-red);
+    background: var(--tertiary-color);
+    color: var(--primary-color);
     border-radius: 15px;
     text-shadow: none;
   }
 
   a:link, a:visited {
     text-decoration: none;
-    color: inherit;
+    color: var(--primary-color);
+  }
+
+  #header-logo {
+    position: absolute;
+    left: 20px;
   }
 
   /* navbar */

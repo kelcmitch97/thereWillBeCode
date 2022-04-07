@@ -1,0 +1,20 @@
+  /* Create event background */
+ .about-us-section {
+    /* background-image: url("../images/basketball1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/basketball1.jpg");
+    background-size: cover;
+    /* background-blend-mode: luminosity; */
+    filter: opacity(90%);
+  }
