@@ -48,6 +48,8 @@
 
             <div id="events_participating" class="profile_event_spacer">
 
+            {{#each eventsPart as |part|}}
+
                 <div class="profile_event_container">
 
                     <div class="profile_event_icon">
@@ -58,7 +60,7 @@
 
                     <div class="profile_event_info">
 
-                        <h3>{{eventsPart.event_name}}</h3>
+                        <h3>{{part.event_name}}</h3>
 
                         <div class="profile_event_date">
                         
@@ -77,6 +79,8 @@
                     </div>
 
                 </div>
+
+            {{/each}}
 
             </div>
 

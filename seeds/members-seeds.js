@@ -2,11 +2,11 @@ const { MembersUser } = require('../models');
 
 const membersData = [
     {
-        user_id: 100,
+        user_id: 103,
         event_id: 101
     },
     {
-        user_id: 103,
+        user_id: 101,
         event_id: 102
     }
 

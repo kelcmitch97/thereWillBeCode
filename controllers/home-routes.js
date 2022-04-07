@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const db = require('../config/vanilla');
-const { User, EventCreated } = require('../models');
+const { User, EventCreated, MembersUser } = require('../models');
 
 router.get('/', (req, res) => {
   User.findAll({ })
@@ -255,16 +255,16 @@ router.get('/profile', (req, res) => {
 
             eventsPart.push(results[i]);
 
+            res.render('profile-page', {
+              events,
+              eventsPart,
+              session: req.session
+            });
+
           })
 
         }
 
-    });
-
-    res.render('profile-page', {
-      events,
-      eventsPart,
-      session: req.session
     });
         
   })
@@ -280,6 +280,18 @@ router.get('/contact', (req, res) => {
 
   res.render('contact-page');
 
+});
+
+router.route('/join-event')
+.post((req, res) => {
+  MembersUser.create({
+      user_id: req.session.user_id,
+      event_id: req.body.event_id
+  }).then( res.json({message: 'Location Created!'}))
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
 
 module.exports = router;

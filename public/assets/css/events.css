@@ -417,3 +417,7 @@ input, select {
 button:hover {
   cursor: pointer;
 }
+
+#join_button {
+  z-index: 5;
+}
