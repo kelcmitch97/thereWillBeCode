@@ -239,13 +239,34 @@ router.get('/profile', (req, res) => {
   .then(eventData => {
     
     const events = eventData.map(user => user.get({ plain: true }));
+    var eventsPart = [];
 
-        res.render('profile-page', {
-          events,
-          // loggedIn: req.session.loggedIn,
-          session: req.session
+    const sql = `SELECT * FROM members_user WHERE user_id = ?`;
+    const params = req.session.user_id;
 
-        });
+    db.query(sql, params, (err, results) => {
+
+        for (let i = 0; i < results.length; i++) {
+          
+          const sql = `SELECT * FROM eventcreated WHERE id = ?`;
+          const params = results[i].event_id;
+
+          db.query(sql, params, (err, results) => {
+
+            eventsPart.push(results[i]);
+
+          })
+
+        }
+
+    });
+
+    res.render('profile-page', {
+      events,
+      eventsPart,
+      session: req.session
+    });
+        
   })
 });
 
