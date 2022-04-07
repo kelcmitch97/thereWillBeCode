@@ -422,3 +422,7 @@ button:hover {
 #join_button {
   z-index: 5;
 }
+
+.left_tab:hover {
+  cursor: pointer;
+}
