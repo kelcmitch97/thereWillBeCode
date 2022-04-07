@@ -1,63 +1,314 @@
-body{margin-top:20px;
-    background-color:#f2f6fc;
-    color:#69707a;
-    }
-    .img-account-profile {
-        height: 10rem;
-    }
-    .rounded-circle {
-        border-radius: 50% !important;
-    }
-    .card {
-        box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
-    }
-    .card .card-header {
-        font-weight: 500;
-    }
-    .card-header:first-child {
-        border-radius: 0.35rem 0.35rem 0 0;
-    }
-    .card-header {
-        padding: 1rem 1.35rem;
-        margin-bottom: 0;
-        background-color: rgba(33, 40, 50, 0.03);
-        border-bottom: 1px solid rgba(33, 40, 50, 0.125);
-    }
-    .form-control, .dataTable-input {
-        display: block;
-        width: 100%;
-        padding: 0.875rem 1.125rem;
-        font-size: 0.875rem;
-        font-weight: 400;
-        line-height: 1;
-        color: #69707a;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #c5ccd6;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 0.35rem;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-    
-    .nav-borders .nav-link.active {
-        color: #0061f2;
-        border-bottom-color: gray;
-    }
-    .nav-borders .nav-link {
-        color: #69707a;
-        border-bottom-width: 0.125rem;
-        border-bottom-style: solid;
-        border-bottom-color: transparent;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+body {
+  margin-top: 20px;
+  background-color: #f2f6fc;
+  color: #69707a;
+}
+.img-account-profile {
+  height: 10rem;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.card {
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+  font-weight: 500;
+}
+.card-header:first-child {
+  border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+  padding: 1rem 1.35rem;
+  margin-bottom: 0;
+  background-color: rgba(33, 40, 50, 0.03);
+  border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control,
+.dataTable-input {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #69707a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c5ccd6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
-    .btn {
-        color: gray;
-    }
+.nav-borders .nav-link.active {
+  color: #0061f2;
+  border-bottom-color: gray;
+}
+.nav-borders .nav-link {
+  color: #69707a;
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.btn {
+  color: gray;
+}
+#profile_page_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/hockey_full.jpg") #188a97 no-repeat;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.page_header_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.profile_panel_container {
+  width: 1200px;
+  height: 480px;
+  display: flex;
+  background: #fff;
+  box-shadow: var(--bshadow-2);
+  border-radius: 10px;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.profile_nav {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.profile_nav .profile_event {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  background: var(--tertiary-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-right: 20px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.profile_nav .profile_event p {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* LEFT SIDE PANEL */
+
+.profile_panel_left {
+  position: relative;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_spacer {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.profile_image {
+  display: flex;
+  overflow: hidden;
+  margin-top: 40px;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  border: 1px solid var(--tertiary-color);
+}
+
+.profile_info {
+  display: flex;
+  margin-top: 20px;
+  height: fit-content;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile_info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 200px;
+}
+
+.profile_info p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: 300px;
+}
+
+.profile_sports {
+  width: 100%;
+  display: flex;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.profile_sports p {
+  font-weight: 600;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 1px solid var(--tertiary-color);
+  box-sizing: border-box;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE PANEL */
+
+.profile_panel_right {
+  position: relative;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_event_spacer {
+  display: flex;
+  position: relative;
+  width: 90%;
+  border-radius: 10px;
+  height: 400px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile_event_container {
+  display: flex;
+  width: 90%;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+  background: #f1f1f1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile_event_container:nth-child(1) {
+  margin-top: 30px;
+}
+
+.profile_event_icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  object-fit: contain;
+  margin-left: 20px;
+  border-radius: 30px;
+  background: var(--tertiary-color);
+}
+
+.profile_event_info {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_event_date {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile_event_date p {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.profile_event_icon img {
+  mix-blend-mode: screen;
+}
+
+.profile_event_button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_event_button button {
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  background-color: #39a6b2;
+  border-radius: 25px;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.profile_event:hover {
+  cursor: pointer;
+}
+
+#events_participating {
+  display: none;
+}
+
+#events_created {
+  display: flex;
+}

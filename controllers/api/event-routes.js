@@ -13,9 +13,15 @@ router.route('/')
 })
 .post((req, res) => {
     EventCreated.create({
-        // username: req.body.username,
-        // email: req.body.email,
-        // password: req.body.password
+        // event_name, availability and date_time set to bypass difficult
+        user_id: req.session.user_id,
+        event_name: req.body.event_name,
+        date_time: req.body.date_time,
+        sport_id: req.body.sport_id,
+        members_needed: req.body.members_needed,
+        location_id: req.body.location_id,
+        description: req.body.description,
+        availability: true
     }).then( res.json({message: 'Event Created!'}))
     .catch(err => {
         console.log(err);

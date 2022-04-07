@@ -1,0 +1,138 @@
+#hero_2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#hero_video_spacer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    background: #39a6b2;
+    z-index: 1,
+}
+
+#hero_main_spacer, #hero_login_spacer, #hero_signup_spacer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.hero_content_spacer {
+    display: flex;
+    width: 500px;
+    height: 180px;
+    flex-direction: column;
+}
+
+.hero_content_line {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    /* background: #fff; */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero_content_line p {
+    font-weight: 600;
+}
+
+.hero_content_line button {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    background-color: #39a6b2;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.hero_content_line button:nth-child(2) {
+    margin-left: 20px;
+}
+
+.hero_content_line {
+    font-size: 30px;
+}
+
+#hero_video {
+    /* mix-blend-mode: luminosity; */
+    mix-blend-mode: screen;
+    /* mix-blend-mode: hard-light; */
+}
+
+#hero_main_spacer {
+    display: flex;
+}
+
+#hero_login_spacer {
+    display: none;
+}
+
+#hero_signup_spacer {
+    display: none;
+}
+
+#hero_login_spacer form, #hero_signup_spacer form {
+    display: flex;
+    width: 300px;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.hero_login_input, .hero_register_input {
+    display: flex;
+    position: relative;
+    height: 34px;
+    margin-bottom: 10px;
+}
+
+#hero_login_spacer input, #hero_signup_spacer input {
+    display: flex;
+    height: 34px!important;
+    border-radius: 17px;
+    padding-left: 50px!important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+input::placeholder {
+    letter-spacing: 0px;
+}
+
+input[type="password"]{
+    letter-spacing: 2px;
+}
+
+.hero_login_input span, .hero_register_input span {
+    position: absolute;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    left: 2px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,93 @@
+<div id="form_page_container">
+
+<div class="form-container">
+
+    <a href="/profile">
+
+        <div class="back_button">
+
+            <span><i class="uil uil-angle-left"></i></span>
+
+            <h3>Back</h3>
+
+        </div>
+
+    </a>
+
+    <h3 class="create-game-title">
+        Create Game
+    </h3>
+
+    <form id="event-form" class="event-form" method="POST">
+
+        <div class="form-group form-event-details">
+            <div class="form-title">
+                <label for="title">Event Name</label>
+                <input type="text" id="title" class="title" place="Event title" />
+            </div>
+            <div class="form-sport">
+                <label for="sport">Sport</label>
+                <select>
+                    <option value="3">Basketball</option>
+                    <option value="2">Baseball</option>
+                    <option value="5">Tennis</option>
+                    <option value="4">Soccer</option>
+                    <option value="1">Hockey</option>
+                </select>
+            </div>
+            <div class="form-date">
+                <label for="date">Date</label>
+                <input type="date" id="date" class="date" place="Pick a date" />
+            </div>
+            <div class="form-duration">
+                <label for="date">Time</label>
+                <input type="time" id="time" class="time" place="Pick a time" />
+            </div>
+
+        </div>
+
+        <div class="form-group form-location">
+            
+            <div class="form-players">
+                <label for="players">Players Needed</label>
+                <span class="modify-qty plus" onClick="Tang()"><i class="zmdi zmdi-chevron-up"></i></span>
+                <input type="number" name="players" id="players" value="0" min="0" class="nput-text qty text">
+                <span class="modify-qty minus" onClick="Giam()"><i class="zmdi zmdi-chevron-down"></i></span>
+            </div>
+            <div class="form-venue">
+                <label for="venue">Venue Location</label>
+                <select required>
+                    <option value="1">Ramsden Park</option>
+                    <option value="3">Trinity Bellwoods Park</option>
+                    <option value="2">Christie Pits</option>
+                    <option value="4">Withrow Park</option>
+                    <option value="5">Weston Lions Park</option>
+                    <option value="6">Earlscourt Park</option>
+                    <option value="7">Flemingdon Park </option>
+                </select>
+
+                <!-- <input type="text" id="venue" class="venue" place="Pick a venue location" /> -->
+            </div>
+            <div class="form-city">
+                <label for="city">City</label>
+                <select>
+                    <option value="1">Toronto</option>
+                </select>
+            </div>
+            <div class="form-description">
+                <label for="info">Description</label>
+                <input type="text" id="info" class="info" place="Provide any additional details" />
+            </div>
+        </div>
+    </form>
+
+    <!-- Submit -->
+    <div class="form-submit">
+        <button type="submit" id="submit" class="submit">Create Game</button>
+    </div>
+
+</div>
+
+</div>
+
+<script src="/assets/js/create-event-page.js"></script>

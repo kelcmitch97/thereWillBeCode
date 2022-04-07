@@ -54,12 +54,16 @@
 
                 {{#each basketballArray as |basketball|}}
 
+                <a href="/event/{{basketball.id}}">
+
                     <div class="event_content_spacer">
 
                     <h4>{{basketball.event_name}}</h4>
                     <p>{{basketball.description}}</p>
 
                     </div>
+
+                </a>
 
                 {{/each}}
 
@@ -69,12 +73,15 @@
 
                 {{#each baseballArray as |baseball|}}
 
+                <a href="/event/{{baseball.id}}">
                     <div class="event_content_spacer">
 
                     <h4>{{baseball.event_name}}</h4>
                     <p>{{baseball.description}}</p>
 
                     </div>
+
+                </a>
 
                 {{/each}}
 
@@ -84,12 +91,16 @@
 
                 {{#each tennisArray as |tennis|}}
 
+                <a href="/event/{{tennis.id}}">
+
                     <div class="event_content_spacer">
 
                     <h4>{{tennis.event_name}}</h4>
                     <p>{{tennis.description}}</p>
 
                     </div>
+
+                </a>
 
                 {{/each}}
 
@@ -99,12 +110,16 @@
 
                 {{#each soccerArray as |soccer|}}
 
+                <a href="/event/{{soccer.id}}">
+
                     <div class="event_content_spacer">
 
                     <h4>{{soccer.event_name}}</h4>
                     <p>{{soccer.description}}</p>
 
                     </div>
+
+                </a>
 
                 {{/each}}
 
@@ -114,12 +129,16 @@
 
                 {{#each hockeyArray as |hockey|}}
 
+                <a href="/event/{{hockey.id}}">
+
                     <div class="event_content_spacer">
 
                     <h4>{{hockey.event_name}}</h4>
                     <p>{{hockey.description}}</p>
 
                     </div>
+
+                </a>
 
                 {{/each}}
 
@@ -130,3 +149,5 @@
     </div>
 
 </div>
+
+<script src="/assets/js/events-page.js"></script>

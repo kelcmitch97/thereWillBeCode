@@ -1,0 +1,127 @@
+<div id="profile_page_container">
+
+    <nav class="profile_nav">
+
+        <div id="participating_tab" class="profile_event">
+
+            <p>Participating</p>
+
+        </div>
+
+        <div id="created_tab" class="profile_event">
+
+            <p>Created</p>
+
+        </div>
+
+    </nav>
+
+    <div class="profile_panel_container">
+
+        <div class="profile_panel_left">
+
+            <div class="profile_spacer">
+
+                <div class="profile_image">
+
+                    <img src="/assets/images/avatar.jpeg" />
+
+                </div>
+
+                <div class="profile_info">
+
+                    <h3>{{session.username}}</h3>
+
+                    <p>{{session.description}}</p>
+
+                </div>
+
+                <div class="profile_sports">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile_panel_right">
+
+            <div id="events_participating" class="profile_event_spacer">
+
+                <div class="profile_event_container">
+
+                    <div class="profile_event_icon">
+
+                        <img src="/assets/images/eventicon.png" />
+
+                    </div>
+
+                    <div class="profile_event_info">
+
+                        <h3>PARTICIPATING Event</h3>
+
+                        <div class="profile_event_date">
+                        
+                            <i class="uil uil-calender button__icon"></i>
+
+                            <p>Event Date</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile_event_button">
+
+                        <button>More Info</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="events_created" class="profile_event_spacer">
+
+                {{#each events as |event|}}
+
+                <div class="profile_event_container">
+
+                    <div class="profile_event_icon">
+
+                        <img src="/assets/images/eventicon.png" />
+
+                    </div>
+
+                    <div class="profile_event_info">
+
+                        <h3>{{event.event_name}}</h3>
+
+                        <div class="profile_event_date">
+                        
+                            <i class="uil uil-calender button__icon"></i>
+
+                            <p>{{format_date event.date_time}}</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile_event_button">
+
+                        <a href="/event/{{event.id}}"><button>More Info</button></a>
+
+                    </div>
+
+                </div>
+
+                {{/each}}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/assets/js/profile-page.js"></script>
