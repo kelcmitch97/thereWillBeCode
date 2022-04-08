@@ -3,7 +3,7 @@ const { EventCreated } = require('../models');
 const eventData = [
     {
       id: 100,
-      event_name: 'Test Event 100',
+      event_name: 'Hockey Event 100',
       date_time: null,
       user_id: 100,
       sport_id: 1, 
@@ -15,7 +15,7 @@ const eventData = [
     },
     {
       id: 101,
-      event_name: 'Test Event 101',
+      event_name: 'Hockey Event 101',
       date_time: null,
       user_id: 101,
       sport_id: 1, // hockey
@@ -27,7 +27,7 @@ const eventData = [
     },
     {
       id: 102,
-      event_name: 'Test Event 102',
+      event_name: 'Tennis Event 102',
       date_time: null,
       user_id: 102,
       sport_id: 5, // tennis
@@ -39,7 +39,7 @@ const eventData = [
     },
     {
       id: 103,
-      event_name: 'Test Event 103',
+      event_name: 'Baseball Event 103',
       date_time: null,
       user_id: 103,
       sport_id: 2, // baseball
@@ -51,7 +51,7 @@ const eventData = [
     },
     {
       id: 104,
-      event_name: 'Test Event 104',
+      event_name: 'Basketball Event 104',
       date_time: null,
       user_id: 104,
       sport_id: 3, // basketball
@@ -63,7 +63,7 @@ const eventData = [
     },
     {
       id: 105,
-      event_name: 'Test Event 105',
+      event_name: 'Basketball Event 105',
       date_time: null,
       user_id: 105,
       sport_id: 3, // basketball
@@ -75,7 +75,7 @@ const eventData = [
     },
     {
       id: 106,
-      event_name: 'Test Event 106',
+      event_name: 'Soccer Event 106',
       date_time: null,
       user_id: 106,
       sport_id: 4,
