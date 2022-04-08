@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const db = require('../config/vanilla');
-const { User, EventCreated, MembersUser } = require('../models');
+const { User, EventCreated, MembersUser, Location, Sports } = require('../models');
 
 router.get('/', (req, res) => {
   User.findAll({ })
@@ -147,32 +147,40 @@ router.get('/event/:id', (req, res) => {
           'location_id',
           'sport_id',
       ],
-  //     include: [
-  //     {
-  //         model: Comment,
-  //         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-  //         include: {
-  //             model: User,
-  //             attributes: ['username', 'id']
-  //         }
-  //     },
-  //     {
-  //         model: User,
-  //         attributes: ['username']
-  //     }
-  //   ]
+      include: [
+        {
+          model: Location,
+          attributes: ['location_name', 'location_address'],
+        },
+        {
+          model: User,
+          attributes: ['username'],
+        },
+        {
+          model: Sports,
+          attributes: ['sport'],
+        },
+      ],
   })
   
   .then(eventData => {
 
     const event = eventData.get({ plain: true });
 
+    console.log(event);
+
+        if (event.user_id === req.session.user_id){
+
+        } //else {
+
         res.render('event-page', {
           event,
-          // loggedIn: req.session.loggedIn,
-          // session: req.session
+          loggedIn: req.session.loggedIn,
+          session: req.session
 
-      });
+        });
+
+        //}
   })
   .catch(err => {
 
@@ -308,7 +316,7 @@ router.route('/join-event')
   MembersUser.create({
       user_id: req.session.user_id,
       event_id: req.body.event_id
-  }).then( res.json({message: 'Location Created!'}))
+  }).then( res.json({message: 'Event Joined!'}))
   .catch(err => {
       console.log(err);
       res.status(500).json(err);
