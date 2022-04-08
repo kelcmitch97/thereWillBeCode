@@ -150,7 +150,7 @@ router.get('/event/:id', (req, res) => {
       include: [
         {
           model: Location,
-          attributes: ['location_name', 'location_address'],
+          attributes: ['location_name', 'location_address', 'city_name'],
         },
         {
           model: User,
@@ -167,14 +167,27 @@ router.get('/event/:id', (req, res) => {
 
     const event = eventData.get({ plain: true });
 
-    console.log(event);
-
         if (event.user_id === req.session.user_id){
+
+
 
         } //else {
 
+        console.log(event.location)
+
+        var mapLink = [];
+
+        const addressSplit= event.location.location_address.split(',')[0];
+
+        const mapDataRaw = `${addressSplit}, ${event.location.city_name}`;
+
+        const mapData = mapDataRaw.replaceAll(' ', '%20');
+
+        mapLink.push(mapData);
+
         res.render('event-page', {
           event,
+          mapLink,
           loggedIn: req.session.loggedIn,
           session: req.session
 
