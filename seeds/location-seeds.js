@@ -34,7 +34,7 @@ const locationData = [
     {
       city_name: 'Toronto',
       location_name: 'Earlscourt Park',
-      location_address: '1200 Landsdowne Ave , M6H 3Z8',
+      location_address: '1200 Landsdowne Ave, M6H 3Z8',
       venue_type_id: '2'
     },
     {
