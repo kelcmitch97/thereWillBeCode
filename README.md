@@ -35,15 +35,16 @@
 
  ## Technologies Used
  - HTML
- - CSS including Bootstrap (tbc?)
+ - CSS including Bootstrap
  - Greensock animations
  - Javascript
  - Node.js
  - Express.js
  - Handlebars.js
+ - GoogleMaps
  - EmailJS
  - MySQL
- – Sequelize
+ - Sequelize
  - bcrypt
  - Express-session
  - Heroku for deployment
