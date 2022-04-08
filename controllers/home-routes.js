@@ -250,7 +250,7 @@ router.get('/profile', (req, res) => {
 
     db.query(sql, params, (err, results) => {
 
-      if (!results) {
+      if (results.length === 0) {
 
         res.render('profile-page', {
           events,
@@ -268,16 +268,9 @@ router.get('/profile', (req, res) => {
 
           db.query(sql, params, (err, results) => {
 
-            // console.log(results)
-            // console.log(results[i])
-
             eventsPart.push(results[0]);
 
-            // console.log(eventsPart)
-
             if (i + 1 === dataAmount){
-
-              console.log(eventsPart)
   
               res.render('profile-page', {
                 events,
