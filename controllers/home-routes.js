@@ -167,33 +167,82 @@ router.get('/event/:id', (req, res) => {
 
     const event = eventData.get({ plain: true });
 
-        if (event.user_id === req.session.user_id){
+    var mapLink = [];
+    const addressSplit= event.location.location_address.split(',')[0];
+    const mapDataRaw = `${addressSplit}, ${event.location.city_name}`;
+    const mapData = mapDataRaw.replaceAll(' ', '%20');
+    mapLink.push(mapData);
 
+      if (event.user_id === req.session.user_id){
 
+        var appliedUsers = [];
 
-        } //else {
+        const sql = `SELECT * FROM members_user WHERE event_id = ?`;
+        const params = event.id;
 
-        console.log(event.location)
+        db.query(sql, params, (err, results) => {
 
-        var mapLink = [];
+          var userAmount = results.length;
 
-        const addressSplit= event.location.location_address.split(',')[0];
+          if (results.length === 0){
 
-        const mapDataRaw = `${addressSplit}, ${event.location.city_name}`;
+            // Render if the user is the creator, but no applied users 
 
-        const mapData = mapDataRaw.replaceAll(' ', '%20');
+            res.render('event-page', {
+              event,
+              mapLink,
+              loggedIn: req.session.loggedIn,
+              session: req.session
+            });
 
-        mapLink.push(mapData);
+          } else {
+
+            for (let i = 0; i < results.length; i++) {
+              
+              const sql = `SELECT * FROM user WHERE id = ?`;
+              const params = results[i].user_id;
+
+              db.query(sql, params, (err, results) => {
+
+                appliedUsers.push(results[0])
+
+                if (i + 1 === userAmount){
+
+                  console.log(appliedUsers)
+
+                  // Render for if the user is the creator AND has applied users
+
+                  res.render('event-page', {
+                    event,
+                    mapLink,
+                    appliedUsers,
+                    loggedIn: req.session.loggedIn,
+                    session: req.session
+                  });
+
+                }
+
+              })
+              
+            }
+
+          }
+
+        })
+
+      } else {
+
+        // Render If the user visiting is not creator
 
         res.render('event-page', {
           event,
           mapLink,
           loggedIn: req.session.loggedIn,
           session: req.session
-
         });
 
-        //}
+      }
+
   })
   .catch(err => {
 
