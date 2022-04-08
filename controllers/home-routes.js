@@ -160,6 +160,11 @@ router.get('/event/:id', (req, res) => {
           model: Sports,
           attributes: ['sport'],
         },
+        {
+          model: User,
+          through: MembersUser,
+          as: 'user_applicant'
+        },
       ],
   })
   
@@ -175,60 +180,18 @@ router.get('/event/:id', (req, res) => {
 
       if (event.user_id === req.session.user_id){
 
-        var appliedUsers = [];
+        var appliedUsers = event.user_applicant
 
-        const sql = `SELECT * FROM members_user WHERE event_id = ?`;
-        const params = event.id;
+        console.log(appliedUsers)
 
-        db.query(sql, params, (err, results) => {
+        res.render('event-page', {
+          event,
+          mapLink,
+          appliedUsers,
+          loggedIn: req.session.loggedIn,
+          session: req.session
+        });
 
-          var userAmount = results.length;
-
-          if (results.length === 0){
-
-            // Render if the user is the creator, but no applied users 
-
-            res.render('event-page', {
-              event,
-              mapLink,
-              loggedIn: req.session.loggedIn,
-              session: req.session
-            });
-
-          } else {
-
-            for (let i = 0; i < results.length; i++) {
-              
-              const sql = `SELECT * FROM user WHERE id = ?`;
-              const params = results[i].user_id;
-
-              db.query(sql, params, (err, results) => {
-
-                appliedUsers.push(results[0])
-
-                if (i + 1 === userAmount){
-
-                  console.log(appliedUsers)
-
-                  // Render for if the user is the creator AND has applied users
-
-                  res.render('event-page', {
-                    event,
-                    mapLink,
-                    appliedUsers,
-                    loggedIn: req.session.loggedIn,
-                    session: req.session
-                  });
-
-                }
-
-              })
-              
-            }
-
-          }
-
-        })
 
       } else {
 

@@ -54,7 +54,8 @@ User.belongsToMany(EventCreated, {
 
 EventCreated.belongsToMany(User, {
     through: MembersUser,
-    foreignKey: 'event_id'
+    foreignKey: 'event_id',
+    as: 'user_applicant'
 });
 
 module.exports = {
