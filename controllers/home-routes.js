@@ -242,8 +242,6 @@ router.get('/profile', (req, res) => {
    })
   .then(eventData => {
 
-    console.log('?')
-    
     const events = eventData.map(user => user.get({ plain: true }));
     var eventsPart = [];
 
@@ -256,11 +254,12 @@ router.get('/profile', (req, res) => {
 
         res.render('profile-page', {
           events,
-          eventsPart,
           session: req.session
         });
 
       } else {
+
+        dataAmount = results.length;
 
         for (let i = 0; i < results.length; i++) {
           
@@ -269,13 +268,24 @@ router.get('/profile', (req, res) => {
 
           db.query(sql, params, (err, results) => {
 
-            eventsPart.push(results[i]);
+            // console.log(results)
+            // console.log(results[i])
 
-            res.render('profile-page', {
-              events,
-              eventsPart,
-              session: req.session
-            });
+            eventsPart.push(results[0]);
+
+            // console.log(eventsPart)
+
+            if (i + 1 === dataAmount){
+
+              console.log(eventsPart)
+  
+              res.render('profile-page', {
+                events,
+                eventsPart,
+                session: req.session
+              });
+  
+            }
 
           })
 
