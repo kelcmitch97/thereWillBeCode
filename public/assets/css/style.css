@@ -57,6 +57,15 @@
     filter: opacity(90%);
   }
 
+  .hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+
 header h1 {
     font-weight: bold;
     margin-left: 35px;
@@ -150,11 +159,6 @@ header a {
   padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 #logout_button_spacer {
   position: absolute;
   bottom: 40px;
@@ -182,17 +186,3 @@ header a {
   cursor: pointer;
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-
-@media screen and (max-width: 980px) {
-
-
-}
-
-@media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 575px) {
-  
-}
