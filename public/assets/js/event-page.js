@@ -1,9 +1,8 @@
 async function joinEvent(event) {
     event.preventDefault();
     const idString = window.location.toString()
-    const event_id = idString.split('/event/')[1];
-
-    console.log(event_id)
+    const event_id_string = idString.split('/event/')[1];
+    const event_id = parseInt(event_id_string);
     
     const response = await fetch(`/join-event`, {
         method: 'POST',
@@ -19,6 +18,7 @@ async function joinEvent(event) {
     } else {
         alert(response.statusText);
     }
+
   };
 
-    document.querySelector('#join_button').addEventListener('click', joinEvent);
+document.querySelector('#join_button').addEventListener('click', joinEvent);

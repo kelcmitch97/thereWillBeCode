@@ -252,14 +252,39 @@ router.get('/contact', (req, res) => {
 
 router.route('/join-event')
 .post((req, res) => {
-  MembersUser.create({
-      user_id: req.session.user_id,
+  MembersUser.findAll({
+    where: {
       event_id: req.body.event_id
-  }).then( res.json({message: 'Event Joined!'}))
-  .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-  });
+    }
+   })
+  .then(membersData =>{
+
+    const members = membersData.map(member => member.get({ plain: true }));
+
+    var found = false;
+
+    for (let i = 0; i < members.length; i++) {
+
+      if (req.session.user_id === members[i].user_id){
+
+        res.redirect(`/event/${members[i].event_id}`);
+
+        found = true;
+
+        return
+
+      } else if ((i + 1 === members.length) && (found === false)){
+
+        MembersUser.create({
+          user_id: req.session.user_id,
+          event_id: req.body.event_id
+          })
+
+      }
+      
+    }
+
+  })
 });
 
 router.route('/event/update')
