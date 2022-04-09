@@ -23,6 +23,11 @@
         #contact_spacer {
             width: 900px;
         }
+
+        /* Event details page */
+        #event_card_spacer {
+            width: 900px;
+        }
   }
   
   
@@ -96,6 +101,15 @@
         margin-bottom: 10px;
     }
 
+    /* Event details page */
+    #event_card_spacer {
+        width: 700px;
+    }
+
+    .creator_header {
+        width: 250px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +144,31 @@
     .about-us-right {
         width: 100%;
     }
+
+    /* Event details page */
+     #event_card_spacer {
+        width: 500px;
+    }
+
+    .back_button h3{
+        display: none;
+    }
+
+    .creator_header {
+        position: absolute;
+        top: -77px;
+        right: -14px;
+        width: 98px;
+        height: 40px; 
+        background-color: transparent; 
+        box-shadow: none;
+
+    }
+
+    .creator_text {
+       display: none;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -176,5 +215,4 @@
         display: none;
         margin-top: 0;
     }
-
 }
