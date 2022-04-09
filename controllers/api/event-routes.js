@@ -1,9 +1,14 @@
 const router = require('express').Router();
-const { EventCreated } = require('../../models');
+const { EventCreated, MembersUser, User } = require('../../models');
 
 router.route('/')
 .get((req, res) => {
   EventCreated.findAll({
+      include: {
+          model: User,
+          through: MembersUser,
+          as: 'user_applicant'
+      }
   })
     .then(eventData => res.json(eventData))
     .catch(err => {
