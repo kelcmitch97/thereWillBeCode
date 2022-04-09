@@ -103,9 +103,45 @@
 }
 
 @media screen and (max-width: 768px) {
+    #contact_spacer {
+        width: 600px;
+    }
 
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right input {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 575px) {
-  
+    #contact_spacer {
+        flex-direction: column;
+        width: 400px;
+        height: 600px;
+    }
+
+    .contact_panel_left {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #contact-panel-left-h2 {
+        justify-content: center;
+    }
+
+    #contact-panel-left-p {
+        display: none;
+    }
+
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right {
+        width: 100%;
+    }
 }
