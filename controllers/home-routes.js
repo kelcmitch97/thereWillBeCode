@@ -25,7 +25,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/events', (req, res) => {
-    EventCreated.findAll({})
+    EventCreated.findAll({
+        where: {
+            availability: true
+        }
+    })
     .then(eventData => {
         const events = eventData.map(event => event.get({ plain: true }));
         var basketballArray = []

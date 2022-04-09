@@ -9,7 +9,7 @@ const eventData = [
       sport_id: 1,
       members_needed: 1,
       location_id: 1, // using actual Parks & Rec location_id ids
-      availability: true, // tbd
+      availability: false, // tbd
       description: 'looking for a goalie',
       members: 1
     },
@@ -69,7 +69,7 @@ const eventData = [
       sport_id: 3, // basketball
       members_needed: 1,
       location_id:  6, // using actual Parks & Rec location_id ids Earlscourt
-      availability: true,
+      availability: false,
       description: 'looking for keen players, competitive group of men',
       members: 2,
     },
