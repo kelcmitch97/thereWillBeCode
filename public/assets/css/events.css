@@ -177,7 +177,7 @@ body {
   border-radius: 25px;
   background: #39a6b2;
   overflow: hidden;
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 
 .creator_header {
@@ -188,7 +188,7 @@ body {
   border-radius: 25px;
   background-color: #f1f1f1;
   flex-direction: row;
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
 
 .icon_spacer {
@@ -485,7 +485,7 @@ button:hover {
   align-items: center;
   flex-direction: row;
   background: var(--light-grey);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
 }
@@ -500,4 +500,35 @@ button:hover {
   font-weight: 600;
   color: var(--tertiary-color);
   margin-left: 20px;
+}
+
+.creator_applicant span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.applicant_options {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  width: 120px;
+  right: 40px;
+  height: 40;
+}
+
+.accept_applicant, .deny_applicant, .undecided_applicant {
+  width: 40px;
+  display: flex;
+  height: 40px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.accept_applicant:hover, .deny_applicant:hover, .undecided_applicant:hover {
+  cursor: pointer;
 }

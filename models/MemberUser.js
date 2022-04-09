@@ -25,6 +25,11 @@ MembersUser.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        status: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
+            allowNull: false,
         }
     },
     {

@@ -220,8 +220,6 @@ router.get('/profile', (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    console.log(user)
-
     if (user.id === req.session.user_id){
 
       var events = user.eventCreateds
@@ -262,6 +260,16 @@ router.route('/join-event')
       console.log(err);
       res.status(500).json(err);
   });
+});
+
+router.route('/event/update')
+.put((req, res) => {
+  MembersUser.update(req.body, {
+      where: {
+          event_id: req.body.event_id,
+          user_id: req.body.user_id
+      }
+  })
 });
 
 router.get('/login', (req, res) => {

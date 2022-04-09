@@ -132,7 +132,25 @@
 
                     {{#each appliedUsers as |applicant|}}
 
-                    <div class="creator_applicant"><p>{{applicant.username}}</p></div>
+                    <div class="creator_applicant" id="user-{{applicant.members_user.user_id}}" value="{{applicant.members_user.status}}">
+
+                        {{!-- <span><i class="uil uil-question-circle"></i></span> --}}
+
+                        <span><i class="uil uil-user-circle"></i></span>
+
+                        <p>{{applicant.username}}</p>
+
+                        <div class="applicant_options">
+
+                            <div class="accept_applicant" value="1"><i class="uil uil-check-circle"></i></div>
+
+                            <div class="deny_applicant" value="2"><i class="uil uil-times-circle"></i></div>
+
+                            <div class="undecided_applicant" value="0"><i class="uil uil-question-circle"></i></div>
+
+                        </div>
+
+                    </div>
 
                     {{/each}}
 
