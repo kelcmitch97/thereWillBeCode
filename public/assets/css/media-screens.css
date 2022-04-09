@@ -1,0 +1,66 @@
+/* Main Handlebars */
+
+@media only screen and (max-width: 1250px) {
+    
+    header nav {
+        align-items: center;
+    }
+
+    #logout_button_spacer {
+        position: absolute;
+        right: inherit;
+        bottom: 40px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 780px) {
+
+    header nav {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+
+    .hero_content_line h2 {
+        font-size: 24px;
+    }
+
+    .hero_content_line p {
+        font-size: 14px;
+    }
+
+}
+
+/* Profile Page */
+
+@media only screen and (max-width: 1250px) {
+    
+    #profile_page_container {
+        overflow-y: visible;
+        height: 100%;
+    }
+
+    .profile_nav {
+        display: none;
+    }
+
+    .profile_panel_container {
+        width: 90%;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 240px;
+    }
+
+    .profile_panel_left {}
+
+    .profile_panel_right {}
+
+}
