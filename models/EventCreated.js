@@ -25,8 +25,9 @@ EventCreated.init(
         },
         date_time: {
             type: DataTypes.DATE,
-            allowNull: true, // Changed for seeding
-            defaultValue: new Date()
+            allowNull: false,
+            get(){var date = this.getDataValue('date_time').toString().split('G')
+                    return date[0]}
         },
         sport_id: {
             type: DataTypes.INTEGER,

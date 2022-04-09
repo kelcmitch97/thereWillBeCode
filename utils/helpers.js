@@ -1,4 +1,7 @@
 module.exports = {
+    format_date: date => {
+        console.log(date);
+        return `${new Date(date).getFullYear()}`;},
   format_time: (date) => {
 
     return date.toLocaleTimeString();
@@ -14,6 +17,6 @@ module.exports = {
   format_day: (date) => {
 
     return `${new Date(date).getDate()}`;
-    
+
   },
 };
