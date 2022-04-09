@@ -120,16 +120,34 @@ router.get('/event/:id', (req, res) => {
 
       if (event.user_id === req.session.user_id){
 
-        var appliedUsers = event.user_applicant
+        const creator = true;
+        const hasApplicants = true;
+        const appliedUsers = event.user_applicant;
 
-        res.render('event-page', {
-          event,
-          mapLink,
-          appliedUsers,
-          loggedIn: req.session.loggedIn,
-          session: req.session
-        });
+        if (appliedUsers.length === 0){
 
+          res.render('event-page', {
+            event,
+            mapLink,
+            creator,
+            appliedUsers,
+            loggedIn: req.session.loggedIn,
+            session: req.session
+          });
+
+        } else {
+
+          res.render('event-page', {
+            event,
+            mapLink,
+            creator,
+            hasApplicants,
+            appliedUsers,
+            loggedIn: req.session.loggedIn,
+            session: req.session
+          });
+
+        }
 
       } else {
 

@@ -21,4 +21,4 @@ async function joinEvent(event) {
     }
   };
 
-document.querySelector('#join_button').addEventListener('click', joinEvent);
+    document.querySelector('#join_button').addEventListener('click', joinEvent);

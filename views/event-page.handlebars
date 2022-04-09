@@ -1,5 +1,18 @@
 <div class="page_spacer">
 
+    {{#if creator}}
+
+    <nav class="event_nav">
+
+        <div id="applicants_tab" class="event_tab">
+
+            <p>Applicants</p>
+
+        </div>
+    </nav>
+
+    {{/if}}
+
     <div id="event_card_spacer">
 
         <!-- Can put position absolutes anywhere in event_card_spacer -->
@@ -111,6 +124,24 @@
 
                 </div>
 
+                {{#if creator}}
+
+                <div class="creator_content_spacer">
+
+                    {{#if hasApplicants}}
+
+                    {{#each appliedUsers as |applicant|}}
+
+                    <div class="creator_applicant"><p>{{applicant.username}}</p></div>
+
+                    {{/each}}
+
+                    {{/if}}
+
+                </div>
+
+                {{/if}}
+
             </div>
 
         </div>
@@ -119,4 +150,14 @@
 
 </div>
 
+{{#if loggedIn}}
+
 <script src="/assets/js/event-page.js"></script>
+
+{{/if}}
+
+{{#if creator}}
+
+<script src="/assets/js/event-creator.js"></script>
+
+{{/if}}
