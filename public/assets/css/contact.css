@@ -88,7 +88,17 @@
   /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
   @media screen and (max-width: 980px) {
+    #contact_spacer {
+        width: 800px;
+    }
 
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right input {
+        width: 60%;
+    }
 
 }
 
