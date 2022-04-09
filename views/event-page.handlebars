@@ -6,21 +6,21 @@
 
         <div class="event_button_spacer">
 
+            {{#if loggedIn}}
+
             <button id="join_button">Join Now</button>
+
+            {{/if}}
 
         </div>
 
-        <a href="/events">
-
-            <div class="back_button">
+            <div class="back_button" onclick="history.back()">
 
                 <span><i class="uil uil-angle-left"></i></span>
 
                 <h3>Back</h3>
 
             </div>
-
-        </a>
 
         <!-- Not Position Absolute: -->
 

@@ -49,7 +49,8 @@ Location.belongsToMany(VenueType, {
 //Association between users and event through MembersUser - for the users that want to participate.
 User.belongsToMany(EventCreated, {
     through: MembersUser,
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    as: 'event_applicant'
 });
 
 EventCreated.belongsToMany(User, {

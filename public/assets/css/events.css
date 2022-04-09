@@ -340,6 +340,11 @@ body {
   height: 40px;
   display: flex;
   flex-direction: row;
+  color: var(--tertiary-color);
+}
+
+.back_button:hover {
+  cursor: pointer;
 }
 
 .back_button span {

@@ -111,7 +111,6 @@ router.get('/event/:id', (req, res) => {
   .then(eventData => {
 
     const event = eventData.get({ plain: true });
-    console.log(eventData.date_time);
 
     var mapLink = [];
     const addressSplit= event.location.location_address.split(',')[0];
@@ -122,8 +121,6 @@ router.get('/event/:id', (req, res) => {
       if (event.user_id === req.session.user_id){
 
         var appliedUsers = event.user_applicant
-
-        console.log(appliedUsers)
 
         res.render('event-page', {
           event,
@@ -186,58 +183,41 @@ router.get('/profile', (req, res) => {
     res.redirect('/login');
     return;
 }
-  EventCreated.findAll({
+  User.findOne({
     where: {
-      user_id: req.session.user_id
+      id: req.session.user_id
     },
+    include: [
+      {
+        model: EventCreated,
+      },
+      {
+        model: EventCreated,
+        through: MembersUser,
+        as: 'event_applicant'
+      },
+    ],
    })
-  .then(eventData => {
+  .then(userData => {
 
-    const events = eventData.map(user => user.get({ plain: true }));
-    var eventsPart = [];
+    const user = userData.get({ plain: true });
 
-    const sql = `SELECT * FROM members_user WHERE user_id = ?`;
-    const params = req.session.user_id;
+    console.log(user)
 
-    db.query(sql, params, (err, results) => {
+    if (user.id === req.session.user_id){
 
-      if (results.length === 0) {
+      var events = user.eventCreateds
+      var eventsPart = user.event_applicant
 
-        res.render('profile-page', {
-          events,
-          session: req.session
-        });
+      res.render('profile-page', {
+        events,
+        eventsPart,
+        loggedIn: req.session.loggedIn,
+        session: req.session
+      });
 
-      } else {
 
-        dataAmount = results.length;
-
-        for (let i = 0; i < results.length; i++) {
-
-          const sql = `SELECT * FROM eventcreated WHERE id = ?`;
-          const params = results[i].event_id;
-
-          db.query(sql, params, (err, results) => {
-
-            eventsPart.push(results[0]);
-
-            if (i + 1 === dataAmount){
-
-              res.render('profile-page', {
-                events,
-                eventsPart,
-                session: req.session
-              });
-
-            }
-
-          })
-
-        }
-
-      }
-
-    });
+    }
 
   })
 });
