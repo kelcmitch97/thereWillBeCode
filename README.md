@@ -15,6 +15,18 @@
 
  The application helps individuals and groups Create Events and Participate in sports and recreational activities in their Local areas using our uniquely powerful design platform and tireless support network. Current sports offerings include: hockey, baseball, basketball, soccer, and tennis. Current locations are in the Greater Toronto Area (GTA), Toronto, Canada and are linked to Toronto Parks & Rec locations and facilities.
 
+ ## Table-of-Contents 
+* [Description](#description) 
+* [User Story and How it works](#user-story-and-how-it-works) 
+* [How It Works](#how-it-works) 
+* [Installation Guide](#installation-guide) 
+* [Screenshots](#screenshots) 
+* [Technologies Used](#technologies-used) 
+* [Link for Toronto Parks & Rec facilities](#link-for-toronto-parks-and-rec-facilities) 
+* [GitHub repo:](#github-repo) 
+* [Trello board](#trello-board)
+* [License](#license)
+
  ## User Story and How It Works
  - AS A PERSON who enjoys playing community-based team sports
  - I AM INTERESTED in an application that provides me with information and 
@@ -52,7 +64,29 @@ After adding information to our database run the following in the terminal to ac
 npm start
 ```
 
- ## Screenshots of App...  (tbd)
+ ## Screenshots
+
+### Homepage
+
+![Homepage of PickUpSports](/public/assets/images/homepage.png)
+
+### Profile
+
+![Profile page of PickUpSports](/public/assets/images/profile.png)
+
+### Events
+
+![Events page of PickUpSports](/public/assets/images/events.png)
+
+### Event Details
+
+![Event Details page of PickUpSports](/public/assets/images/eventdetails.png)
+
+### Event Details (Mobile View)
+
+![Event Details (mobile view) of PickUpSports](/public/assets/images/mobileevents.png)
+
+
 
  ## Technologies Used
  - HTML
@@ -71,15 +105,16 @@ npm start
  - Heroku for deployment
  - Toronto Parks & Rec website and (incomplete) API database
 
-### Link for Toronto Parks & Rec facilities
+### Link for Toronto Parks and Rec facilities
 https://www.toronto.ca/services-payments/venues-facilities-bookings/booking-park-recreation-facilities/parks-and-recreation-facilities/
-+ API link here if we think it is helpful
 
-## Link for the repo
+
+## GitHub repo:
 https://github.com/kelcmitch97/thereWillBeCode
 
 ## Deployment link:
-heroku
+
+https://therewillbecode.herokuapp.com/
 
 ## Trello board
 https://trello.com/b/AiQ3DUUe/project-2
