@@ -15,6 +15,15 @@
         width: 60%;
     }
 
+    .applicants_button {
+        display: none;
+    }
+
+    /* Create Event Page */
+    .form-container {
+        width: 90%;
+    }
+
   }
 
   @media screen and (max-width: 1100px) {
@@ -31,6 +40,10 @@
 
         .event_nav .event_tab {
             right: 175px;
+        }
+
+        .applicants_button {
+            display: none;
         }
   }
   
@@ -118,6 +131,10 @@
     .event_nav .event_tab {
         right: 250px;
         width: 150px;
+    }
+
+    .applicants_button {
+        display: none;
     }
 
 }
@@ -217,8 +234,49 @@
         display: none;
     }
 
+    .applicants_buttons {
+        display: contents;
+        position: absolute;
+        
+    }
 
 }
+
+@media screen and (max-width: 660px) {
+
+    /* Create Event Page */
+    .form-container {
+        height: 650px;
+        padding: 10px;
+    }    
+    
+    .event-form {
+        flex-direction: column;
+        margin-top: 150px;
+        margin-left: 20px;
+    }
+
+    .create-game-title {
+        margin-top: 6px;
+    }
+
+    .form-group label{
+        text-align: center;
+    }
+
+    .form-sport, .form-date, .form-duration, .form-players, .form-description, .form-venue, .form-city, .form-address {
+        width: auto;
+      }
+
+      .form-submit button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 125px;
+      }
+    } 
+
+
 
 @media screen and (max-width: 575px) {
 
@@ -310,5 +368,15 @@
         align-items: center;
     }
 
+    /* Create Event Page */
+    
+    .form-container {
+        width: 90%;
+    }
+    
+    .form-submit button{
+
+        width: 100px;
+      }
 
 }
