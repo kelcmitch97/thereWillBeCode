@@ -1,10 +1,12 @@
 // Nav bar
-const hamburger = document.getElementById("hamburger");
-const navBar = document.getElementById("navBar");
+const navbarMenu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
-  navBar.classList.toggle("show");
-});
+navbarMenu.addEventListener("click", () => {
+  navbarMenu.classList.toggle('is-active');
+  menuLinks.classList.toggle("active");
+})
+
 
 $('#hero_main_login').on('click', function(){
 

@@ -67,22 +67,79 @@
   @media screen and (max-width: 980px) {
    
     /* Header  */
+    
     header {
         padding: 10px;
     }
 
-    .hamburger {
-        display: block;
-    } */
-
-    #navBar.show {
-        display: flex;
+    .nav-container {
+        position: relative;
+        width: 100%;
     }
 
-    nav {
-        display: none;
-    }  
-    
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        background: var(--tertiary-color);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background-color: var(--tertiary-color);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--dark-grey);
+        color: white;
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
+    .hamburger-menu .bar {
+        display: block;
+    }
+
+    .hamburger-menu:hover {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     header h1 {
         font-size: 25px;
     }
@@ -91,7 +148,7 @@
         left: 10px;
         width: 30px;
         height: 30px;
-    }
+    } 
 
 
     /* Contact Page */
@@ -157,6 +214,7 @@
 
 @media screen and (max-width: 768px) {
 
+    
      /* Contact Page */
     #contact_spacer {
         width: 500px;
@@ -235,15 +293,13 @@
     }
     .left_card_content_spacer {
         height:175px;
-
- 
     }
 
     .right_card_spacer {
         width: 100%;
     }
 
-        /* Applicant info */
+    /* Applicant info */
 
     .event_nav .event_tab {
         right: 175px;
@@ -274,7 +330,7 @@
         width: 100px;
     }
 
- .event_content_spacer {
+    .event_content_spacer {
         width: auto;
     }
 
@@ -282,8 +338,6 @@
         width: 20px;
         height: 20px;
     }
-
-
 
 }
 
