@@ -226,8 +226,11 @@ router.get('/profile', (req, res) => {
 
     if (user.id === req.session.user_id){
 
-      var events = user.eventCreateds
-      var eventsPart = user.event_applicant
+      var events = user.eventCreateds;
+      var eventsPart = user.event_applicant;
+      var status = eventsPart.members_user;
+
+      console.log(eventsPart[0].members_user.status)
 
       res.render('profile-page', {
         events,
@@ -235,7 +238,6 @@ router.get('/profile', (req, res) => {
         loggedIn: req.session.loggedIn,
         session: req.session
       });
-
 
     }
 

@@ -280,3 +280,16 @@
 #mobile_participating {
   margin-right: 20px;
 }
+
+.profile_event_icon span {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_accept, .profile_deny, .profile_undecided {
+  display: none;
+}

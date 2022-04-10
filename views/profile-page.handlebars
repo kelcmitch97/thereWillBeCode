@@ -61,11 +61,27 @@
 
             {{#each eventsPart as |part|}}
 
-                <div class="profile_event_container">
+                <div class="profile_event_container" value="{{part.members_user.status}}">
 
                     <div class="profile_event_icon">
 
-                        <img src="/assets/images/eventicon.png" />
+                        <span class="profile_accept">
+
+                        <i class="uil uil-check-circle"></i>
+
+                        </span>
+
+                        <span class="profile_deny">
+
+                        <i class="uil uil-times-circle"></i>
+
+                        </span>
+
+                        <span class="profile_undecided">
+
+                        <i class="uil uil-question-circle"></i>
+
+                        </span>
 
                     </div>
 
