@@ -1,5 +1,4 @@
 // Nav bar
-if (window.location.pathname === '/') {
 
 const navbarMenu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
@@ -8,6 +7,8 @@ navbarMenu.addEventListener("click", () => {
   navbarMenu.classList.toggle('is-active');
   menuLinks.classList.toggle("active");
 })
+
+if (window.location.pathname === '/') {
 
 
 $('#hero_main_login').on('click', function(){
@@ -105,6 +106,7 @@ async function loginForm(event) {
       });
   
       if (response.ok) {
+
         document.location.replace('/');
       } else {
         alert(response.statusText);
