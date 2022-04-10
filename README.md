@@ -31,6 +31,25 @@
 - The Events page also allows users to Create Events, including information on
 - the sport, date & time, location & venue, number of players sought, and other descriptive details
 
+## Installation Guide
+
+In terminal and the targeted directory run the following code to install the module dependencies:
+```shell
+npm i
+```
+
+After installing the dependencies change the username/password located in db/connection.js to your mysql specifications. Run the following in powershell:
+```shell
+mysql -u root -p (login example leading to password for root)
+mysql > source db/db.sql
+```
+
+After adding information to our database run the following in the terminal to activate the server:
+
+```shell
+npm start
+```
+
  ## Screenshots of App...  (tbd)
 
  ## Technologies Used
