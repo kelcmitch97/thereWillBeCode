@@ -2,9 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
-router.route('/')
-.get((req, res) => {
+router.route('/') //Basic routes for user entries.
+.get((req, res) => { //Get all user.
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -14,7 +13,7 @@ router.route('/')
       res.status(500).json(err);
     });
 })
-.post((req, res) => {
+.post((req, res) => { //Create a user.
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -26,13 +25,13 @@ router.route('/')
             req.session.username = dbUserData.username;
             req.session.description = dbUserData.description;
             req.session.loggedIn = true;
-        
+
             // res.json(dbUserData);
           });
 
         res.json({message: 'User Created!'})
-    
-    
+
+
     })
 
     .catch(err => {
@@ -41,8 +40,8 @@ router.route('/')
     });
 });
 
-router.route('/:id')
-.get((req, res) => {
+router.route('/:id') //Routes to modify a single user entry.
+.get((req, res) => { //Get a single user.
     User.findOne({
         attributes: { exclude: ['password'] },
         where: {
@@ -61,7 +60,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.put((req, res) => {
+.put((req, res) => { //Update a single user.
     User.update(req.body, {
         individualHooks: true,
         where: {
@@ -86,7 +85,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.delete((req, res) => {
+.delete((req, res) => { //Delete a single user.
     User.destroy({
         where: {
             id: req.params.id
@@ -105,7 +104,7 @@ router.route('/:id')
     });
 });
 
-router.post('/login', (req, res) => {
+router.post('/login', (req, res) => { //User route to login.
     User.findOne({
       where: {
         username: req.body.username
@@ -117,25 +116,25 @@ router.post('/login', (req, res) => {
       }
 
       const validPassword = dbUserData.checkPassword(req.body.password);
-  
+
       if (!validPassword) {
         res.status(400).json({ message: 'Incorrect password!' });
         return;
       }
-  
+
       req.session.save(() => {
-        
+
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.description = dbUserData.description;
         req.session.loggedIn = true;
-  
+
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });
-  });
+});
 
-  router.post('/logout', (req, res) => {
+router.post('/logout', (req, res) => { //User route to logout.
 
     if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -145,7 +144,7 @@ router.post('/login', (req, res) => {
     else {
       res.status(404).end();
     }
-  
-  });
 
+});
+//Exporting the routes.
 module.exports = router;

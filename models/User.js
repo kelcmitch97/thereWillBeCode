@@ -7,21 +7,21 @@ class User extends Model {
         return bcrypt.compareSync(loginPw, this.password);
       }
 }
-
+//Initializing the model.
 User.init(
     {
-        id:{
+        id:{ //Id row with its attributes.
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        username:{
+        username:{ //Username row with its attributes.
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
         },
-        email:{
+        email:{ //Email of the user row with its attributes.
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -29,25 +29,25 @@ User.init(
                 isEmail: true
             }
         },
-        password:{
+        password:{ //Password of the user row with its attributes.
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [4]
             }
         },
-        sports:{
+        sports:{ //Sport row with its attributes.
             type: DataTypes.STRING,
             allowNull: true,
         },
-        description:{
+        description:{ //Description of the user row with its attributes.
             type: DataTypes.STRING,
             allowNull: true,
             defaultValue: 'Description goes here'
         }
     },
     {
-    hooks: {
+    hooks: { //Encryption of the password.
         async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
@@ -66,4 +66,5 @@ User.init(
     modelName: 'user',
     }
 );
-  module.exports = User;
+//Exporting the model.
+module.exports = User;

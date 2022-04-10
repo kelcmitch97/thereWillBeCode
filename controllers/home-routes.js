@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const db = require('../config/vanilla');
+//const sequelize = require('../config/connection');
+//const db = require('../config/vanilla');
 const { User, EventCreated, MembersUser, Location, Sports } = require('../models');
 
-router.get('/', (req, res) => {
-  User.findAll({ })
+router.get('/', (req, res) => { //Basic route.
+  User.findAll({})
   .then(userData => {
 
         res.render('home-page', {
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 
 });
 
-router.get('/events', (req, res) => {
+router.get('/events', (req, res) => { //Route to show all events.
     EventCreated.findAll({
         where: {
             availability: true
@@ -86,7 +86,7 @@ router.get('/events', (req, res) => {
 
 });
 
-router.get('/event/:id', (req, res) => {
+router.get('/event/:id', (req, res) => { //Route to show event.
   EventCreated.findOne({
     where: {
       id: req.params.id
@@ -177,7 +177,7 @@ router.get('/event/:id', (req, res) => {
 
 });
 
-router.get('/create-event', (req, res) => {
+router.get('/create-event', (req, res) => { //Route to show event creation.
   EventCreated.findAll({ })
   .then(eventData => {
 
@@ -200,7 +200,7 @@ router.get('/create-event', (req, res) => {
 
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', (req, res) => { //Route to show the logged in profile.
   if (!req.session.loggedIn) {
     res.redirect('/login');
     return;
@@ -244,19 +244,19 @@ router.get('/profile', (req, res) => {
   })
 });
 
-router.get('/about', (req, res) => {
+router.get('/about', (req, res) => { //Route to show the about page.
 
   res.render('about-page');
 
 });
 
-router.get('/contact', (req, res) => {
+router.get('/contact', (req, res) => { //Route to show the contact page.
 
   res.render('contact-page');
 
 });
 
-router.route('/join-event')
+router.route('/join-event') //Route to join an event.
 .post((req, res) => {
   MembersUser.findAll({
     where: {
@@ -306,7 +306,7 @@ router.route('/join-event')
   })
 });
 
-router.route('/event/update')
+router.route('/event/update') //Route to update an event.
 .put((req, res) => {
   MembersUser.update(req.body, {
       where: {
@@ -316,12 +316,12 @@ router.route('/event/update')
   })
 });
 
-router.get('/login', (req, res) => {
+router.get('/login', (req, res) => { //Route to login the user.
   if (req.session.loggedIn) {
       res.redirect('/');
       return;
   }
   res.render('login-page');
 });
-
+//Exporting the routes.
 module.exports = router;
