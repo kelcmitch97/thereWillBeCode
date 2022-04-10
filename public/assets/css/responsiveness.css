@@ -28,6 +28,10 @@
         #event_card_spacer {
             width: 900px;
         }
+
+        .event_nav .event_tab {
+            right: 175px;
+        }
   }
   
   
@@ -102,12 +106,18 @@
     }
 
     /* Event details page */
+
     #event_card_spacer {
-        width: 700px;
+        width: 90%;
     }
 
     .creator_header {
         width: 250px;
+    }
+
+    .event_nav .event_tab {
+        right: 250px;
+        width: 150px;
     }
 
 }
@@ -146,28 +156,67 @@
     }
 
     /* Event details page */
-     #event_card_spacer {
-        width: 500px;
+
+    #event_card_spacer {
+        width: 90%;
+        height: 600px;
     }
 
     .back_button h3{
         display: none;
     }
 
-    .creator_header {
-        position: absolute;
-        top: -77px;
-        right: -14px;
-        width: 98px;
-        height: 40px; 
-        background-color: transparent; 
-        box-shadow: none;
+    .event_card_content_spacer {
+        flex-direction: column;
+    }
 
+    .creator_header {
+        height: 30px;
     }
 
     .creator_text {
-       display: none;
+        height: 30px;
     }
+
+    .icon_spacer {
+        height: 30px;
+        width: 30px;
+    }
+
+    .left_card_creator_spacer {
+        width: 90%;
+    }
+
+    .event_button_spacer {
+        top: 100px;
+    }
+
+    .event_button_spacer button {
+        height: 30px;
+    }
+
+    .left_card_content_spacer {
+        height:100px;
+        width: 220px;
+        position: absolute;
+        top: 30px;
+        left: 220px;
+    }
+
+    .right_card_spacer {
+        width: 100%;
+    }
+
+        /* Applicant info */
+
+    .event_nav .event_tab {
+        right: 175px;
+    }
+
+    .event_nav {
+        display: none;
+    }
+
 
 }
 
@@ -215,4 +264,51 @@
         display: none;
         margin-top: 0;
     }
+
+    /* Event Details Page */
+
+    .page_spacer {
+        overflow-y: visible;
+        height: 100%;
+    }
+
+    #event_content_spacer {
+        width: 90%;
+        height: 400px;
+
+    }
+
+    .creator_header {
+        width: 150px;
+    }
+
+    .creator_header p {
+        margin-left: 0px;
+    }
+
+    .event_button_spacer {
+        top: 100px;
+    }
+
+    .event_button_spacer button {
+        height: 30px;
+        width: 150px;
+    }
+
+    .icon_spacer {
+        display: none;
+    }
+
+    .left_card_content_spacer {
+        display: none;
+    }
+
+    /* Applicant info */
+
+    .event_nav {
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
