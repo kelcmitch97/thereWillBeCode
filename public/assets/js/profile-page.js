@@ -77,13 +77,13 @@ $('#profile_edit_link').on('click', function(){
     var profileNameInput = $('#profile_edit_username');
     var profileDescInput = $('#profile_edit_description');
 
-    TweenMax.to(profileName, 0, { display: 'none' });
+    // TweenMax.to(profileName, 0, { display: 'none' });
     TweenMax.to(profileDescription, 0, { display: 'none' });
     TweenMax.to(profileSports, 0, { display: 'none' });
 
     TweenMax.to(profileSportsInputs, 0, { display: 'flex' });
     TweenMax.to(profileDescInput, 0, { display: 'flex' });
-    TweenMax.to(profileNameInput, 0, { display: 'flex' });
+    // TweenMax.to(profileNameInput, 0, { display: 'flex' });
 
     var sportArray = [];
 
@@ -221,7 +221,7 @@ $('#profile_edit_link').on('click', function(){
             }
 
             const user_id = $('#profile_info_id').attr('value');
-            const username = $('#profile_edit_username').val();
+            // const username = $('#profile_edit_username').val();
             const descriptionValue = $('#profile_edit_description').val();
 
             if (descriptionValue.length === 0){
@@ -238,7 +238,7 @@ $('#profile_edit_link').on('click', function(){
                 method: 'PUT',
                 body: JSON.stringify({
                     sports,
-                    username,
+                    // username,
                     description
                 }),
                 headers: {

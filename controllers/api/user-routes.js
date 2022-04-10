@@ -66,9 +66,15 @@ router.route('/:id')
         individualHooks: true,
         where: {
             id: req.params.id
+        },
+        attributes: {
+          description: req.body.description,
+          // username: req.body.username,
+          sports: req.body.sports
         }
     })
     .then(userData => {
+
         if (!userData[0]) {
             res.status(404).json({ message: 'No user found with this id to update.' });
             return;

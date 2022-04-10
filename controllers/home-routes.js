@@ -229,7 +229,10 @@ router.get('/profile', (req, res) => {
       var events = user.eventCreateds;
       var eventsPart = user.event_applicant;
 
+      console.log(user)
+
       res.render('profile-page', {
+        user,
         events,
         eventsPart,
         loggedIn: req.session.loggedIn,
