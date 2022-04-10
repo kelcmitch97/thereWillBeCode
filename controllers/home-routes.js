@@ -228,9 +228,6 @@ router.get('/profile', (req, res) => {
 
       var events = user.eventCreateds;
       var eventsPart = user.event_applicant;
-      var status = eventsPart.members_user;
-
-      console.log(eventsPart[0].members_user.status)
 
       res.render('profile-page', {
         events,

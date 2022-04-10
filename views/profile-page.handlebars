@@ -18,6 +18,26 @@
 
     <div class="profile_panel_container">
 
+        <div id="profile_edit_nav">
+
+            <div class="edit_nav_link">
+
+                <span><i class="uil uil-edit"></i></span>
+
+            </div>
+
+            <a href="/create-event">
+
+                <div id="profile_create_link" class="edit_nav_link">
+
+                    <span><i class="uil uil-plus-circle"></i></span>
+
+                </div>
+
+            </a>
+
+        </div>
+
         <div class="profile_panel_left">
 
             <div class="profile_spacer">
@@ -31,12 +51,20 @@
                 <div class="profile_info">
 
                     <h3>{{session.username}}</h3>
+                    <input type="text" id="profile_edit_username" value="{{session.username}}"/>
 
                     <p>{{session.description}}</p>
+                    <textarea id="profile_edit_description" placeholder="{{session.description}}"></textarea>
 
                 </div>
 
                 <div class="profile_sports">
+
+                    <input type="radio" name="event" value="basketball" />
+                    <input type="radio" name="event" value="baseball" />
+                    <input type="radio" name="event" value="tennis" />
+                    <input type="radio" name="event" value="soccer" />
+                    <input type="radio" name="event" value="hockey" />
 
                 </div>
 

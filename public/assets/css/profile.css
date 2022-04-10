@@ -25,6 +25,7 @@
 }
 
 .profile_panel_container {
+  position: relative;
   width: 1200px;
   height: 480px;
   display: flex;
@@ -89,9 +90,9 @@
   display: flex;
   overflow: hidden;
   margin-top: 40px;
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
+  width: 228px;
+  height: 228px;
+  border-radius: 114px;
   border: 1px solid var(--tertiary-color);
 }
 
@@ -292,4 +293,48 @@
 
 .profile_accept, .profile_deny, .profile_undecided {
   display: none;
+}
+
+/* Edit profile inputs */
+
+.profile_panel_container input[type="text"] {
+  display: none;
+}
+
+.profile_panel_container input[type="radio"]{
+  display: none;
+}
+
+.profile_panel_container textarea {
+  display: none;
+}
+
+#profile_edit_nav {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  width: 80px;
+  height: 40px;
+}
+
+#profile_edit_nav a {
+  color: var(--tertiary-color);
+  z-index: 99;
+}
+
+#profile_edit_icon {
+  display: flex;
+}
+
+.edit_nav_link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_nav_link span {
+  font-size: 24px;
 }
