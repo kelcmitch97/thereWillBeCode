@@ -53,13 +53,20 @@
     .profile_panel_container {
         width: 90%;
         flex-direction: column;
-        height: 100%;
+        height: fit-content;
+        margin-top: 240px;
+        margin-bottom: 100px;
         justify-content: center;
         align-items: center;
-        margin-top: 240px;
     }
 
-    .profile_panel_left {}
+    .profile_mobile_nav {
+        display: flex;
+    }
+
+    .profile_panel_left {
+        margin-top: 100px;
+    }
 
     .profile_panel_right {}
 

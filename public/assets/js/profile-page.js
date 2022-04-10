@@ -5,12 +5,28 @@ $('#participating_tab').on('click', function(){
 
 });
 
+$('#mobile_participating').on('click', function(){
+
+    TweenMax.to($('#events_created'), 0, { display: 'none' });
+    TweenMax.to($('#events_participating'), 0, { display: 'flex' });
+
+});
+
 $('#created_tab').on('click', function(){
 
     TweenMax.to($('#events_created'), 0, { display: 'flex' });
     TweenMax.to($('#events_participating'), 0, { display: 'none' });
 
 });
+
+$('#mobile_created').on('click', function(){
+
+    TweenMax.to($('#events_created'), 0, { display: 'flex' });
+    TweenMax.to($('#events_participating'), 0, { display: 'none' });
+
+});
+
+
 
 // USERS FETCH
 
