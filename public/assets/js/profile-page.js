@@ -65,7 +65,111 @@ for (let i = 0; i < partContainer.length; i++) {
     
 }
     
+// On clicks
 
+$('#profile_edit_link').on('click', function(){
+
+    var profileName = $('.profile_info').find('h3');
+    var profileDescription = $('.profile_info').find('p');
+    var profileSports = $('.profile_sports');
+    var profileSportsInputs = $('.profile_sports_inputs');
+
+    TweenMax.to(profileName, 0, { display: 'none' });
+    TweenMax.to(profileDescription, 0, { display: 'none' });
+    TweenMax.to(profileSports, 0, { display: 'none' });
+
+    TweenMax.to(profileSportsInputs, 0, { display: 'flex' });
+
+    $('label').on('click', function(){
+
+        labelID = $(this).attr('id');
+        
+        if (labelID === 'input-sport-1'){
+
+            if ($('#sport-1').attr('checked')) {
+
+                $('#sport-1').removeAttr('checked');
+                TweenMax.to($(this), 0, { backgroundColor: '#39a6b2' });
+
+            } else {
+
+            $('#sport-1').attr('checked', 'true');
+            TweenMax.to($(this), 0, { backgroundColor: '#024e76' });
+
+            }
+
+        }
+
+        if (labelID === 'input-sport-2'){
+
+            if ($('#sport-2').attr('checked')) {
+
+                $('#sport-2').removeAttr('checked');
+                TweenMax.to($(this), 0, { backgroundColor: '#39a6b2' });
+
+            } else {
+
+            $('#sport-2').attr('checked', 'true');
+            TweenMax.to($(this), 0, { backgroundColor: '#024e76' });
+
+            }
+            
+        }
+
+
+        if (labelID === 'input-sport-3'){
+
+            if ($('#sport-3').attr('checked')) {
+
+                $('#sport-3').removeAttr('checked');
+                TweenMax.to($(this), 0, { backgroundColor: '#39a6b2' });
+
+            } else {
+
+            $('#sport-3').attr('checked', 'true');
+            TweenMax.to($(this), 0, { backgroundColor: '#024e76' });
+
+            }
+            
+        }
+
+
+        if (labelID === 'input-sport-4'){
+
+            if ($('#sport-4').attr('checked')) {
+
+                $('#sport-4').removeAttr('checked');
+                TweenMax.to($(this), 0, { backgroundColor: '#39a6b2' });
+
+            } else {
+
+            $('#sport-4').attr('checked', 'true');
+            TweenMax.to($(this), 0, { backgroundColor: '#024e76' });
+
+            }
+            
+        }
+
+
+        if (labelID === 'input-sport-5'){
+
+            if ($('#sport-5').attr('checked')) {
+
+                $('#sport-5').removeAttr('checked');
+                TweenMax.to($(this), 0, { backgroundColor: '#39a6b2' });
+
+            } else {
+
+            $('#sport-5').attr('checked', 'true');
+            TweenMax.to($(this), 0, { backgroundColor: '#024e76' });
+
+            }
+            
+        }
+
+    })
+
+});
 
 // USERS FETCH
 

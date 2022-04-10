@@ -1,4 +1,6 @@
 // Nav bar
+if (window.location.pathname === '/') {
+
 const navbarMenu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
 
@@ -112,3 +114,5 @@ async function loginForm(event) {
   }
 
   document.querySelector('#hero_register_form').addEventListener('submit', registerForm);
+
+}

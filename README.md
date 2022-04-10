@@ -64,3 +64,6 @@ heroku
 https://trello.com/b/AiQ3DUUe/project-2
 The team used GitHub branches and a Trello Board to help distribute work and monitor progress
 
+## License
+
+All photos and videos contained within this application is property of Envato Elements with a license certificate registered to Kelcie Mitchelmore.

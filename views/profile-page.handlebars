@@ -20,9 +20,15 @@
 
         <div id="profile_edit_nav">
 
-            <div class="edit_nav_link">
+            <div id="profile_edit_link" class="edit_nav_link">
 
                 <span><i class="uil uil-edit"></i></span>
+
+            </div>
+
+            <div id="profile_save_link" class="edit_nav_link">
+
+                <span><i class="uil uil-save"></i></span>
 
             </div>
 
@@ -60,11 +66,21 @@
 
                 <div class="profile_sports">
 
-                    <input type="radio" name="event" value="basketball" />
-                    <input type="radio" name="event" value="baseball" />
-                    <input type="radio" name="event" value="tennis" />
-                    <input type="radio" name="event" value="soccer" />
-                    <input type="radio" name="event" value="hockey" />
+                </div>
+
+                <div class="profile_sports_inputs">
+
+                    <input type="checkbox" id="sport-1" name="event" value="basketball" />
+                    <input type="checkbox" id="sport-2" name="event" value="baseball" />
+                    <input type="checkbox" id="sport-3" name="event" value="tennis" />
+                    <input type="checkbox" id="sport-4" name="event" value="soccer" />
+                    <input type="checkbox" id="sport-5" name="event" value="hockey" />
+
+                    <label id="input-sport-1" for="sport-1"><i class="uil uil-basketball button__icon"></i></label>
+                    <label id="input-sport-2" for="sport-2"><i class="uil uil-baseball-ball button__icon"></i></label>
+                    <label id="input-sport-3" for="sport-3"><i class="uil uil-tennis-ball button__icon"></i></label>
+                    <label id="input-sport-4" for="sport-4"><i class="uil uil-football button__icon"></i></label>
+                    <label id="input-sport-5" for="sport-5"><i class="uil uil-check button__icon"></i></label>
 
                 </div>
 
