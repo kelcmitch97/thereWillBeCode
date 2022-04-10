@@ -3,6 +3,8 @@ async function joinEvent(event) {
     const idString = window.location.toString()
     const event_id_string = idString.split('/event/')[1];
     const event_id = parseInt(event_id_string);
+
+    console.log(event_id)
     
     const response = await fetch(`/join-event`, {
         method: 'POST',
@@ -14,7 +16,7 @@ async function joinEvent(event) {
         }
     });
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
     } else {
         alert(response.statusText);
     }

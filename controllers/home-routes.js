@@ -263,7 +263,20 @@ router.route('/join-event')
    })
   .then(membersData =>{
 
+    if (membersData.length === 0){
+
+      MembersUser.create({
+        user_id: req.session.user_id,
+        event_id: req.body.event_id
+        })
+
+        return res.redirect('/profile');
+
+    }
+
     const members = membersData.map(member => member.get({ plain: true }));
+
+    console.log(members);
 
     var found = false;
 
@@ -271,11 +284,9 @@ router.route('/join-event')
 
       if (req.session.user_id === members[i].user_id){
 
-        res.redirect(`/event/${members[i].event_id}`);
-
         found = true;
 
-        return
+        return res.redirect('/profile');
 
       } else if ((i + 1 === members.length) && (found === false)){
 
@@ -283,6 +294,8 @@ router.route('/join-event')
           user_id: req.session.user_id,
           event_id: req.body.event_id
           })
+
+          return res.redirect('/profile');
 
       }
       
