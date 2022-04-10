@@ -24,6 +24,12 @@
         width: 90%;
     }
 
+    /* Events Page */
+
+    #events_spacer {
+        width: 90%;
+    }
+
   }
 
   @media screen and (max-width: 1100px) {
@@ -44,6 +50,16 @@
 
         .applicants_button {
             display: none;
+        }
+
+        /* Events page */
+
+        #left_tabs {
+            width: 200px;
+        }
+
+        .left_tab {
+            width: 200px;
         }
   }
   
@@ -200,24 +216,27 @@
         width: 30px;
     }
 
-    .left_card_creator_spacer {
-        width: 90%;
+    .left_card_spacer {
+        width: 100%;
     }
 
     .event_button_spacer {
-        top: 100px;
+        top: 35px;
+        right: 20px;
     }
 
     .event_button_spacer button {
         height: 30px;
+        width: auto;
     }
-
+    
+    .left_card_creator_spacer {
+        height: 40px;
+    }
     .left_card_content_spacer {
-        height:100px;
-        width: 220px;
-        position: absolute;
-        top: 30px;
-        left: 220px;
+        height:175px;
+
+ 
     }
 
     .right_card_spacer {
@@ -239,6 +258,32 @@
         position: absolute;
         
     }
+
+
+    /* Events page */
+
+    #left_tabs {
+        width: 100px;
+    }
+
+    .left_tab h3 {
+        display: none;
+    }
+
+    .left_tab {
+        width: 100px;
+    }
+
+ .event_content_spacer {
+        width: auto;
+    }
+
+    .button__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+
 
 }
 
@@ -336,31 +381,7 @@
 
     }
 
-    .creator_header {
-        width: 150px;
-    }
-
-    .creator_header p {
-        margin-left: 0px;
-    }
-
-    .event_button_spacer {
-        top: 100px;
-    }
-
-    .event_button_spacer button {
-        height: 30px;
-        width: 150px;
-    }
-
-    .icon_spacer {
-        display: none;
-    }
-
-    .left_card_content_spacer {
-        display: none;
-    }
-
+ 
     /* Applicant info */
 
     .event_nav {
@@ -378,5 +399,7 @@
 
         width: 100px;
       }
+
+    
 
 }
