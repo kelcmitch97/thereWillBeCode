@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { EventCreated } = require('../../models');
 
-router.route('/')
-.get((req, res) => {
+router.route('/') //Basic routes for event entries.
+.get((req, res) => { //Get all events.
   EventCreated.findAll({
   })
     .then(eventData => res.json(eventData))
@@ -11,7 +11,7 @@ router.route('/')
       res.status(500).json(err);
     });
 })
-.post((req, res) => {
+.post((req, res) => { //Create an event.
     EventCreated.create({
         // event_name, availability and date_time set to bypass difficult
         user_id: req.session.user_id,
@@ -29,8 +29,8 @@ router.route('/')
     });
 });
 
-router.route('/:id')
-.get((req, res) => {
+router.route('/:id') //Routes to modify a single event entry.
+.get((req, res) => { //Get a single event.
     EventCreated.findOne({
         where: {
         id: req.params.id
@@ -48,7 +48,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.put((req, res) => {
+.put((req, res) => { //Update a single event.
     EventCreated.update(req.body, {
         individualHooks: true,
         where: {
@@ -67,7 +67,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.delete((req, res) => {
+.delete((req, res) => { //Delete a single event.
     EventCreated.destroy({
         where: {
             id: req.params.id
@@ -85,5 +85,5 @@ router.route('/:id')
         res.status(500).json(err);
     });
 });
-
+//Exporting the routes.
 module.exports = router;

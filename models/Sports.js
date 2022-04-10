@@ -1,18 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
 class Sports extends Model {}
-
+//Initializing the model.
 Sports.init(
     {
-        id: {
+        id: { //Id row with its attributes.
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        sport:{
+        sport:{ //Sport row with its attributes.
             type: DataTypes.STRING,
             allowNull: false,
         }
@@ -25,4 +24,5 @@ Sports.init(
         modelName: 'sports',
     }
 );
+//Exporting the model.
 module.exports = Sports;

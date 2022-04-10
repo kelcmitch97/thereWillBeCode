@@ -21,7 +21,7 @@ const eventData = [
       sport_id: 1, // hockey
       members_needed: 1,
       location_id: 2, // using actual Parks & Rec location_id ids RamsdenPark
-      availability: true, // tbd
+      availability: true,
       description: 'looking for defence',
       members: 1
     },
@@ -33,7 +33,7 @@ const eventData = [
       sport_id: 5, // tennis
       members_needed: 1,
       location_id: 3, // using actual Parks & Rec location_id ids HighPark
-      availability: true, // tbd
+      availability: true,
       description: 'looking for doubles partner',
       members: 1
     },
@@ -45,7 +45,7 @@ const eventData = [
       sport_id: 2, // baseball
       members_needed: 1,
       location_id:  4, // using actual Parks & Rec location_id ids TrinityBellwoods
-      availability: true, // tbd
+      availability: true,
       description: 'looking for catcher',
       members: 1
     },
@@ -57,7 +57,7 @@ const eventData = [
       sport_id: 3, // basketball
       members_needed: 1,
       location_id:  5, // using actual Parks & Rec location_id ids TrinityBellwoods
-      availability: true, // tbd
+      availability: true,
       description: 'looking for several players, open to all genders',
       members: 1
     },
@@ -81,7 +81,7 @@ const eventData = [
       sport_id: 4,
       members_needed: 1,
       location_id: 7, // using actual Parks & Rec location_id ids WestonLionsPark
-      availability: true, // tbd
+      availability: true,
       description: 'skill building and pick-up play for adults all levels',
       members: 1
     },

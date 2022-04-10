@@ -43,8 +43,7 @@ const locationData = [
       location_address: '150 Grenoble Drive, M3C 1E3',
       venue_type_id: '3'
     },
-
-  ]
+]
 
 const seedLocations = () => Location.bulkCreate(locationData);
 

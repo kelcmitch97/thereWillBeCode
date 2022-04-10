@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Location, VenueType, LocationVenue } = require('../../models');
 
-router.route('/')
-.get((req, res) => {
+router.route('/') //Basic routes for location entries.
+.get((req, res) => { //Get all locations.
     Location.findAll({
         include: [
             {
@@ -18,7 +18,7 @@ router.route('/')
       res.status(500).json(err);
     });
 })
-.post((req, res) => {
+.post((req, res) => { //Create a location.
     Location.create({
         city_name: req.body.city_name,
         location_name: req.body.location_name,
@@ -31,8 +31,8 @@ router.route('/')
     });
 });
 
-router.route('/:id')
-.get((req, res) => {
+router.route('/:id') //Routes to modify a single location entry.
+.get((req, res) => { //Get a single location.
     Location.findOne({
         where: {
         id: req.params.id
@@ -50,7 +50,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.put((req, res) => {
+.put((req, res) => { //Update a single location.
     Location.update(req.body, {
         individualHooks: true,
         where: {
@@ -69,7 +69,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.delete((req, res) => {
+.delete((req, res) => { //Delete a single location.
     Location.destroy({
         where: {
             id: req.params.id
@@ -87,5 +87,5 @@ router.route('/:id')
         res.status(500).json(err);
     });
 });
-
+//Exporting the routes.
 module.exports = router;

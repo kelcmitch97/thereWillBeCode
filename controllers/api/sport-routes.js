@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Sports } = require('../../models');
 
-router.route('/')
-.get((req, res) => {
+router.route('/') //Basic routes for sports entries.
+.get((req, res) => { //Get all sports.
     Sports.findAll({})
     .then(sportData => res.json(sportData))
     .catch(err => {
@@ -10,7 +10,7 @@ router.route('/')
       res.status(500).json(err);
     });
 })
-.post((req, res) => {
+.post((req, res) => { //Create a sports.
     Sports.create({
         sport: req.body.sport
     }).then( res.json({message: 'Venue Type Created!'}))
@@ -20,8 +20,8 @@ router.route('/')
     });
 });
 
-router.route('/:id')
-.get((req, res) => {
+router.route('/:id') //Routes to modify a single sport entry.
+.get((req, res) => { //Get a single sport.
     Sports.findOne({
         where: {
             id: req.params.id
@@ -39,7 +39,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.put((req, res) => {
+.put((req, res) => { //Update a single sport.
     Sports.update(req.body, {
         individualHooks: true,
         where: {
@@ -58,7 +58,7 @@ router.route('/:id')
         res.status(500).json(err);
     });
 })
-.delete((req, res) => {
+.delete((req, res) => { //Delete a single sport.
     Sports.destroy({
         where: {
             id: req.params.id
@@ -76,5 +76,5 @@ router.route('/:id')
         res.status(500).json(err);
     });
 });
-
+//Exporting the routes.
 module.exports = router;

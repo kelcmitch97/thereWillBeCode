@@ -1,18 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
 class VenueType extends Model {}
-
+//Initializing the model.
 VenueType.init(
     {
-        id: {
+        id: { //Id row with its attributes.
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        venue:{
+        venue:{ //Venue type row with its attributes.
             type: DataTypes.STRING,
             allowNull: false,
         }
@@ -24,5 +23,6 @@ VenueType.init(
         underscored: true,
         modelName: 'venue_type',
     }
-  );
-  module.exports = VenueType;
+);
+//Exporting the model.
+module.exports = VenueType;
