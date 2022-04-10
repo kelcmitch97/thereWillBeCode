@@ -299,6 +299,11 @@
 
 .profile_panel_container input[type="text"] {
   display: none;
+  width: 200px;
+  text-align: center;
+  color: var(--tertiary-color);
+  font-family: 'Poppins';
+  font-weight: 600;
 }
 
 .profile_panel_container input[type="checkbox"]{
@@ -307,6 +312,16 @@
 
 .profile_panel_container textarea {
   display: none;
+  width: 90%;
+  height: 50px;
+  resize: none;
+  border: 0;
+  background: var(--light-grey);
+  color: var(--tertiary-color);
+  padding: 10px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 #profile_edit_nav {
