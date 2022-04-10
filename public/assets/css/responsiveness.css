@@ -15,9 +15,7 @@
         width: 60%;
     }
 
-    .applicants_button {
-        display: none;
-    }
+
 
     /* Create Event Page */
     .form-container {
@@ -48,9 +46,7 @@
             right: 175px;
         }
 
-        .applicants_button {
-            display: none;
-        }
+
 
         /* Events page */
 
@@ -61,13 +57,24 @@
         .left_tab {
             width: 200px;
         }
+
+        /* Applicants Tab  */
+
+        .applicant_options {
+            position: relative;
+            right: 0;
+        }
+
+        .creator_applicant {
+            width: auto;
+        }
   }
   
   
   @media screen and (max-width: 980px) {
    
     /* Header  */
-    
+
     header {
         padding: 10px;
     }
@@ -206,9 +213,7 @@
         width: 150px;
     }
 
-    .applicants_button {
-        display: none;
-    }
+
 
 }
 
@@ -286,6 +291,7 @@
     .event_button_spacer button {
         height: 30px;
         width: auto;
+        padding: 10px;
     }
     
     .left_card_creator_spacer {
@@ -299,23 +305,24 @@
         width: 100%;
     }
 
-    /* Applicant info */
-
-    .event_nav .event_tab {
-        right: 175px;
-    }
-
     .event_nav {
         display: none;
     }
 
-    .applicants_buttons {
-        display: contents;
-        position: absolute;
-        
+    .applicants_mobile_nav{
+        display: contents;       
     }
 
+    .applicants_mobile_nav button {
+        position: absolute;
+        bottom: 371px;
+        right: 50px;
+        z-index: 999;
+        width: auto;
+        padding: 10px;
+    }
 
+    
     /* Events page */
 
     #left_tabs {
@@ -335,8 +342,7 @@
     }
 
     .button__icon {
-        width: 20px;
-        height: 20px;
+        font-size: 30px;
     }
 
 }
@@ -373,6 +379,8 @@
         right: 20px;
         width: 125px;
       }
+
+    
     } 
 
 
@@ -432,16 +440,8 @@
     #event_content_spacer {
         width: 90%;
         height: 400px;
-
     }
 
- 
-    /* Applicant info */
-
-    .event_nav {
-        justify-content: center;
-        align-items: center;
-    }
 
     /* Create Event Page */
     

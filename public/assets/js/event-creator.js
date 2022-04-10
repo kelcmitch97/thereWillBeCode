@@ -6,6 +6,15 @@ $('#applicants_tab').on('click', function(){
 
 })
 
+$('#mobile_applicants').on('click', function(){
+
+    $('.right_content_spacer').css('display', 'none')
+
+    $('.creator_content_spacer').css('display', 'flex')
+
+});
+
+
 // Colors for distinguishing what the current status of the user is... Don't as about .attributes.value.vlue IDK what's going on as to why I have to target so hard
 
 const applicantContainer = $('.creator_applicant');

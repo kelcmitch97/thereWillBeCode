@@ -418,6 +418,7 @@ button:hover {
 
 #join_button {
   z-index: 5;
+  border: 3px solid #fff;
 }
 
 .left_tab:hover {
