@@ -1,3 +1,4 @@
+
 async function joinEvent(event) {
     event.preventDefault();
     const idString = window.location.toString()

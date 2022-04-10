@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-    {{!-- <link rel="stylesheet" href="public/assets/css/swiper-bundle.min.css"> --}}
+    {{!--
+    <link rel="stylesheet" href="public/assets/css/swiper-bundle.min.css"> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,300;1,400&display=swap"
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="/assets/css/events.css" />
     <link rel="stylesheet" href="/assets/css/profile.css" />
     <link rel="stylesheet" href="/assets/css/aboutus.css" />
+    <link rel="stylesheet" href="/assets/css/responsiveness.css" />
 
     <link rel="stylesheet" href="/assets/css/media-screens.css" />
 
@@ -35,45 +37,57 @@
 
     <header>
 
-        <h1>
-            <img id="header-logo" src="/assets/images/Logo.png" width="40" height="40">
-            <a href="/">PickUpSports</a>
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home </a>
-                </li>
-                <li>
-                    <a href="/events">Events </a>
-                </li>
-                <li>
-                    <a href="/profile">Profile</a>
-                </li>
-                <li>
-                    <a href="/about">About Us</a>
-                </li>
-                <li>
-                    <a href="/contact">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <h1>
+                <img id="header-logo" src="/assets/images/Logo.png" width="40" height="40">
+                <a href="/">PickUpSports</a>
+            </h1>
+
+            <nav class="navbar">
+                <div class="hamburger-menu" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-menu">
+                    <li>
+                        <a class="nav-links" href="/">Home </a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/events">Events </a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/about">About Us</a>
+                    </li>
+                    <li>
+                        <a class="nav-links" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     {{{body}}}
 
     {{#if loggedIn}}
 
-        <div id="logout_button_spacer">
+    <div id="logout_button_spacer">
 
-            <button id="logout_button">Logout</button>
+        <button id="logout_button">Logout</button>
 
-        </div>
+    </div>
 
-        <script src="/assets/js/logout.js"></script>
+    <script src="/assets/js/logout.js"></script>
 
     {{/if}}
 
+    <script src="/assets/js/home-page.js"></script>
 </body>
+
 
 </html>

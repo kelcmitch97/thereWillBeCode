@@ -1,3 +1,13 @@
+// Nav bar
+const navbarMenu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".nav-menu");
+
+navbarMenu.addEventListener("click", () => {
+  navbarMenu.classList.toggle('is-active');
+  menuLinks.classList.toggle("active");
+})
+
+
 $('#hero_main_login').on('click', function(){
 
     TweenMax.to($('#hero_main_spacer'), 0.5, { opacity: 0, transformOrigin:"50% 50%", ease:Power1.easeInOut });

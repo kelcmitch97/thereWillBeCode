@@ -1,0 +1,469 @@
+  /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+  @media screen and (max-width: 1300px) {
+    
+    /* Contact Page */
+    #contact_spacer {
+        width: 1000px;
+    }
+
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right input {
+        width: 60%;
+    }
+
+    /* Create Event Page */
+    .form-container {
+        width: 90%;
+    }
+
+    /* Events Page */
+
+    #events_spacer {
+        width: 90%;
+    }
+
+  }
+
+  @media screen and (max-width: 1250px) {
+              /* Events page */
+
+              #left_tabs {
+                width: 200px;
+            }
+    
+            .left_tab {
+                width: 200px;
+            }
+  }
+
+  @media screen and (max-width: 1100px) {
+      
+        /* Contact Page */
+        #contact_spacer {
+            width: 900px;
+        }
+
+        /* Event details page */
+        #event_card_spacer {
+            width: 900px;
+        }
+
+        .event_nav .event_tab {
+            right: 175px;
+        }
+
+
+
+        /* Events page */
+
+        #left_tabs {
+            width: 200px;
+        }
+
+        .left_tab {
+            width: 200px;
+        }
+
+        /* Applicants Tab  */
+
+        .applicant_options {
+            position: relative;
+            right: 0;
+        }
+
+        .creator_applicant {
+            width: auto;
+        }
+  }
+  
+  
+  @media screen and (max-width: 980px) {
+   
+    /* Header  */
+
+    header {
+        padding: 10px;
+    }
+
+    .nav-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        background: var(--tertiary-color);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background-color: var(--tertiary-color);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--dark-grey);
+        color: white;
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
+    .hamburger-menu .bar {
+        display: block;
+    }
+
+    .hamburger-menu:hover {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    #header-logo {
+        left: 10px;
+        width: 30px;
+        height: 30px;
+    } 
+
+
+    /* Contact Page */
+    #contact_spacer {
+        width: 750px;
+    }
+
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right input {
+        width: 60%;
+    }
+
+    /* About page */
+
+    .about-us-container {
+        width: 700px;
+        height: 750px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-left {
+        padding: 10px;
+        width: 600px;
+        height: 250px;
+    }
+
+    .about-us-content p {
+        max-width: 500px; 
+    }
+
+    .about-us-right {
+      width: 600px;
+    }
+
+    .whoweare {
+        margin-bottom: 10px;
+    }
+
+    /* Event details page */
+
+    #event_card_spacer {
+        width: 90%;
+    }
+
+    .creator_header {
+        width: 250px;
+    }
+
+    .event_nav .event_tab {
+        right: 250px;
+        width: 150px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    
+     /* Contact Page */
+    #contact_spacer {
+        width: 500px;
+    }
+
+    .contact_panel_left {
+        margin-top: 10px;
+    }
+
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right input {
+        width: 60%;
+    }
+
+    /* About page */
+    .about-us-container {
+        width: 500px;
+        padding: 10px;
+    }
+
+    .about-us-left {
+        width: 100%;
+    }
+
+    .about-us-right {
+        width: 100%;
+    }
+
+    /* Event details page */
+
+    #event_card_spacer {
+        width: 90%;
+        height: 600px;
+    }
+
+    .back_button h3{
+        display: none;
+    }
+
+    .event_card_content_spacer {
+        flex-direction: column;
+    }
+
+    .creator_header {
+        height: 30px;
+    }
+
+    .creator_text {
+        height: 30px;
+    }
+
+    .icon_spacer {
+        height: 30px;
+        width: 30px;
+    }
+
+    .left_card_spacer {
+        width: 100%;
+    }
+
+    .event_button_spacer {
+        top: 35px;
+        right: 20px;
+    }
+
+    .event_button_spacer button {
+        height: 30px;
+        width: auto;
+        padding: 10px;
+    }
+    
+    .left_card_creator_spacer {
+        height: 40px;
+    }
+    .left_card_content_spacer {
+        height:175px;
+    }
+
+    .right_card_spacer {
+        width: 100%;
+    }
+
+    .event_nav {
+        display: none;
+    }
+
+    .applicants_mobile_nav{
+        display: contents;       
+    }
+
+    .applicants_mobile_nav button {
+        position: absolute;
+        bottom: 371px;
+        right: 50px;
+        z-index: 999;
+        width: auto;
+        padding: 10px;
+    }
+
+    
+    /* Events page */
+
+    #left_tabs {
+        width: 100px;
+    }
+
+    .left_tab h3 {
+        display: none;
+    }
+
+    .left_tab {
+        width: 100px;
+    }
+
+    .event_content_spacer {
+        width: auto;
+    }
+
+    .button__icon {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+    /* Create Event Page */
+    .form-container {
+        height: 650px;
+        padding: 10px;
+    }    
+    
+    .event-form {
+        flex-direction: column;
+        margin-top: 150px;
+        margin-left: 20px;
+    }
+
+    .create-game-title {
+        margin-top: 6px;
+    }
+
+    .form-group label{
+        text-align: center;
+    }
+
+    .form-sport, .form-date, .form-duration, .form-players, .form-description, .form-venue, .form-city, .form-address {
+        width: auto;
+      }
+
+      .form-submit button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 125px;
+      }
+
+    
+    } 
+
+
+
+@media screen and (max-width: 575px) {
+
+     /* Contact Page */
+    #contact_spacer {
+        flex-direction: column;
+        width: 400px;
+        height: 600px;
+    }
+
+    .contact_panel_left {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #contact-panel-left-h2 {
+        justify-content: center;
+    }
+
+    #contact-panel-left-p {
+        display: none;
+    }
+
+    .contact_panel_left p {
+        text-align: justify;
+    }
+
+    .contact_panel_right {
+        width: 100%;
+    }
+
+    /* About Page */
+    .about-us-container {
+        width: 400px;
+    }
+
+    .about-us-left{
+        height: 50px;
+    }
+
+    .about-us-content {
+        display: none;
+        margin-top: 0;
+    }
+
+    /* Event Details Page */
+
+    .page_spacer {
+        overflow-y: visible;
+        height: 100%;
+    }
+
+    #event_content_spacer {
+        width: 90%;
+        height: 400px;
+    }
+
+
+    /* Create Event Page */
+    
+    .form-container {
+        width: 90%;
+    }
+    
+    .form-submit button{
+
+        width: 100px;
+      }
+
+    
+
+}
