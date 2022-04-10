@@ -38,10 +38,12 @@ In terminal and the targeted directory run the following code to install the mod
 npm i
 ```
 
-After installing the dependencies change the username/password located in db/connection.js to your mysql specifications. Run the following in powershell:
+Rename the .env.EXAMPLE file to .env
+
+After installing the dependencies change the username/password/hostname/database located in the .env file to your mysql specifications. Run the following in powershell:
 ```shell
 mysql -u root -p (login example leading to password for root)
-mysql > source db/db.sql
+mysql > source db/schema.sql
 ```
 
 After adding information to our database run the following in the terminal to activate the server:
